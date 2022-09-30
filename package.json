@@ -1,0 +1,23 @@
+{
+  "name": "live-cams",
+  "version": "1.0.0",
+  "description": "live-cams",
+  "main": "js/index.js",
+  "scripts": {
+    "http-server": "http-server ./public --port 5555 --cors -c-1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/urikalish/live-cams.git"
+  },
+  "author": "Uri Kalish",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/urikalish/live-cams/issues"
+  },
+  "homepage": "https://github.com/urikalish/live-cams#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
