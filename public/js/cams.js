@@ -68,8 +68,52 @@ export const cams = [
 		lng: 139.6503,
 		cams: [
 			{
+				id: 'gFRtAAmiFbE',
+				name: 'Tokyo, Japan',
+			},
+			{
+				id: 'DjdUEyjx8GM',
+				name: 'Tokyo, Japan',
+			},
+			{
+				id: '3kPH7kTphnE',
+				name: 'Tokyo, Japan',
+			},
+			{
+				id: 'EcbnRfKOzT4',
+				name: 'Tokyo, Japan',
+			},
+			{
 				id: 'QOjmvL3e7Lc',
 				name: 'Tokyo, Japan',
+			},
+		]
+	},
+	{
+		id: 'australia--sydney',
+		name: 'Sydney, Australia',
+		lat: -33.8688,
+		lng: 151.2093,
+		cams: [
+			{
+				id: 'KPrrWB1eo1I',
+				name: 'Sydney, Australia',
+			},
+			{
+				id: 'sWWCy2WCjRA',
+				name: 'Sydney, Australia',
+			},
+		]
+	},
+	{
+		id: 'australia--melbourne',
+		name: 'Melbourne, Australia',
+		lat: -37.8136,
+		lng: 144.9631,
+		cams: [
+			{
+				id: 'l_8DrACHpwY',
+				name: 'Melbourne, Australia',
 			},
 		]
 	},
@@ -106,6 +150,18 @@ export const cams = [
 			{
 				id: '-I6qbjZk0HM',
 				name: 'Davao City, Philippines',
+			},
+		]
+	},
+	{
+		id: 'namibia--namib-desert',
+		name: 'Namib Desert, Namibia',
+		lat: -22.9576,
+		lng: 18.4904,
+		cams: [
+			{
+				id: 'ydYDqZQpim8',
+				name: 'Namib Desert, Namibia',
 			},
 		]
 	},
