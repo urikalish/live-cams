@@ -165,4 +165,20 @@ export const cams = [
 			},
 		]
 	},
+	{
+		id: 'israel--hula-valley',
+		name: 'Hula Valley, Israel',
+		lat: 33.1178,
+		lng: 35.6078,
+		cams: [
+			{
+				id: '-AmaIGvwt1c',
+				name: 'Hula Valley, Israel',
+			},
+			{
+				id: 'bSBAX_o6gkw',
+				name: 'Hula Valley, Israel',
+			},
+		]
+	},
 ]
