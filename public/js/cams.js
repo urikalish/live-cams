@@ -146,6 +146,26 @@ export const cams = [
 		]
 	},
 	{
+		id: 'virgin-islands--st-john',
+		name: 'St. John, Virgin Islands',
+		lat: 18.3368,
+		lng: -64.7281,
+		cams: [
+			{
+				id: '2wqpy036z24',
+				name: 'St. John Beach Bar',
+			},
+			{
+				id: 'MZgnOBBcPgQ',
+				name: 'St. John Spice',
+			},
+			{
+				id: 'hpdmQYPsj30',
+				name: 'St. John Cruz Bay',
+			},
+		]
+	},
+	{
 		id: 'uk--oxford',
 		name: 'Oxford, UK',
 		lat: 51.7520,
