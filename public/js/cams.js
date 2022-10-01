@@ -207,6 +207,38 @@ export const cams = [
 				id: 'HpZAez2oYsA',
 				name: 'Ponte delle Guglie | Venice | Italy',
 			},
+			{
+				id: 'K_Vg94nBiaY',
+				name: 'Rialto Bridge | Venice | Italy',
+			},
+			{
+				id: 'P393gTj527k',
+				name: 'Grand Canal | Venice | Italy',
+			},
+			{
+				id: '3lDUAGio6mE',
+				name: 'Bacino di San Marco | Venice | Italy',
+			},
+			{
+				id: 'WjOGhNDX51M',
+				name: 'Campo Santa Maria Formosa | Venice | Italy',
+			},
+			{
+				id: 'JqUREqYduHw',
+				name: 'Dorsoduro | Venice | Italy',
+			},
+			{
+				id: 'oOcqSm7PMBU',
+				name: 'Campiello Marinoni | Venice | Italy',
+			},
+			{
+				id: 'rVyP35EHCzY',
+				name: 'San Marco Basin | Venice | Italy',
+			},
+			{
+				id: 'eE6VVJ3hvv8',
+				name: 'St. Mark\'s Basin | Venice | Italy',
+			},
 		]
 	},
 	{
