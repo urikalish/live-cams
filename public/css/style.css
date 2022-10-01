@@ -24,9 +24,13 @@ body {
     width: 950px;
     height: 534px;
 }
-.iss {
+.news {
     width: 950px;
     height: 534px;
+    background-color: #222;
+    color: #ccc;
+    font-size: 1.6rem;
+    padding: 4rem;
 }
 .main {
     display: grid;
