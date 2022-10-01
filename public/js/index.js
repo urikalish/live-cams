@@ -9,3 +9,4 @@ function handleMarkerClick(locationId) {
 const mapService = new MapService();
 const camService = new CamService();
 mapService.init(cams, handleMarkerClick);
+camService.displayLiveCams(cams, 'space--iss');
