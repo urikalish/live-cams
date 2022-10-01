@@ -29,7 +29,15 @@ export const cams = [
 		cams: [
 			{
 				id: '-eqdD8qKBbM',
-				name: 'Fishing Pier Camera, Deerfield Beach, Florida, USA',
+				name: 'Fishing Pier Camera, Deerfield Beach, Florida',
+			},
+			{
+				id: 'arrs3t70B5g',
+				name: 'Deerfield Beach, Florida',
+			},
+			{
+				id: '-HAi_5IIAYg',
+				name: 'Deerfield Beach, Florida',
 			},
 			{
 				id: '06-9leYioUI',
