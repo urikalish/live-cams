@@ -13,12 +13,14 @@ export class CamService {
 	}
 
 	displayLiveCams(cams, locationId) {
-		const mainElm = document.getElementById('main');
-		mainElm.replaceChildren();
 		const location = cams.find(l => l.id === locationId);
 		if (!location) {
 			return;
 		}
+		const mainElm = document.getElementById('main');
+		const mapElm = document.getElementById('map');
+		mainElm.replaceChildren();
+		mainElm.appendChild(mapElm);
 		location.cams.forEach(cam => {
 			const frElm = this.createYouTubeFrame(cam);
 			mainElm.appendChild(frElm);
