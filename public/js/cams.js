@@ -35,6 +35,94 @@ export const cams = [
 				id: 'JS7yxHgYR-o',
 				name: 'Times Square, New York, USA',
 			},
+			{
+				id: 'KGuCGd726RA',
+				name: 'Brooklyn Bridge, New York, USA',
+			},
+			{
+				id: 'RowXUQ7Yn0I',
+				name: 'East River, New York, USA',
+			},
+			{
+				id: 'Vj0XKu6AoOw',
+				name: 'Lower Manhattan and Harbor, New York, USA',
+			},
+		]
+	},
+	{
+		id: 'usa--the-hamptons',
+		name: 'The Hamptons, USA',
+		lat: 40.9246,
+		lng: -72.3548,
+		cams: [
+			{
+				id: 'I2syMSm7uI0',
+				name: 'The Hamptons, USA',
+			},
+			{
+				id: 'tnWQVOnXmPw',
+				name: 'The Hamptons, USA',
+			},
+			{
+				id: 'Sc_fzjLJvF4',
+				name: 'The Hamptons, USA',
+			},
+			{
+				id: 'qVaeGwuVwgI',
+				name: 'The Hamptons, USA',
+			},
+			{
+				id: 'VswvsGpnKcg',
+				name: 'The Hamptons, USA',
+			},
+			{
+				id: 'n4JsqoELJ14',
+				name: 'The Hamptons, USA',
+			},
+			{
+				id: 'v_xO4j5iCCU',
+				name: 'The Hamptons, USA',
+			},
+			{
+				id: 'FfYGgT5iI_E',
+				name: 'The Hamptons, USA',
+			},
+			{
+				id: 'SoAsJowkGyU',
+				name: 'The Hamptons, USA',
+			},
+			{
+				id: 'TAQBuObk2d0',
+				name: 'The Hamptons, USA',
+			},
+			{
+				id: 'a8nyuAMnYQo',
+				name: 'The Hamptons, USA',
+			},
+			{
+				id: 'h0BV9beC8as',
+				name: 'The Hamptons, USA',
+			},
+			{
+				id: 'eV22QCedn4g',
+				name: 'The Hamptons, USA',
+			},
+			{
+				id: 'WdRQpwOWmwg',
+				name: 'The Hamptons, USA',
+			},
+			{
+				id: 'vCYD6jNcisg',
+				name: 'The Hamptons, USA',
+			},
+			{
+				id: 'PIIsQTFuo2Y',
+				name: 'The Hamptons, USA',
+			},
+			{
+				id: 'nkPeVfnth1g',
+				name: 'The Hamptons, USA',
+			},
 		]
 	},
 	{
