@@ -344,12 +344,12 @@ export const cams = [
 				name: 'Outback Bar | Lamai | Koh Samui | Thailand',
 			},
 			{
-				id: 'JsaD2iPZsas',
-				name: 'Tropical Murphy\'s | Chaweng | Koh Samui | Thailand',
-			},
-			{
 				id: 'WVNIKU6_Om4',
 				name: 'Hooters | Chaweng | Koh Samui | Thailand',
+			},
+			{
+				id: 'JsaD2iPZsas',
+				name: 'Tropical Murphy\'s | Chaweng | Koh Samui | Thailand',
 			},
 			{
 				id: 'Cy635CoTnEw',
