@@ -10,22 +10,6 @@ export const cams = [
 		]
 	},
 	{
-		id: 'usa--new-york',
-		name: 'New York, USA',
-		lat: 40.7580,
-		lng: -73.9855,
-		cams: [
-			{
-				id: '1-iS7LArMPA',
-				name: 'Times Square, New York',
-			},
-			{
-				id: 'JS7yxHgYR-o',
-				name: 'Times Square, New York',
-			},
-		]
-	},
-	{
 		id: 'usa--los-angeles',
 		name: 'Los Angeles, USA',
 		lat: 33.988270,
@@ -33,19 +17,23 @@ export const cams = [
 		cams: [
 			{
 				id: 'vvOjJoSEFM0',
-				name: 'Venice Beach, Los Angeles',
+				name: 'Venice Beach, Los Angeles, USA',
 			},
 		]
 	},
 	{
-		id: 'italy--venice',
-		name: 'Venice, Italy',
-		lat: 45.438759,
-		lng: 12.327145,
+		id: 'usa--new-york',
+		name: 'New York, USA',
+		lat: 40.7580,
+		lng: -73.9855,
 		cams: [
 			{
-				id: 'HpZAez2oYsA',
-				name: 'Venice, Italy',
+				id: '1-iS7LArMPA',
+				name: 'Times Square, New York, USA',
+			},
+			{
+				id: 'JS7yxHgYR-o',
+				name: 'Times Square, New York, USA',
 			},
 		]
 	},
@@ -62,58 +50,42 @@ export const cams = [
 		]
 	},
 	{
-		id: 'japan--tokyo',
-		name: 'Tokyo, Japan',
-		lat: 35.6762,
-		lng: 139.6503,
+		id: 'italy--venice',
+		name: 'Venice, Italy',
+		lat: 45.438759,
+		lng: 12.327145,
 		cams: [
 			{
-				id: 'gFRtAAmiFbE',
-				name: 'Tokyo, Japan',
-			},
-			{
-				id: 'DjdUEyjx8GM',
-				name: 'Tokyo, Japan',
-			},
-			{
-				id: '3kPH7kTphnE',
-				name: 'Tokyo, Japan',
-			},
-			{
-				id: 'EcbnRfKOzT4',
-				name: 'Tokyo, Japan',
-			},
-			{
-				id: 'QOjmvL3e7Lc',
-				name: 'Tokyo, Japan',
+				id: 'HpZAez2oYsA',
+				name: 'Ponte delle Guglie, Venice, Italy',
 			},
 		]
 	},
 	{
-		id: 'australia--sydney',
-		name: 'Sydney, Australia',
-		lat: -33.8688,
-		lng: 151.2093,
+		id: 'namibia--namib-desert',
+		name: 'Namib Desert, Namibia',
+		lat: -22.9576,
+		lng: 18.4904,
 		cams: [
 			{
-				id: 'KPrrWB1eo1I',
-				name: 'Sydney, Australia',
-			},
-			{
-				id: 'sWWCy2WCjRA',
-				name: 'Sydney, Australia',
+				id: 'ydYDqZQpim8',
+				name: 'Namib Desert, Namibia',
 			},
 		]
 	},
 	{
-		id: 'australia--melbourne',
-		name: 'Melbourne, Australia',
-		lat: -37.8136,
-		lng: 144.9631,
+		id: 'israel--hula-valley',
+		name: 'Hula Valley, Israel',
+		lat: 33.1178,
+		lng: 35.6078,
 		cams: [
 			{
-				id: 'l_8DrACHpwY',
-				name: 'Melbourne, Australia',
+				id: '-AmaIGvwt1c',
+				name: 'Hula Valley, Israel',
+			},
+			{
+				id: 'bSBAX_o6gkw',
+				name: 'Hula Valley, Israel',
 			},
 		]
 	},
@@ -154,30 +126,58 @@ export const cams = [
 		]
 	},
 	{
-		id: 'namibia--namib-desert',
-		name: 'Namib Desert, Namibia',
-		lat: -22.9576,
-		lng: 18.4904,
+		id: 'japan--tokyo',
+		name: 'Tokyo, Japan',
+		lat: 35.6762,
+		lng: 139.6503,
 		cams: [
 			{
-				id: 'ydYDqZQpim8',
-				name: 'Namib Desert, Namibia',
+				id: 'gFRtAAmiFbE',
+				name: 'Tokyo, Japan',
+			},
+			{
+				id: 'DjdUEyjx8GM',
+				name: 'Tokyo, Japan',
+			},
+			{
+				id: '3kPH7kTphnE',
+				name: 'Tokyo, Japan',
+			},
+			{
+				id: 'EcbnRfKOzT4',
+				name: 'Tokyo, Japan',
+			},
+			{
+				id: 'QOjmvL3e7Lc',
+				name: 'Tokyo, Japan',
 			},
 		]
 	},
 	{
-		id: 'israel--hula-valley',
-		name: 'Hula Valley, Israel',
-		lat: 33.1178,
-		lng: 35.6078,
+		id: 'australia--melbourne',
+		name: 'Melbourne, Australia',
+		lat: -37.8136,
+		lng: 144.9631,
 		cams: [
 			{
-				id: '-AmaIGvwt1c',
-				name: 'Hula Valley, Israel',
+				id: 'l_8DrACHpwY',
+				name: 'Melbourne, Australia',
+			},
+		]
+	},
+	{
+		id: 'australia--sydney',
+		name: 'Sydney, Australia',
+		lat: -33.8688,
+		lng: 151.2093,
+		cams: [
+			{
+				id: 'KPrrWB1eo1I',
+				name: 'Sydney, Australia',
 			},
 			{
-				id: 'bSBAX_o6gkw',
-				name: 'Hula Valley, Israel',
+				id: 'sWWCy2WCjRA',
+				name: 'Sydney, Australia',
 			},
 		]
 	},
