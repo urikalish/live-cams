@@ -22,6 +22,26 @@ export const cams = [
 		]
 	},
 	{
+		id: 'usa--florida',
+		name: 'Florida, USA',
+		lat: 27.6648,
+		lng: -81.5158,
+		cams: [
+			{
+				id: '-eqdD8qKBbM',
+				name: 'Fishing Pier Camera, Deerfield Beach, Florida, USA',
+			},
+			{
+				id: '06-9leYioUI',
+				name: 'Tini Martini Bar, St. Augustine, Florida',
+			},
+			{
+				id: 'cI5EqFMJaMI',
+				name: 'Duval Street, Key West, Florida',
+			},
+		]
+	},
+	{
 		id: 'usa--new-york',
 		name: 'New York, USA',
 		lat: 40.7580,
@@ -122,6 +142,18 @@ export const cams = [
 			{
 				id: 'nkPeVfnth1g',
 				name: 'The Hamptons, USA',
+			},
+		]
+	},
+	{
+		id: 'uk--oxford',
+		name: 'Oxford, UK',
+		lat: 51.7520,
+		lng: -1.2577,
+		cams: [
+			{
+				id: 'St7aTfoIdYQ',
+				name: 'Broad Street, Oxford',
 			},
 		]
 	},
