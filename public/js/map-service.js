@@ -58,7 +58,7 @@ export class MapService {
 					fillOpacity: 1,
 					strokeWeight: 0,
 					rotation: 270,
-					scale: 0.8,
+					scale: 1,
 					anchor: new google.maps.Point(12, 12),
 				};
 				issMarker = new google.maps.Marker({
@@ -74,7 +74,7 @@ export class MapService {
 			}
 			setTimeout(() => {
 				this.handleIssMapMarker(map, onMarkerClick, issMarker)
-			}, 1000);
+			}, 10000);
 		} catch(error) {
 			console.log(error);
 		}
