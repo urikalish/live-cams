@@ -260,20 +260,20 @@ export const cams = [
 				name: 'Lenny\'S Hotel, Chaweng Beach Road | Koh Samui | Thailand',
 			},
 			{
-				id: 'oUCFgOyKaOo',
-				name: 'Baobab | Lamai Beach | Koh Samui | Thailand',
+				id: '0EaQuajibHU',
+				name: 'Thong Sala Center | Koh Phangan | Thailand',
 			},
 			{
-				id: '-TA6sl32V4M',
-				name: 'Crystal Bay | Koh Samui | Thailand',
+				id: 'oUCFgOyKaOo',
+				name: 'Baobab | Lamai Beach | Koh Samui | Thailand',
 			},
 			{
 				id: 'HoHlSQoOWBk',
 				name: 'Thongson Beach | Koh Samui | Thailand',
 			},
 			{
-				id: '0EaQuajibHU',
-				name: 'Thong Sala Center | Koh Phangan | Thailand',
+				id: '-TA6sl32V4M',
+				name: 'Crystal Bay | Koh Samui | Thailand',
 			},
 		]
 	},
