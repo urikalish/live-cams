@@ -30,7 +30,7 @@ export class MapService {
 				fillOpacity: 1,
 				strokeWeight: 1,
 				rotation: 0,
-				scale: 0.5,
+				scale: 0.4,
 				anchor: new google.maps.Point(12, 12),
 			};
 			const marker = new google.maps.Marker({
