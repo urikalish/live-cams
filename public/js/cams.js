@@ -17,7 +17,7 @@ export const cams = [
 		cams: [
 			{
 				id: 'vvOjJoSEFM0',
-				name: 'Venice Beach, Los Angeles, USA',
+				name: 'Venice Beach | Los Angeles',
 			},
 		]
 	},
@@ -29,23 +29,23 @@ export const cams = [
 		cams: [
 			{
 				id: '-eqdD8qKBbM',
-				name: 'Fishing Pier Camera, Deerfield Beach, Florida',
+				name: 'Fishing Pier | Deerfield Beach | Florida',
 			},
 			{
 				id: 'arrs3t70B5g',
-				name: 'Deerfield Beach, Florida',
-			},
-			{
-				id: '-HAi_5IIAYg',
-				name: 'Deerfield Beach, Florida',
+				name: 'Sport Camera | Deerfield Beach | Florida',
 			},
 			{
 				id: '06-9leYioUI',
-				name: 'Tini Martini Bar, St. Augustine, Florida',
+				name: 'Tini Martini Bar | St. Augustine | Florida',
 			},
 			{
 				id: 'cI5EqFMJaMI',
-				name: 'Duval Street, Key West, Florida',
+				name: 'Duval Street | Key West | Florida',
+			},
+			{
+				id: '-HAi_5IIAYg',
+				name: 'Beach Camera | Deerfield Beach | Florida',
 			},
 		]
 	},
@@ -57,23 +57,23 @@ export const cams = [
 		cams: [
 			{
 				id: '1-iS7LArMPA',
-				name: 'Times Square, New York, USA',
+				name: 'Times Square | New York',
 			},
 			{
 				id: 'JS7yxHgYR-o',
-				name: 'Times Square, New York, USA',
+				name: 'Times Square | New York',
 			},
 			{
 				id: 'KGuCGd726RA',
-				name: 'Brooklyn Bridge, New York, USA',
+				name: 'Brooklyn Bridge | New York',
 			},
 			{
 				id: 'RowXUQ7Yn0I',
-				name: 'East River, New York, USA',
+				name: 'East River | New York',
 			},
 			{
 				id: 'Vj0XKu6AoOw',
-				name: 'Lower Manhattan and Harbor, New York, USA',
+				name: 'Lower Manhattan and Harbor | New York',
 			},
 		]
 	},
@@ -85,71 +85,71 @@ export const cams = [
 		cams: [
 			{
 				id: 'I2syMSm7uI0',
-				name: 'The Hamptons, USA',
+				name: 'Main Street | The Hamptons | Long Island',
 			},
 			{
 				id: 'tnWQVOnXmPw',
-				name: 'The Hamptons, USA',
+				name: 'Main Street | The Hamptons | Long Island',
 			},
 			{
 				id: 'Sc_fzjLJvF4',
-				name: 'The Hamptons, USA',
+				name: 'Main Street | The Hamptons | Long Island',
 			},
 			{
 				id: 'qVaeGwuVwgI',
-				name: 'The Hamptons, USA',
+				name: 'Main Street | The Hamptons | Long Island',
 			},
 			{
 				id: 'VswvsGpnKcg',
-				name: 'The Hamptons, USA',
+				name: 'Main Street | The Hamptons | Long Island',
 			},
 			{
 				id: 'n4JsqoELJ14',
-				name: 'The Hamptons, USA',
+				name: 'The Hamptons | Long Island',
 			},
 			{
 				id: 'v_xO4j5iCCU',
-				name: 'The Hamptons, USA',
+				name: 'The Hamptons | Long Island',
 			},
 			{
 				id: 'FfYGgT5iI_E',
-				name: 'The Hamptons, USA',
+				name: 'The Hamptons | Long Island',
 			},
 			{
 				id: 'SoAsJowkGyU',
-				name: 'The Hamptons, USA',
+				name: 'The Hamptons | Long Island',
 			},
 			{
 				id: 'TAQBuObk2d0',
-				name: 'The Hamptons, USA',
+				name: 'The Hamptons | Long Island',
 			},
 			{
 				id: 'a8nyuAMnYQo',
-				name: 'The Hamptons, USA',
+				name: 'The Hamptons | Long Island',
 			},
 			{
 				id: 'h0BV9beC8as',
-				name: 'The Hamptons, USA',
+				name: 'The Hamptons | Long Island',
 			},
 			{
 				id: 'eV22QCedn4g',
-				name: 'The Hamptons, USA',
+				name: 'The Hamptons | Long Island',
 			},
 			{
 				id: 'WdRQpwOWmwg',
-				name: 'The Hamptons, USA',
+				name: 'The Hamptons | Long Island',
 			},
 			{
 				id: 'vCYD6jNcisg',
-				name: 'The Hamptons, USA',
+				name: 'The Hamptons | Long Island',
 			},
 			{
 				id: 'PIIsQTFuo2Y',
-				name: 'The Hamptons, USA',
+				name: 'The Hamptons | Long Island',
 			},
 			{
 				id: 'nkPeVfnth1g',
-				name: 'The Hamptons, USA',
+				name: 'The Hamptons | Long Island',
 			},
 		]
 	},
@@ -161,15 +161,15 @@ export const cams = [
 		cams: [
 			{
 				id: '2wqpy036z24',
-				name: 'St. John Beach Bar',
+				name: 'Beach Bar | St. John | Virgin Islands',
 			},
 			{
 				id: 'MZgnOBBcPgQ',
-				name: 'St. John Spice',
+				name: 'Spice | St. John | Virgin Islands',
 			},
 			{
 				id: 'hpdmQYPsj30',
-				name: 'St. John Cruz Bay',
+				name: 'Cruz Bay | St. John | Virgin Islands',
 			},
 		]
 	},
@@ -181,7 +181,7 @@ export const cams = [
 		cams: [
 			{
 				id: 'St7aTfoIdYQ',
-				name: 'Broad Street, Oxford',
+				name: 'Broad Street | Oxford',
 			},
 		]
 	},
@@ -193,7 +193,7 @@ export const cams = [
 		cams: [
 			{
 				id: 'oTUOTTdqi7I',
-				name: 'Amsterdam, Netherlands',
+				name: 'Red Light District | Amsterdam | Netherlands',
 			},
 		]
 	},
@@ -205,7 +205,7 @@ export const cams = [
 		cams: [
 			{
 				id: 'HpZAez2oYsA',
-				name: 'Ponte delle Guglie, Venice, Italy',
+				name: 'Ponte delle Guglie | Venice | Italy',
 			},
 		]
 	},
@@ -217,7 +217,7 @@ export const cams = [
 		cams: [
 			{
 				id: 'ydYDqZQpim8',
-				name: 'Namib Desert, Namibia',
+				name: 'Namib Desert | Namibia',
 			},
 		]
 	},
@@ -229,31 +229,51 @@ export const cams = [
 		cams: [
 			{
 				id: '-AmaIGvwt1c',
-				name: 'Hula Valley, Israel',
+				name: 'Hula Valley | Israel',
 			},
 			{
 				id: 'bSBAX_o6gkw',
-				name: 'Hula Valley, Israel',
+				name: 'Hula Valley | Israel',
 			},
 		]
 	},
 	{
-		id: 'thailand--koh-samui',
+		id: 'thailand--islands',
 		name: 'Koh Samui, Thailand',
 		lat: 9.5120,
 		lng: 100.0136,
 		cams: [
 			{
+				id: 'f5bqiyGb6Rg',
+				name: 'Rich Club | Chaweng Beach Road | Koh Samui | Thailand',
+			},
+			{
 				id: 'Cy635CoTnEw',
-				name: 'Koh Samui, Thailand',
+				name: 'The Shack | Fisherman\'s Village | Koh Samui | Thailand',
 			},
 			{
 				id: '2hs4PAdPckk',
-				name: 'Koh Samui, Thailand',
+				name: 'Soi Green Mango | Chaweng Beach Road | Koh Samui | Thailand',
+			},
+			{
+				id: 'Ih8txUhr1Rk',
+				name: 'Lenny\'S Hotel, Chaweng Beach Road | Koh Samui | Thailand',
+			},
+			{
+				id: 'oUCFgOyKaOo',
+				name: 'Baobab | Lamai Beach | Koh Samui | Thailand',
 			},
 			{
 				id: '-TA6sl32V4M',
-				name: 'Koh Samui, Thailand',
+				name: 'Crystal Bay | Koh Samui | Thailand',
+			},
+			{
+				id: 'HoHlSQoOWBk',
+				name: 'Thongson Beach | Koh Samui | Thailand',
+			},
+			{
+				id: '0EaQuajibHU',
+				name: 'Thong Sala Center | Koh Phangan | Thailand',
 			},
 		]
 	},
@@ -265,11 +285,11 @@ export const cams = [
 		cams: [
 			{
 				id: 'KFpOsiMkMiU',
-				name: 'Davao City, Philippines',
+				name: 'Agdao | Davao City | Philippines',
 			},
 			{
 				id: '-I6qbjZk0HM',
-				name: 'Davao City, Philippines',
+				name: 'Agdao | Davao City | Philippines',
 			},
 		]
 	},
@@ -281,23 +301,23 @@ export const cams = [
 		cams: [
 			{
 				id: 'gFRtAAmiFbE',
-				name: 'Tokyo, Japan',
+				name: 'Kabukicho | Tokyo | Japan',
 			},
 			{
 				id: 'DjdUEyjx8GM',
-				name: 'Tokyo, Japan',
+				name: 'Shinjuku Kabukicho | Tokyo | Japan',
 			},
 			{
 				id: '3kPH7kTphnE',
-				name: 'Tokyo, Japan',
+				name: 'Shibuya Scramble Crossing | Tokyo | Japan',
 			},
 			{
 				id: 'EcbnRfKOzT4',
-				name: 'Tokyo, Japan',
+				name: 'Shibuya | Tokyo | Japan',
 			},
 			{
 				id: 'QOjmvL3e7Lc',
-				name: 'Tokyo, Japan',
+				name: 'Shiodome Rail Tracks | Tokyo | Japan',
 			},
 		]
 	},
@@ -309,7 +329,7 @@ export const cams = [
 		cams: [
 			{
 				id: 'l_8DrACHpwY',
-				name: 'Melbourne, Australia',
+				name: 'Melbourne | Australia',
 			},
 		]
 	},
@@ -321,11 +341,11 @@ export const cams = [
 		cams: [
 			{
 				id: 'KPrrWB1eo1I',
-				name: 'Sydney, Australia',
+				name: 'Harbour | Sydney | Australia',
 			},
 			{
 				id: 'sWWCy2WCjRA',
-				name: 'Sydney, Australia',
+				name: 'Harbour | Sydney | Australia',
 			},
 		]
 	},
