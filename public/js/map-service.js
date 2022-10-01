@@ -11,8 +11,8 @@ export class MapService {
 			});
 			setTimeout(() => {
 				this.addLocationMarkers(map, onMarkerClick, cams);
-				this.handleIssMapMarker(map, onMarkerClick, null).then(() => {
-				});
+				//this.handleIssMapMarker(map, onMarkerClick, null).then(() => {
+				//});
 			}, 1000);
 		}
 	}
@@ -47,7 +47,7 @@ export class MapService {
 
 	async handleIssMapMarker(map, onMarkerClick, issMarker) {
 		try {
-			const req = await fetch('http://api.open-notify.org/iss-now.json', {referrerPolicy: 'unsafe-url'});
+			const req = await fetch('http://api.open-notify.org/iss-now.json');
 			const json = await req.json();
 			const lat = Number(json.iss_position.latitude);
 			const lng = Number(json.iss_position.longitude);
