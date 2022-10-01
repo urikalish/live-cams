@@ -10,6 +10,18 @@ export const cams = [
 		]
 	},
 	{
+		id: 'usa--san-francisco',
+		name: 'San Francisco, USA',
+		lat: 37.7749,
+		lng: -122.4194,
+		cams: [
+			{
+				id: '6R-c7TcUMY8',
+				name: 'Castro Street | San Francisco',
+			},
+		]
+	},
+	{
 		id: 'usa--los-angeles',
 		name: 'Los Angeles, USA',
 		lat: 33.988270,
@@ -186,11 +198,27 @@ export const cams = [
 		]
 	},
 	{
+		id: 'spain--benidorm',
+		name: 'Benidorm, Spain',
+		lat: 38.5412,
+		lng: -0.1234,
+		cams: [
+			{
+				id: 'o0FKqXql87o',
+				name: 'Benidorm | Spain',
+			},
+		]
+	},
+	{
 		id: 'netherlands--amsterdam',
 		name: 'Amsterdam, Netherlands',
 		lat: 52.377956,
 		lng: 4.897070,
 		cams: [
+			{
+				id: '-5W4so8s0H8',
+				name: 'Dam | Amsterdam | Netherlands',
+			},
 			{
 				id: 'oTUOTTdqi7I',
 				name: 'Red Light District | Amsterdam | Netherlands',
@@ -254,11 +282,35 @@ export const cams = [
 		]
 	},
 	{
-		id: 'israel--hula-valley',
-		name: 'Hula Valley, Israel',
-		lat: 33.1178,
-		lng: 35.6078,
+		id: 'russia--st-petersburg',
+		name: 'St. Petersburg, Russia',
+		lat: 59.9311,
+		lng: 30.3609,
 		cams: [
+			{
+				id: 'rG13FY2ytno',
+				name: 'Nevskiy avenue | St. Petersburg | Russia',
+			},
+			{
+				id: 'h1wly909BYw',
+				name: 'Nevskiy avenue | St. Petersburg | Russia',
+			},
+			{
+				id: 'Cq0Hjm7JS9c',
+				name: 'Rubinstein Street | St. Petersburg | Russia',
+			},
+		]
+	},
+	{
+		id: 'israel',
+		name: 'Israel',
+		lat: 31.7683,
+		lng: 35.2137,
+		cams: [
+			{
+				id: '8EtxNFNgbtc',
+				name: 'The Western Wall | Jerusalem | Israel',
+			},
 			{
 				id: '-AmaIGvwt1c',
 				name: 'Hula Valley | Israel',
@@ -280,16 +332,32 @@ export const cams = [
 				name: 'Rich Club | Chaweng Beach Road | Koh Samui | Thailand',
 			},
 			{
-				id: 'Cy635CoTnEw',
-				name: 'The Shack | Fisherman\'s Village | Koh Samui | Thailand',
+				id: 'Ih8txUhr1Rk',
+				name: 'Lenny\'S Hotel | Chaweng Beach Road | Koh Samui | Thailand',
 			},
 			{
 				id: '2hs4PAdPckk',
 				name: 'Soi Green Mango | Chaweng Beach Road | Koh Samui | Thailand',
 			},
 			{
-				id: 'Ih8txUhr1Rk',
-				name: 'Lenny\'S Hotel, Chaweng Beach Road | Koh Samui | Thailand',
+				id: '3UiViF1Wzp0',
+				name: 'Outback Bar | Lamai | Koh Samui | Thailand',
+			},
+			{
+				id: 'JsaD2iPZsas',
+				name: 'Tropical Murphy\'s | Chaweng | Koh Samui | Thailand',
+			},
+			{
+				id: 'WVNIKU6_Om4',
+				name: 'Hooters | Chaweng | Koh Samui | Thailand',
+			},
+			{
+				id: 'Cy635CoTnEw',
+				name: 'The Shack | Fisherman\'s Village | Koh Samui | Thailand',
+			},
+			{
+				id: 'hIJs5p7ND0g',
+				name: 'Bondi Aussie Bar and Grill | Lamai | Koh Samui | Thailand',
 			},
 			{
 				id: '0EaQuajibHU',
@@ -315,6 +383,14 @@ export const cams = [
 		lat: 7.1907,
 		lng: 125.4553,
 		cams: [
+			{
+				id: 'X3Iwe_d5AVk',
+				name: 'Market Area | Agdao | Davao City | Philippines',
+			},
+			{
+				id: 'zu6yUYEERwA',
+				name: 'Market Area | Agdao | Davao City | Philippines',
+			},
 			{
 				id: 'KFpOsiMkMiU',
 				name: 'Agdao | Davao City | Philippines',
