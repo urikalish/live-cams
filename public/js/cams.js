@@ -55,10 +55,6 @@ export const cams = [
 				id: 'cI5EqFMJaMI',
 				name: 'Duval Street | Key West | Florida',
 			},
-			{
-				id: '-HAi_5IIAYg',
-				name: 'Beach Camera | Deerfield Beach | Florida',
-			},
 		]
 	},
 	{
@@ -78,10 +74,6 @@ export const cams = [
 			{
 				id: 'KGuCGd726RA',
 				name: 'Brooklyn Bridge | New York',
-			},
-			{
-				id: 'RowXUQ7Yn0I',
-				name: 'East River | New York',
 			},
 			{
 				id: 'Vj0XKu6AoOw',
@@ -226,6 +218,42 @@ export const cams = [
 		]
 	},
 	{
+		id: 'switzerland',
+		name: 'Switzerland',
+		lat: 46.8182,
+		lng: 8.2275,
+		cams: [
+			{
+				id: 'y3sMI1HtZfE',
+				name: 'Pont Bessières | Lausanne | Switzerland',
+			},
+			{
+				id: 'yDKJMdZTEXQ',
+				name: 'Verbier | Switzerland',
+			},
+		]
+	},
+	{
+		id: 'norway',
+		name: 'Norway',
+		lat: 60.4720,
+		lng: 8.4689,
+		cams: [
+			{
+				id: 'fpWVAZRb0R0',
+				name: 'NordfjordHjort | Norway',
+			},
+			{
+				id: '-VxViCUlZVk',
+				name: 'Måløy | Norway',
+			},
+			{
+				id: '5VoO4DGb3K4',
+				name: 'Hammerfest Havn | Norway',
+			},
+		]
+	},
+	{
 		id: 'italy--venice',
 		name: 'Venice, Italy',
 		lat: 45.438759,
@@ -248,8 +276,16 @@ export const cams = [
 				name: 'Bacino di San Marco | Venice | Italy',
 			},
 			{
+				id: 'rVyP35EHCzY',
+				name: 'San Marco Basin | Venice | Italy',
+			},
+			{
 				id: 'WjOGhNDX51M',
 				name: 'Campo Santa Maria Formosa | Venice | Italy',
+			},
+			{
+				id: 'eE6VVJ3hvv8',
+				name: 'St. Mark\'s Basin | Venice | Italy',
 			},
 			{
 				id: 'JqUREqYduHw',
@@ -258,14 +294,6 @@ export const cams = [
 			{
 				id: 'oOcqSm7PMBU',
 				name: 'Campiello Marinoni | Venice | Italy',
-			},
-			{
-				id: 'rVyP35EHCzY',
-				name: 'San Marco Basin | Venice | Italy',
-			},
-			{
-				id: 'eE6VVJ3hvv8',
-				name: 'St. Mark\'s Basin | Venice | Italy',
 			},
 		]
 	},
@@ -328,12 +356,8 @@ export const cams = [
 		lng: 100.0136,
 		cams: [
 			{
-				id: 'f5bqiyGb6Rg',
-				name: 'Rich Club | Chaweng Beach Road | Koh Samui | Thailand',
-			},
-			{
-				id: 'Ih8txUhr1Rk',
-				name: 'Lenny\'S Hotel | Chaweng Beach Road | Koh Samui | Thailand',
+				id: 'Cy635CoTnEw',
+				name: 'The Shack | Fisherman\'s Village | Koh Samui | Thailand',
 			},
 			{
 				id: '2hs4PAdPckk',
@@ -350,10 +374,6 @@ export const cams = [
 			{
 				id: 'JsaD2iPZsas',
 				name: 'Tropical Murphy\'s | Chaweng | Koh Samui | Thailand',
-			},
-			{
-				id: 'Cy635CoTnEw',
-				name: 'The Shack | Fisherman\'s Village | Koh Samui | Thailand',
 			},
 			{
 				id: 'hIJs5p7ND0g',
