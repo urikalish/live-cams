@@ -358,6 +358,8 @@ export const cams = [
 			{
 				id: 'Cy635CoTnEw',
 				name: 'The Shack | Fisherman\'s Village | Koh Samui | Thailand',
+				lat: 9.5603,
+				lng: 100.0293,
 			},
 			{
 				id: '2hs4PAdPckk',
@@ -382,10 +384,8 @@ export const cams = [
 			{
 				id: '0EaQuajibHU',
 				name: 'Thong Sala Center | Koh Phangan | Thailand',
-			},
-			{
-				id: 'oUCFgOyKaOo',
-				name: 'Baobab | Lamai Beach | Koh Samui | Thailand',
+				lat: 9.7122,
+				lng: 99.9867,
 			},
 			{
 				id: 'HoHlSQoOWBk',
@@ -394,6 +394,10 @@ export const cams = [
 			{
 				id: '-TA6sl32V4M',
 				name: 'Crystal Bay | Koh Samui | Thailand',
+			},
+			{
+				id: 'oUCFgOyKaOo',
+				name: 'Baobab | Lamai Beach | Koh Samui | Thailand',
 			},
 		]
 	},
