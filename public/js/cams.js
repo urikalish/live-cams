@@ -10,18 +10,6 @@ export const cams = [
 		]
 	},
 	{
-		id: 'usa--san-francisco',
-		name: 'San Francisco, USA',
-		lat: 37.7749,
-		lng: -122.4194,
-		cams: [
-			{
-				id: '6R-c7TcUMY8',
-				name: 'Castro Street | San Francisco',
-			},
-		]
-	},
-	{
 		id: 'usa--los-angeles',
 		name: 'Los Angeles, USA',
 		lat: 33.988270,
@@ -39,14 +27,6 @@ export const cams = [
 		lat: 27.6648,
 		lng: -81.5158,
 		cams: [
-			{
-				id: '-eqdD8qKBbM',
-				name: 'Fishing Pier | Deerfield Beach | Florida',
-			},
-			{
-				id: 'arrs3t70B5g',
-				name: 'Sport Camera | Deerfield Beach | Florida',
-			},
 			{
 				id: '06-9leYioUI',
 				name: 'Tini Martini Bar | St. Augustine | Florida',
@@ -112,15 +92,7 @@ export const cams = [
 				name: 'The Hamptons | Long Island',
 			},
 			{
-				id: 'v_xO4j5iCCU',
-				name: 'The Hamptons | Long Island',
-			},
-			{
 				id: 'FfYGgT5iI_E',
-				name: 'The Hamptons | Long Island',
-			},
-			{
-				id: 'SoAsJowkGyU',
 				name: 'The Hamptons | Long Island',
 			},
 			{
@@ -190,34 +162,6 @@ export const cams = [
 		]
 	},
 	{
-		id: 'spain--benidorm',
-		name: 'Benidorm, Spain',
-		lat: 38.5412,
-		lng: -0.1234,
-		cams: [
-			{
-				id: 'o0FKqXql87o',
-				name: 'Benidorm | Spain',
-			},
-		]
-	},
-	{
-		id: 'netherlands--amsterdam',
-		name: 'Amsterdam, Netherlands',
-		lat: 52.377956,
-		lng: 4.897070,
-		cams: [
-			{
-				id: '-5W4so8s0H8',
-				name: 'Dam | Amsterdam | Netherlands',
-			},
-			{
-				id: 'oTUOTTdqi7I',
-				name: 'Red Light District | Amsterdam | Netherlands',
-			},
-		]
-	},
-	{
 		id: 'switzerland',
 		name: 'Switzerland',
 		lat: 46.8182,
@@ -239,10 +183,6 @@ export const cams = [
 		lat: 60.4720,
 		lng: 8.4689,
 		cams: [
-			{
-				id: 'fpWVAZRb0R0',
-				name: 'NordfjordHjort | Norway',
-			},
 			{
 				id: '-VxViCUlZVk',
 				name: 'Måløy | Norway',
@@ -336,10 +276,6 @@ export const cams = [
 		lng: 35.2137,
 		cams: [
 			{
-				id: '8EtxNFNgbtc',
-				name: 'The Western Wall | Jerusalem | Israel',
-			},
-			{
 				id: '-AmaIGvwt1c',
 				name: 'Hula Valley | Israel',
 			},
@@ -382,22 +318,8 @@ export const cams = [
 				name: 'Bondi Aussie Bar and Grill | Lamai | Koh Samui | Thailand',
 			},
 			{
-				id: '0EaQuajibHU',
-				name: 'Thong Sala Center | Koh Phangan | Thailand',
-				lat: 9.7122,
-				lng: 99.9867,
-			},
-			{
 				id: 'HoHlSQoOWBk',
 				name: 'Thongson Beach | Koh Samui | Thailand',
-			},
-			{
-				id: '-TA6sl32V4M',
-				name: 'Crystal Bay | Koh Samui | Thailand',
-			},
-			{
-				id: 'oUCFgOyKaOo',
-				name: 'Baobab | Lamai Beach | Koh Samui | Thailand',
 			},
 		]
 	},
@@ -442,10 +364,6 @@ export const cams = [
 			{
 				id: '3kPH7kTphnE',
 				name: 'Shibuya Scramble Crossing | Tokyo | Japan',
-			},
-			{
-				id: 'EcbnRfKOzT4',
-				name: 'Shibuya | Tokyo | Japan',
 			},
 			{
 				id: 'QOjmvL3e7Lc',
