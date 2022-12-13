@@ -4,7 +4,11 @@ export const cams = [
 		name: 'International Space Station',
 		cams: [
 			{
-				id: '86YLFOog4GM',
+				id: 'mBzrxNHF2u8',
+				name: 'International Space Station',
+			},
+			{
+				id: 'Wcb5TICf59s',
 				name: 'International Space Station',
 			},
 		]
