@@ -96,19 +96,7 @@ export const cams = [
 				name: 'The Hamptons | Long Island',
 			},
 			{
-				id: 'FfYGgT5iI_E',
-				name: 'The Hamptons | Long Island',
-			},
-			{
-				id: 'TAQBuObk2d0',
-				name: 'The Hamptons | Long Island',
-			},
-			{
 				id: 'a8nyuAMnYQo',
-				name: 'The Hamptons | Long Island',
-			},
-			{
-				id: 'h0BV9beC8as',
 				name: 'The Hamptons | Long Island',
 			},
 			{
@@ -117,14 +105,6 @@ export const cams = [
 			},
 			{
 				id: 'WdRQpwOWmwg',
-				name: 'The Hamptons | Long Island',
-			},
-			{
-				id: 'vCYD6jNcisg',
-				name: 'The Hamptons | Long Island',
-			},
-			{
-				id: 'PIIsQTFuo2Y',
 				name: 'The Hamptons | Long Island',
 			},
 			{
@@ -302,10 +282,6 @@ export const cams = [
 				lng: 100.0293,
 			},
 			{
-				id: '2hs4PAdPckk',
-				name: 'Soi Green Mango | Chaweng Beach Road | Koh Samui | Thailand',
-			},
-			{
 				id: '3UiViF1Wzp0',
 				name: 'Outback Bar | Lamai | Koh Samui | Thailand',
 			},
@@ -340,14 +316,6 @@ export const cams = [
 			{
 				id: 'zu6yUYEERwA',
 				name: 'Market Area | Agdao | Davao City | Philippines',
-			},
-			{
-				id: 'KFpOsiMkMiU',
-				name: 'Agdao | Davao City | Philippines',
-			},
-			{
-				id: '-I6qbjZk0HM',
-				name: 'Agdao | Davao City | Philippines',
 			},
 		]
 	},
