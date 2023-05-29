@@ -14,34 +14,6 @@ export const cams = [
 		]
 	},
 	{
-		id: 'usa--los-angeles',
-		name: 'Los Angeles, USA',
-		lat: 33.988270,
-		lng: -118.472023,
-		cams: [
-			{
-				id: 'vvOjJoSEFM0',
-				name: 'Venice Beach | Los Angeles',
-			},
-		]
-	},
-	{
-		id: 'usa--florida',
-		name: 'Florida, USA',
-		lat: 27.6648,
-		lng: -81.5158,
-		cams: [
-			{
-				id: '06-9leYioUI',
-				name: 'Tini Martini Bar | St. Augustine | Florida',
-			},
-			{
-				id: 'cI5EqFMJaMI',
-				name: 'Duval Street | Key West | Florida',
-			},
-		]
-	},
-	{
 		id: 'usa--new-york',
 		name: 'New York, USA',
 		lat: 40.7580,
@@ -49,10 +21,6 @@ export const cams = [
 		cams: [
 			{
 				id: '1-iS7LArMPA',
-				name: 'Times Square | New York',
-			},
-			{
-				id: 'JS7yxHgYR-o',
 				name: 'Times Square | New York',
 			},
 			{
@@ -72,19 +40,11 @@ export const cams = [
 		lng: -72.3548,
 		cams: [
 			{
-				id: 'I2syMSm7uI0',
-				name: 'Main Street | The Hamptons | Long Island',
-			},
-			{
 				id: 'tnWQVOnXmPw',
 				name: 'Main Street | The Hamptons | Long Island',
 			},
 			{
 				id: 'Sc_fzjLJvF4',
-				name: 'Main Street | The Hamptons | Long Island',
-			},
-			{
-				id: 'qVaeGwuVwgI',
 				name: 'Main Street | The Hamptons | Long Island',
 			},
 			{
@@ -101,10 +61,6 @@ export const cams = [
 			},
 			{
 				id: 'eV22QCedn4g',
-				name: 'The Hamptons | Long Island',
-			},
-			{
-				id: 'WdRQpwOWmwg',
 				name: 'The Hamptons | Long Island',
 			},
 			{
@@ -208,10 +164,6 @@ export const cams = [
 				name: 'Campo Santa Maria Formosa | Venice | Italy',
 			},
 			{
-				id: 'eE6VVJ3hvv8',
-				name: 'St. Mark\'s Basin | Venice | Italy',
-			},
-			{
 				id: 'JqUREqYduHw',
 				name: 'Dorsoduro | Venice | Italy',
 			},
@@ -243,14 +195,6 @@ export const cams = [
 				id: 'rG13FY2ytno',
 				name: 'Nevskiy avenue | St. Petersburg | Russia',
 			},
-			{
-				id: 'h1wly909BYw',
-				name: 'Nevskiy avenue | St. Petersburg | Russia',
-			},
-			{
-				id: 'Cq0Hjm7JS9c',
-				name: 'Rubinstein Street | St. Petersburg | Russia',
-			},
 		]
 	},
 	{
@@ -261,10 +205,6 @@ export const cams = [
 		cams: [
 			{
 				id: '-AmaIGvwt1c',
-				name: 'Hula Valley | Israel',
-			},
-			{
-				id: 'bSBAX_o6gkw',
 				name: 'Hula Valley | Israel',
 			},
 		]
@@ -286,36 +226,12 @@ export const cams = [
 				name: 'Outback Bar | Lamai | Koh Samui | Thailand',
 			},
 			{
-				id: 'WVNIKU6_Om4',
-				name: 'Hooters | Chaweng | Koh Samui | Thailand',
-			},
-			{
 				id: 'JsaD2iPZsas',
 				name: 'Tropical Murphy\'s | Chaweng | Koh Samui | Thailand',
 			},
 			{
 				id: 'hIJs5p7ND0g',
 				name: 'Bondi Aussie Bar and Grill | Lamai | Koh Samui | Thailand',
-			},
-			{
-				id: 'HoHlSQoOWBk',
-				name: 'Thongson Beach | Koh Samui | Thailand',
-			},
-		]
-	},
-	{
-		id: 'philippines--davao-city',
-		name: 'Davao City, Philippines',
-		lat: 7.1907,
-		lng: 125.4553,
-		cams: [
-			{
-				id: 'X3Iwe_d5AVk',
-				name: 'Market Area | Agdao | Davao City | Philippines',
-			},
-			{
-				id: 'zu6yUYEERwA',
-				name: 'Market Area | Agdao | Davao City | Philippines',
 			},
 		]
 	},
@@ -336,10 +252,6 @@ export const cams = [
 			{
 				id: '3kPH7kTphnE',
 				name: 'Shibuya Scramble Crossing | Tokyo | Japan',
-			},
-			{
-				id: 'QOjmvL3e7Lc',
-				name: 'Shiodome Rail Tracks | Tokyo | Japan',
 			},
 		]
 	},
