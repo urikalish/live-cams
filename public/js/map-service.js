@@ -18,29 +18,29 @@ export class MapService {
 	}
 
 	addLocationMarkers(map, onMarkerClick, cams) {
-		cams.forEach(location => {
-			const lat = location.lat;
-			const lng = location.lng;
-			if (!lat || !lng) {
+		cams.forEach(cam => {
+			const lat = Number.parseFloat(cam.lat);
+			const lng = Number.parseFloat(cam.lng);
+			if (!cam.src || !lat || !lng) {
 				return;
 			}
 			const svgMarker = {
 				path: 'M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2z',
-				fillColor: '#f00',
+				fillColor: cam.src.includes('youtube.com') ? '#f00' : '#ff0',
 				fillOpacity: 1,
 				strokeWeight: 1,
 				rotation: 0,
-				scale: 0.4,
+				scale: 0.3,
 				anchor: new google.maps.Point(12, 12),
 			};
 			const marker = new google.maps.Marker({
 				position: {lat, lng},
 				icon: svgMarker,
-				title: location.name,
+				title: cam.name,
 				map,
 			});
 			google.maps.event.addListener(marker, 'click', () => {
-				onMarkerClick(location.id);
+				onMarkerClick(cam);
 			});
 		});
 	}
@@ -76,7 +76,15 @@ export class MapService {
 					map,
 				});
 				google.maps.event.addListener(issMarker, 'click', function () {
-					onMarkerClick('space--iss');
+					const issCam = {
+						"name": "The International Space Station",
+						"loc": "Space/Earth's orbit",
+						"tags": "Astronomy",
+						"src": "https://www.youtube.com/embed/itdpuGHAcpg",
+						"lat": lat.toString(),
+						"lng": lng.toString()
+					}
+					onMarkerClick(issCam);
 				});
 			} else {
 				issMarker.setPosition({lat, lng});

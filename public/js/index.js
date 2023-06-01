@@ -2,8 +2,8 @@ import { cams } from './cams.js';
 import { MapService} from './map-service.js';
 import { CamService} from './cam-service.js';
 
-function handleMarkerClick(locationId) {
-	camService.displayLiveCams(cams, locationId);
+function handleMarkerClick(cam) {
+	camService.displayLiveCam(cam);
 }
 
 const mapService = new MapService();
