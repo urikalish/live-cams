@@ -1,7 +1,7 @@
 export class CamService {
 
 	getCamStr(cam) {
-		return `${cam.name} | ${cam.geo} | ${cam.tags} | ${cam.lat} | ${cam.lng}`;
+		return `${cam.name} | ${cam.geo} | ${cam.tags} | ${cam.lat} | ${cam.lng} | ${cam.src}`;
 	}
 
 	fixCameraList(wctCams, fixCams) {
@@ -9,13 +9,11 @@ export class CamService {
 		let i;
 
 		i = 0;
-		let found = false;
-		while (i < wctCams.length && !found) {
+		while (i < wctCams.length) {
 			for (const [fixedCamId, fixedCamValues] of Object.entries(fixCams)) {
-				if (wctCams[i].src.includes(fixedCamId)) {
-					found = true;
+				if (wctCams[i].src.includes(fixedCamId) || fixedCamId === `${wctCams[i].lat},${wctCams[i].lng}`) {
 					wctCams[i] = {...wctCams[i], ...fixedCamValues};
-					console.log(`Fixed camera | ${this.getCamStr(wctCams[i])}`);
+					console.log(`Fixed | ${this.getCamStr(wctCams[i])}`);
 				}
 			}
 			i++;
@@ -25,7 +23,7 @@ export class CamService {
 		while (i < wctCams.length) {
 			const cam = wctCams[i];
 			if (!cam.src) {
-				console.log(`Removed camera for lack of source | ${this.getCamStr(cam)}`);
+				console.log(`No source | ${this.getCamStr(cam)}`);
 				wctCams.splice(i, 1);
 			} else {
 				++i;
@@ -36,7 +34,7 @@ export class CamService {
 		while (i < wctCams.length) {
 			const cam = wctCams[i];
 			if (!cam.lat || !cam.lng) {
-				console.log(`Removed camera for lack of location | ${this.getCamStr(cam)}`);
+				console.log(`No location | ${this.getCamStr(cam)}`);
 				wctCams.splice(i, 1);
 			} else {
 				++i;
@@ -57,7 +55,7 @@ export class CamService {
 				if (sameCam.tags.length < cam.tags.length) {
 					sameCam.tags = cam.tags;
 				}
-				console.log(`Removed camera for duplication | ${this.getCamStr(cam)}`);
+				console.log(`Duplicated | ${this.getCamStr(cam)}`);
 				wctCams.splice(i, 1);
 			} else {
 				++i;
