@@ -30,11 +30,11 @@ export class MapService {
 
 		const markers = [];
 		cams.forEach(cam => {
-			const lat = Number.parseFloat(cam.lat);
-			const lng = Number.parseFloat(cam.lng);
-			if (!cam.src || !lat || !lng) {
+			if (!cam.src || !cam.pos) {
 				return;
 			}
+			const lat = Number.parseFloat(cam.pos.split(',')[0]);
+			const lng = Number.parseFloat(cam.pos.split(',')[1]);
 			const redPinStyle = new PinElement({
 				scale: 0.25,
 				background: '#f00'
