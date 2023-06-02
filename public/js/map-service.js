@@ -30,7 +30,7 @@ export class MapService {
 				return;
 			}
 			const pinScaled = new PinElement({
-				scale: 0.4,
+				scale: 0.25,
 			});
 			const marker = new AdvancedMarkerElement({
 				map,
