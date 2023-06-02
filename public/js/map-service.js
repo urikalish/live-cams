@@ -6,7 +6,7 @@ export class MapService {
 
 		const map = new Map(document.getElementById("map"), {
 			zoom: 2,
-			center: {lat: 21, lng: 21},
+			center: {lat: 20, lng: 11},
 			mapId: "world-map",
 			labels: false,
 			disableDefaultUI: true,
@@ -14,7 +14,12 @@ export class MapService {
 			//mapTypeId: 'satellite',
 			mapTypeId: 'hybrid'
 		});
-
+		map.addListener('zoom_changed', () => {
+			// const zoom = map.getZoom();
+			// if (zoom) {
+			// 	const scale = 0.0416667 * zoom + 0.1666666;
+			// }
+		});
 		await this.addLocationMarkers(map, wctCams, onMarkerClick);
 		await this.handleIssMapMarker(map, issCam, null, onMarkerClick);
 	}
@@ -23,26 +28,34 @@ export class MapService {
 		//@ts-ignore
 		const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary('marker');
 
+		const markers = [];
 		cams.forEach(cam => {
 			const lat = Number.parseFloat(cam.lat);
 			const lng = Number.parseFloat(cam.lng);
 			if (!cam.src || !lat || !lng) {
 				return;
 			}
-			const pinScaled = new PinElement({
+			const redPinStyle = new PinElement({
 				scale: 0.25,
+				background: '#f00'
+			});
+			const yellowPinStyle  = new PinElement({
+				scale: 0.25,
+				background: '#ff0'
 			});
 			const marker = new AdvancedMarkerElement({
 				map,
 				position: {lat, lng},
 				title: cam.name,
-				content: pinScaled.element,
-				collisionBehavior: 'OPTIONAL_AND_HIDES_LOWER_PRIORITY'
+				content: cam.src.includes('youtube.com') ? redPinStyle.element : yellowPinStyle.element
+				//collisionBehavior: 'OPTIONAL_AND_HIDES_LOWER_PRIORITY'
 			});
 			marker.addListener('click', () => {
 				onMarkerClick(cam);
 			});
+			markers.push(marker);
 		});
+		return markers;
 	}
 
 	async handleIssMapMarker(map, issCam, issMarker, onMarkerClick) {
