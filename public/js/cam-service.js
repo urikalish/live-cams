@@ -73,6 +73,9 @@ export class CamService {
 				if (sameCam.tags.length < cam.tags.length) {
 					sameCam.tags = cam.tags;
 				}
+				if (sameCam.name !== cam.name) {
+					sameCam.name = `${sameCam.name} / ${cam.name}`;
+				}
 				console.log(`Duplicated | ${this.getCamStr(cam)}`);
 				wctCams.splice(i, 1);
 			} else {
