@@ -1,5 +1,55 @@
 export class CamService {
 
+	fixCameraList(wctCams) {
+		console.log(`Number of cameras before fix: ${wctCams.length}`);
+		let i;
+
+		i = 0;
+		while (i < wctCams.length) {
+			const cam = wctCams[i];
+			if (!cam.src) {
+				console.log(`Removed camera for lack of source | ${cam.name} | ${cam.geo} | ${cam.tags}`);
+				wctCams.splice(i, 1);
+			} else {
+				++i;
+			}
+		}
+
+		i = 0;
+		while (i < wctCams.length) {
+			const cam = wctCams[i];
+			if (!cam.lat || !cam.lng) {
+				console.log(`Removed camera for lack of location | ${cam.name} | ${cam.geo} | ${cam.tags}`);
+				wctCams.splice(i, 1);
+			} else {
+				++i;
+			}
+		}
+
+		i = 0;
+		while (i < wctCams.length) {
+			const cam = wctCams[i];
+			let sameCam = null;
+			for (let j = 0; j < i; j++) {
+				if (wctCams[i].src === wctCams[j].src) {
+					sameCam = wctCams[j];
+					break;
+				}
+			}
+			if (sameCam) {
+				if (sameCam.tags.length < cam.tags.length) {
+					sameCam.tags = cam.tags;
+				}
+				console.log(`Removed camera for duplication | ${cam.name} | ${cam.geo} | ${cam.tags}`);
+				wctCams.splice(i, 1);
+			} else {
+				++i;
+			}
+		}
+
+		console.log(`Number of cameras after fix: ${wctCams.length}`);
+	}
+
 	addSrcQueryParams(src) {
 		const srcLocation = src.split('?')[0];
 		const srcQuery = src.replace(srcLocation, '').replace('?', '');

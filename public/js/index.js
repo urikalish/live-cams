@@ -3,13 +3,16 @@ import { issCam } from '../cameras/iss-cam.js';
 import { MapService} from './map-service.js';
 import { CamService} from './cam-service.js';
 
+const mapService = new MapService();
+const camService = new CamService();
+
 function handleMarkerClick(cam) {
 	camService.displayLiveCam(cam);
 }
-
-const mapService = new MapService();
-const camService = new CamService();
 window.handleGoogleMapLoaded = function() {
 	mapService.init(wctCams, issCam, handleMarkerClick).then(()=>{});
 }
-//camService.displayLiveCams(cams, 'space--iss');
+
+camService.fixCameraList(wctCams);
+//camService.displayLiveCam(issCam);
+
