@@ -70,10 +70,13 @@ export class CamService {
 				}
 			}
 			if (sameCam) {
-				if (sameCam.tags.length < cam.tags.length) {
-					sameCam.tags = cam.tags;
+				if (cam.tags !== sameCam.tags) {
+					const tagSet = new Set();
+					sameCam.tags.split(',').forEach(t => tagSet.add(t));
+					cam.tags.split(',').forEach(t => tagSet.add(t));
+					sameCam.tags = Array.from(tagSet).join(',');
 				}
-				if (sameCam.name !== cam.name) {
+				if (cam.name !== sameCam.name) {
 					sameCam.name = `${sameCam.name} / ${cam.name}`;
 				}
 				console.log(`Duplicated | ${this.getCamStr(cam)}`);
