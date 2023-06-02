@@ -1,4 +1,4 @@
-export const cams =
+export const wctCams =
 [
   {
     "name": "Elvis' Beach Bar Cam, Anguilla",
