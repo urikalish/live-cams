@@ -12,7 +12,7 @@ export class CamService {
 		while (i < wctCams.length) {
 			let isRemoved = false;
 			for (const [fixedCamId, fixedCamValues] of Object.entries(fixCams)) {
-				if (wctCams[i].src.includes(fixedCamId) || fixedCamId === `${wctCams[i].lat},${wctCams[i].lng}` && fixedCamValues._action === 'remove') {
+				if ((wctCams[i].src.includes(fixedCamId) || fixedCamId === `${wctCams[i].lat},${wctCams[i].lng}`) && fixedCamValues._action === 'remove') {
 					console.log(`Removed | ${this.getCamStr(wctCams[i])}`);
 					wctCams.splice(i, 1);
 					isRemoved = true;
@@ -27,8 +27,9 @@ export class CamService {
 		i = 0;
 		while (i < wctCams.length) {
 			for (const [fixedCamId, fixedCamValues] of Object.entries(fixCams)) {
-				if (wctCams[i].src.includes(fixedCamId) || fixedCamId === `${wctCams[i].lat},${wctCams[i].lng}` && fixedCamValues._action !== 'remove') {
-					wctCams[i] = {...wctCams[i], ...fixedCamValues};
+				const cam = wctCams[i];
+				if ((cam.src.includes(fixedCamId) || fixedCamId === `${cam.lat},${cam.lng}`) && fixedCamValues._action !== 'remove') {
+					wctCams[i] = {...cam, ...fixedCamValues};
 					console.log(`Fixed | ${this.getCamStr(wctCams[i])}`);
 					break;
 				}
