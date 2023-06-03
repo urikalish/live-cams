@@ -16,7 +16,7 @@ export class CamService {
 			let isRemoved = false;
 			for (const [fixedCamId, fixedCamValues] of Object.entries(fixCams)) {
 				if ((this.cams[i].src.includes(fixedCamId) || fixedCamId === this.cams[i].pos) && fixedCamValues._action === 'remove') {
-					console.log(`Removed | ${this.getCamStr(this.cams[i])}`);
+					//console.log(`Removed | ${this.getCamStr(this.cams[i])}`);
 					this.cams.splice(i, 1);
 					isRemoved = true;
 					break;
@@ -35,7 +35,7 @@ export class CamService {
 				const cam = this.cams[i];
 				if ((cam.src.includes(fixedCamId) || fixedCamId === this.cams[i].pos) && fixedCamValues._action !== 'remove') {
 					this.cams[i] = {...cam, ...fixedCamValues};
-					console.log(`Updated | ${this.getCamStr(this.cams[i])}`);
+					//console.log(`Updated | ${this.getCamStr(this.cams[i])}`);
 					break;
 				}
 			}
@@ -48,7 +48,7 @@ export class CamService {
 		while (i < this.cams.length) {
 			const cam = this.cams[i];
 			if (!cam.src) {
-				console.log(`No source | ${this.getCamStr(cam)}`);
+				//console.log(`No source | ${this.getCamStr(cam)}`);
 				this.cams.splice(i, 1);
 			} else {
 				i++;
@@ -61,7 +61,7 @@ export class CamService {
 		while (i < this.cams.length) {
 			const cam = this.cams[i];
 			if (!cam.pos) {
-				console.log(`No position | ${this.getCamStr(cam)}`);
+				//console.log(`No position | ${this.getCamStr(cam)}`);
 				this.cams.splice(i, 1);
 			} else {
 				i++;
@@ -73,28 +73,31 @@ export class CamService {
 		let i = 0;
 		while (i < this.cams.length) {
 			const cam = this.cams[i];
-			let sameCam = null;
+			let prevCam = null;
 			for (let j = 0; j < i; j++) {
 				if (this.cams[i].src === this.cams[j].src) {
-					sameCam = this.cams[j];
+					prevCam = this.cams[j];
 					break;
 				}
 			}
-			if (sameCam) {
-				if (cam.tags !== sameCam.tags) {
-					const tagSet = new Set();
-					sameCam.tags.split(',').forEach(t => tagSet.add(t));
-					cam.tags.split(',').forEach(t => tagSet.add(t));
-					sameCam.tags = Array.from(tagSet).join(',');
-				}
-				if (cam.name !== sameCam.name) {
-					if (cam.name.includes(sameCam.name) && cam.name.length > sameCam.name.length) {
-						sameCam.name = cam.name;
+			if (prevCam) {
+				if (cam.name !== prevCam.name) {
+					if (cam.name.includes(prevCam.name) && cam.name.length > prevCam.name.length) {
+						prevCam.name = cam.name;
 					} else {
-						sameCam.name = `${sameCam.name} / ${cam.name}`;
+						prevCam.name = `${prevCam.name} / ${cam.name}`;
 					}
 				}
-				console.log(`Duplicated | ${this.getCamStr(cam)}`);
+				if (cam.position && !prevCam.position) {
+					prevCam.position = cam.position;
+				}
+				if (cam.tags !== prevCam.tags) {
+					const tagSet = new Set();
+					prevCam.tags.split(',').forEach(t => tagSet.add(t));
+					cam.tags.split(',').forEach(t => tagSet.add(t));
+					prevCam.tags = Array.from(tagSet).join(',');
+				}
+				//console.log(`Duplicated | ${this.getCamStr(cam)}`);
 				this.cams.splice(i, 1);
 			} else {
 				i++;
@@ -107,12 +110,12 @@ export class CamService {
 			let match = /(^https:\/\/www\.youtube\.com\/embed\/live_stream\?channel=)([0-9a-zA-Z_-]*)/.exec(cam.src);
 			if (match && match[2]) {
 				cam.ytc = match[2];
-				console.log(`ID added | ${this.getCamStr(cam)}`);
+				//console.log(`YT channel | ${this.getCamStr(cam)}`);
 			} else {
 				match = /(^https:\/\/www\.youtube\.com\/embed\/)([0-9a-zA-Z_-]*)/.exec(cam.src);
 				if (match && match[2]) {
 					cam.ytv = match[2];
-					console.log(`ID added | ${this.getCamStr(cam)}`);
+					//console.log(`YT video | ${this.getCamStr(cam)}`);
 				}
 			}
 		});
@@ -123,9 +126,9 @@ export class CamService {
 		console.log(`Number of cameras before fix: ${this.cams.length}`);
 		this.removeDeadCams(fixCams);
 		this.updateCams(fixCams);
+		this.handleDuplicatedCams();
 		this.removeNoSourceCams();
 		this.removeNoPositionCams();
-		this.handleDuplicatedCams();
 		this.addYouTubeIds();
 		console.log(`Number of cameras after fix: ${this.cams.length}`);
 	}
