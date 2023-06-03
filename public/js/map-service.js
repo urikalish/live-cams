@@ -24,7 +24,7 @@ export class MapService {
 		return pinElement.element;
 	}
 
-	async init(cams, issCam, onMarkerClick) {
+	async init(cams, issCam, activateCamsForMarkers) {
 		//@ts-ignore
 		const { Map } = await google.maps.importLibrary('maps');
 		//@ts-ignore
@@ -52,8 +52,8 @@ export class MapService {
 			this.mapZoom = mapZoom;
 			debouncePinUpdate();
 		});
-		await this.addLocationMarkers(this.map, cams, onMarkerClick);
-		await this.handleIssMapMarker(this.map, issCam, onMarkerClick);
+		await this.addLocationMarkers(this.map, cams, activateCamsForMarkers);
+		await this.handleIssMapMarker(this.map, issCam, activateCamsForMarkers);
 	}
 
 	getMarkerTitle(cam) {
@@ -64,7 +64,7 @@ export class MapService {
 		return `${cam.name}\n${geo}\n${lat}, ${lng}${tags ? '\n' + tags : ''}`;
 	}
 
-	async addLocationMarkers(map, cams, onMarkerClick) {
+	async addLocationMarkers(map, cams, activateCamsForMarkers) {
 		//@ts-ignore
 		const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary('marker');
 
@@ -89,7 +89,8 @@ export class MapService {
 				this.selectedMarker = marker;
 				this.selectedMarker.content = this.getPin(PinElement, true);
 				console.log(`Cam clicked: ${cam.src}`);
-				onMarkerClick(cam, false);
+				const closestMarkers = this.getClosestMarkers(marker, this.markers);
+				activateCamsForMarkers([marker, ...closestMarkers]);
 			});
 			marker.cam = cam;
 			cam.mrk = marker;
@@ -97,7 +98,7 @@ export class MapService {
 		});
 	}
 
-	async handleIssMapMarker(map, issCam, onMarkerClick) {
+	async handleIssMapMarker(map, issCam, activateCamsForMarkers) {
 		try {
 			const req = await fetch('https://api.wheretheiss.at/v1/satellites/25544');
 			const json = await req.json();
@@ -121,7 +122,7 @@ export class MapService {
 					icon: svgMarker,
 				});
 				google.maps.event.addListener(this.issMarker, 'click', () => {
-					onMarkerClick(issCam, true);
+					activateCamsForMarkers([this.issMarker]);
 				});
 				this.issMarker.cam = issCam;
 				issCam.mrk = this.issMarker;
@@ -151,24 +152,20 @@ export class MapService {
 		return R * c; // returns the distance in meters
 	};
 
-	getClosestCams(cam, cams) {
-		let lat2;
-		let lng2;
+	getClosestMarkers(marker, markers) {
 		const distances = [];
-		const lat1 = Number.parseFloat(cam.pos.split(',')[0]);
-		const lng1 = Number.parseFloat(cam.pos.split(',')[1]);
-		cams.forEach(c => {
-			if (c !== cam) {
-				lat2 = Number.parseFloat(c.pos.split(',')[0]);
-				lng2 = Number.parseFloat(c.pos.split(',')[1]);
+		const lat1 = marker.position.lat;
+		const lng1 = marker.position.lng;
+		markers.forEach(m => {
+			if (m !== marker) {
 				distances.push({
-					c,
-					d: this.getDistance(lat1, lng1, lat2, lng2)
+					m,
+					d: this.getDistance(lat1, lng1, m.position.lat, m.position.lng)
 				});
 			}
 		});
 		distances.sort((a,b) => a.d - b.d);
-		return [distances[0].c, distances[1].c];
+		return [distances[0].m, distances[1].m];
 	}
 
 }
