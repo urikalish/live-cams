@@ -7,7 +7,7 @@ export class CamService {
 	}
 
 	getCamStr(cam) {
-		return `${cam.name} | ${cam.tags} | ${cam.geo} | ${cam.pos} | ${cam.src}`;
+		return `${cam.name}${cam.tags ? ' | ' + cam.tags : ''}${cam.ytc ? ' | YTC | ' + cam.ytc : ''}${cam.ytv ? ' | YTV | ' + cam.ytv : ''} | ${cam.geo} | ${cam.pos} | ${cam.src}`;
 	}
 
 	removeDeadCams(fixCams) {
@@ -102,6 +102,22 @@ export class CamService {
 		}
 	}
 
+	addYouTubeIds() {
+		this.cams.forEach(cam => {
+			let match = /(^https:\/\/www\.youtube\.com\/embed\/live_stream\?channel=)([0-9a-zA-Z_-]*)/.exec(cam.src);
+			if (match && match[2]) {
+				cam.ytc = match[2];
+				console.log(`ID added | ${this.getCamStr(cam)}`);
+			} else {
+				match = /(^https:\/\/www\.youtube\.com\/embed\/)([0-9a-zA-Z_-]*)/.exec(cam.src);
+				if (match && match[2]) {
+					cam.ytv = match[2];
+					console.log(`ID added | ${this.getCamStr(cam)}`);
+				}
+			}
+		});
+	}
+
 	init(cams, fixCams) {
 		this.cams = cams;
 		console.log(`Number of cameras before fix: ${this.cams.length}`);
@@ -110,6 +126,7 @@ export class CamService {
 		this.removeNoSourceCams();
 		this.removeNoPositionCams();
 		this.handleDuplicatedCams();
+		this.addYouTubeIds();
 		console.log(`Number of cameras after fix: ${this.cams.length}`);
 	}
 
