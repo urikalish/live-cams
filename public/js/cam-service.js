@@ -4,11 +4,8 @@ export class CamService {
 		return `${cam.name} | ${cam.tags} | ${cam.geo} | ${cam.pos} | ${cam.src}`;
 	}
 
-	fixCameraList(wctCams, fixCams) {
-		console.log(`Number of cameras before fix: ${wctCams.length}`);
-		let i;
-
-		i = 0;
+	removeDeadCams(wctCams, fixCams) {
+		let i = 0;
 		while (i < wctCams.length) {
 			let isRemoved = false;
 			for (const [fixedCamId, fixedCamValues] of Object.entries(fixCams)) {
@@ -23,21 +20,25 @@ export class CamService {
 				i++;
 			}
 		}
+	}
 
-		i = 0;
+	updateCams(wctCams, fixCams) {
+		let i = 0;
 		while (i < wctCams.length) {
 			for (const [fixedCamId, fixedCamValues] of Object.entries(fixCams)) {
 				const cam = wctCams[i];
 				if ((cam.src.includes(fixedCamId) || fixedCamId === wctCams[i].pos) && fixedCamValues._action !== 'remove') {
 					wctCams[i] = {...cam, ...fixedCamValues};
-					console.log(`Fixed | ${this.getCamStr(wctCams[i])}`);
+					console.log(`Updated | ${this.getCamStr(wctCams[i])}`);
 					break;
 				}
 			}
 			i++;
 		}
+	}
 
-		i = 0;
+	removeNoSourceCams(wctCams) {
+		let i = 0;
 		while (i < wctCams.length) {
 			const cam = wctCams[i];
 			if (!cam.src) {
@@ -47,19 +48,23 @@ export class CamService {
 				i++;
 			}
 		}
+	}
 
-		i = 0;
+	removeNoPositionCams(wctCams) {
+		let i = 0;
 		while (i < wctCams.length) {
 			const cam = wctCams[i];
 			if (!cam.pos) {
-				console.log(`No location | ${this.getCamStr(cam)}`);
+				console.log(`No position | ${this.getCamStr(cam)}`);
 				wctCams.splice(i, 1);
 			} else {
 				i++;
 			}
 		}
+	}
 
-		i = 0;
+	handleDuplicatedCams(wctCams) {
+		let i = 0;
 		while (i < wctCams.length) {
 			const cam = wctCams[i];
 			let sameCam = null;
@@ -85,7 +90,15 @@ export class CamService {
 				i++;
 			}
 		}
+	}
 
+	fixCameraList(wctCams, fixCams) {
+		console.log(`Number of cameras before fix: ${wctCams.length}`);
+		this.removeDeadCams(wctCams, fixCams);
+		this.updateCams(wctCams, fixCams);
+		this.removeNoSourceCams(wctCams);
+		this.removeNoPositionCams(wctCams);
+		this.handleDuplicatedCams(wctCams);
 		console.log(`Number of cameras after fix: ${wctCams.length}`);
 	}
 
