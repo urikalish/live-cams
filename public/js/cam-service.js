@@ -2,6 +2,10 @@ export class CamService {
 
 	cams = [];
 
+	getCams() {
+		return this.cams;
+	}
+
 	getCamStr(cam) {
 		return `${cam.name}${cam.tags ? ' | ' + cam.tags : ''}${cam.ytc ? ' | YTC | ' + cam.ytc : ''}${cam.ytv ? ' | YTV | ' + cam.ytv : ''} | ${cam.geo} | ${cam.pos} | ${cam.src}`;
 	}
@@ -145,21 +149,23 @@ export class CamService {
 		frElm.setAttribute('src', src);
 		frElm.setAttribute('width', '950');
 		frElm.setAttribute('height', '534');
-		frElm.setAttribute('title', 'YouTube video player');
+		frElm.setAttribute('title', 'Video player frame');
 		frElm.setAttribute('frameborder', '0');
 		frElm.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
 		frElm.setAttribute('allowfullscreen', 'true');
 		return frElm;
 	}
 
-	displayLiveCam(cam) {
+	displayLiveCams(cams) {
 		const mainElm = document.getElementById('main');
 		const mapElm = document.getElementById('map');
 		mainElm.replaceChildren();
 		mainElm.appendChild(mapElm);
-		let src = this.addSrcQueryParams(cam.src);
-		const frElm = this.createCameraFrame(src);
-		mainElm.appendChild(frElm);
+		cams.forEach(cam => {
+			let src = this.addSrcQueryParams(cam.src);
+			const frElm = this.createCameraFrame(src);
+			mainElm.appendChild(frElm);
+		});
 	}
 
 }

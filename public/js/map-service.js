@@ -89,9 +89,10 @@ export class MapService {
 				this.selectedMarker = marker;
 				this.selectedMarker.content = this.getPin(PinElement, true);
 				console.log(`Cam clicked: ${cam.src}`);
-				onMarkerClick(cam);
+				onMarkerClick(cam, false);
 			});
-			cam.marker = marker;
+			marker.cam = cam;
+			cam.mrk = marker;
 			this.markers.push(marker);
 		});
 	}
@@ -120,8 +121,10 @@ export class MapService {
 					icon: svgMarker,
 				});
 				google.maps.event.addListener(this.issMarker, 'click', () => {
-					onMarkerClick(issCam);
+					onMarkerClick(issCam, true);
 				});
+				this.issMarker.cam = issCam;
+				issCam.mrk = this.issMarker;
 			} else {
 				this.issMarker.setPosition({lat, lng});
 			}
@@ -132,4 +135,40 @@ export class MapService {
 			console.log(error);
 		}
 	}
+
+	rad(x) {
+		return x * Math.PI / 180;
+	};
+
+	getDistance(lat1, lng1, lat2, lng2) {
+		const R = 6378137; // Earth’s mean radius in meters
+		const dLat = this.rad(lat2 - lat1);
+		const dLong = this.rad(lng2 - lng1);
+		const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+		Math.cos(this.rad(lat1)) * Math.cos(this.rad(lat2)) *
+		Math.sin(dLong / 2) * Math.sin(dLong / 2);
+		const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+		return R * c; // returns the distance in meters
+	};
+
+	getClosestCams(cam, cams) {
+		let lat2;
+		let lng2;
+		const distances = [];
+		const lat1 = Number.parseFloat(cam.pos.split(',')[0]);
+		const lng1 = Number.parseFloat(cam.pos.split(',')[1]);
+		cams.forEach(c => {
+			if (c !== cam) {
+				lat2 = Number.parseFloat(c.pos.split(',')[0]);
+				lng2 = Number.parseFloat(c.pos.split(',')[1]);
+				distances.push({
+					c,
+					d: this.getDistance(lat1, lng1, lat2, lng2)
+				});
+			}
+		});
+		distances.sort((a,b) => a.d - b.d);
+		return [distances[0].c, distances[1].c];
+	}
+
 }

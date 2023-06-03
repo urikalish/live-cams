@@ -8,10 +8,17 @@ import { CamService} from './cam-service.js';
 const mapService = new MapService();
 const camService = new CamService();
 
+function handleMarkerClick(cam, isIss) {
+	if (isIss) {
+		camService.displayLiveCams([cam]);
+	} else {
+		const closestCams = mapService.getClosestCams(cam, camService.getCams());
+		camService.displayLiveCams([cam, ...closestCams]);
+	}
+}
+
 window.handleGoogleMapLoaded = () => {
-	mapService.init(wctCams, issCam, (cam) => {
-		camService.displayLiveCam(cam);
-	}).then(()=>{});
+	mapService.init(wctCams, issCam, handleMarkerClick).then(()=>{});
 }
 
 camService.init(wctCams, errCamIds, fixCams);
