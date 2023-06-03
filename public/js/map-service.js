@@ -1,8 +1,39 @@
 export class MapService {
 
+	markers = [];
+	selectedMarker = null;
+	mapZoom = 2;
+
+	debounce(func, timeout = 1000){
+		let timer;
+		return (...args) => {
+			clearTimeout(timer);
+			timer = setTimeout(() => { func.apply(this, args); }, timeout);
+		};
+	}
+
+	getPin(PinElement, isSelected) {
+		const pinElement = new PinElement({
+			//scale: 0.04 * this.mapZoom + 0.2,
+			scale: 0.0375 * this.mapZoom + 0.25,
+			borderColor: '#000',
+			background: isSelected ? '#f00' : '#fa0',
+			glyphColor: '#000',
+		})
+		return pinElement.element;
+	}
+
 	async init(wctCams, issCam, onMarkerClick) {
 		//@ts-ignore
 		const { Map } = await google.maps.importLibrary('maps');
+		//@ts-ignore
+		const { PinElement } = await google.maps.importLibrary('marker');
+
+		const debouncePinUpdate = this.debounce(() => {
+			this.markers.forEach(m => {
+				m.content = this.getPin(PinElement, m === this.selectedMarker);
+			});
+		}, 1000);
 
 		const map = new Map(document.getElementById("map"), {
 			zoom: 2,
@@ -15,10 +46,12 @@ export class MapService {
 			mapTypeId: 'hybrid'
 		});
 		map.addListener('zoom_changed', () => {
-			// const zoom = map.getZoom();
-			// if (zoom) {
-			// 	const scale = 0.0416667 * zoom + 0.1666666;
-			// }
+			const mapZoom = map.getZoom();
+			if (!mapZoom || mapZoom === this.mapZoom) {
+				return;
+			}
+			this.mapZoom = mapZoom;
+			debouncePinUpdate();
 		});
 		await this.addLocationMarkers(map, wctCams, onMarkerClick);
 		await this.handleIssMapMarker(map, issCam, null, onMarkerClick);
@@ -28,34 +61,32 @@ export class MapService {
 		//@ts-ignore
 		const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary('marker');
 
-		const markers = [];
+		this.markers = [];
 		cams.forEach(cam => {
 			if (!cam.src || !cam.pos) {
 				return;
 			}
 			const lat = Number.parseFloat(cam.pos.split(',')[0]);
 			const lng = Number.parseFloat(cam.pos.split(',')[1]);
-			const redPinStyle = new PinElement({
-				scale: 0.25,
-				background: '#f00'
-			});
-			const yellowPinStyle  = new PinElement({
-				scale: 0.25,
-				background: '#ff0'
-			});
 			const marker = new AdvancedMarkerElement({
 				map,
 				position: {lat, lng},
 				title: `${cam.name}\n${cam.tags ? cam.tags + '\n' : ''}${cam.geo}\n${lat.toFixed(5)},${lng.toFixed(5)}`,
-				content: cam.src.includes('youtube.com') ? redPinStyle.element : yellowPinStyle.element
+				content: this.getPin(PinElement, false),
 				//collisionBehavior: 'OPTIONAL_AND_HIDES_LOWER_PRIORITY'
 			});
 			marker.addListener('click', () => {
+				if (this.selectedMarker) {
+					this.selectedMarker.content = this.getPin(PinElement, false);
+				}
+				this.selectedMarker = marker;
+				this.selectedMarker.content = this.getPin(PinElement, true);
+
 				onMarkerClick(cam);
 			});
-			markers.push(marker);
+			cam.marker = marker;
+			this.markers.push(marker);
 		});
-		return markers;
 	}
 
 	async handleIssMapMarker(map, issCam, issMarker, onMarkerClick) {
