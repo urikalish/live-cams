@@ -1,5 +1,6 @@
 export class MapService {
 
+	map = null;
 	markers = [];
 	selectedMarker = null;
 	mapZoom = 2;
@@ -14,8 +15,7 @@ export class MapService {
 
 	getPin(PinElement, isSelected) {
 		const pinElement = new PinElement({
-			//scale: 0.04 * this.mapZoom + 0.2,
-			scale: 0.0375 * this.mapZoom + 0.25,
+			scale: 0.0375 * this.mapZoom + 0.25, //0.04 * this.mapZoom + 0.2
 			borderColor: '#000',
 			background: isSelected ? '#f00' : '#fa0',
 			glyphColor: '#000',
@@ -23,7 +23,7 @@ export class MapService {
 		return pinElement.element;
 	}
 
-	async init(wctCams, issCam, onMarkerClick) {
+	async init(cams, issCam, onMarkerClick) {
 		//@ts-ignore
 		const { Map } = await google.maps.importLibrary('maps');
 		//@ts-ignore
@@ -35,33 +35,32 @@ export class MapService {
 			});
 		}, 1000);
 
-		const map = new Map(document.getElementById("map"), {
+		this.map = new Map(document.getElementById("map"), {
 			zoom: 2,
 			center: {lat: 20, lng: 11},
 			mapId: "world-map",
 			labels: false,
 			disableDefaultUI: true,
-			//mapTypeId: 'roadmap',
-			//mapTypeId: 'satellite',
-			mapTypeId: 'hybrid'
+			mapTypeId: 'hybrid' // 'roadmap' | 'satellite' | 'hybrid'
 		});
-		map.addListener('zoom_changed', () => {
-			const mapZoom = map.getZoom();
+		this.map.addListener('zoom_changed', () => {
+			const mapZoom = this.map.getZoom();
 			if (!mapZoom || mapZoom === this.mapZoom) {
 				return;
 			}
 			this.mapZoom = mapZoom;
 			debouncePinUpdate();
 		});
-		await this.addLocationMarkers(map, wctCams, onMarkerClick);
-		await this.handleIssMapMarker(map, issCam, null, onMarkerClick);
+		await this.addLocationMarkers(cams, onMarkerClick);
+		await this.handleIssMapMarker(issCam, null, onMarkerClick);
 	}
 
-	async addLocationMarkers(map, cams, onMarkerClick) {
+	async addLocationMarkers(cams, onMarkerClick) {
 		//@ts-ignore
 		const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary('marker');
 
 		this.markers = [];
+		const map = this.map;
 		cams.forEach(cam => {
 			if (!cam.src || !cam.pos) {
 				return;
@@ -89,8 +88,9 @@ export class MapService {
 		});
 	}
 
-	async handleIssMapMarker(map, issCam, issMarker, onMarkerClick) {
+	async handleIssMapMarker(issCam, issMarker, onMarkerClick) {
 		try {
+			const map = this.map;
 			const req = await fetch('https://api.wheretheiss.at/v1/satellites/25544');
 			const json = await req.json();
 			const lat = Number(json.latitude);
