@@ -88,7 +88,7 @@ export class MapService {
 				}
 				this.selectedMarker = marker;
 				this.selectedMarker.content = this.getPin(PinElement, true);
-
+				console.log(`Cam clicked: ${cam.src}`);
 				onMarkerClick(cam);
 			});
 			cam.marker = marker;
