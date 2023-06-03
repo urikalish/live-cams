@@ -3,6 +3,7 @@ export class MapService {
 	map = null;
 	markers = [];
 	selectedMarker = null;
+	closestMarkers = [];
 	issMarker = null;
 	mapZoom = 2;
 
@@ -14,11 +15,19 @@ export class MapService {
 		};
 	}
 
-	getPin(PinElement, isSelected) {
+	getPin(PinElement, isSelected, isClosest) {
+		let background;
+		if (isSelected) {
+			background = '#f00';
+		} else if (isClosest) {
+			background = '#f90';
+		} else {
+			background = '#fc0';
+		}
 		const pinElement = new PinElement({
 			scale: 0.0375 * this.mapZoom + 0.25, //0.04 * this.mapZoom + 0.2
 			borderColor: '#000',
-			background: isSelected ? '#f00' : '#fa0',
+			background,
 			glyphColor: '#000',
 		})
 		return pinElement.element;
@@ -32,7 +41,7 @@ export class MapService {
 
 		const debouncePinUpdate = this.debounce(() => {
 			this.markers.forEach(m => {
-				m.content = this.getPin(PinElement, m === this.selectedMarker);
+				m.content = this.getPin(PinElement, m === this.selectedMarker, this.closestMarkers.includes(m));
 			});
 		}, 1000);
 
@@ -64,6 +73,37 @@ export class MapService {
 		return `${cam.name}\n${geo}\n${lat}, ${lng}${tags ? '\n' + tags : ''}`;
 	}
 
+	rad(x) {
+		return x * Math.PI / 180;
+	};
+
+	getDistance(lat1, lng1, lat2, lng2) {
+		const R = 6378137; // Earth’s mean radius in meters
+		const dLat = this.rad(lat2 - lat1);
+		const dLong = this.rad(lng2 - lng1);
+		const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+		Math.cos(this.rad(lat1)) * Math.cos(this.rad(lat2)) *
+		Math.sin(dLong / 2) * Math.sin(dLong / 2);
+		const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+		return R * c; // returns the distance in meters
+	};
+
+	getClosestMarkers(marker, markers) {
+		const distances = [];
+		const lat1 = marker.position.lat;
+		const lng1 = marker.position.lng;
+		markers.forEach(m => {
+			if (m !== marker) {
+				distances.push({
+					m,
+					d: this.getDistance(lat1, lng1, m.position.lat, m.position.lng)
+				});
+			}
+		});
+		distances.sort((a,b) => a.d - b.d);
+		return [distances[0].m, distances[1].m];
+	}
+
 	async addLocationMarkers(map, cams, activateCamsForMarkers) {
 		//@ts-ignore
 		const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary('marker');
@@ -87,10 +127,16 @@ export class MapService {
 					this.selectedMarker.content = this.getPin(PinElement, false);
 				}
 				this.selectedMarker = marker;
-				this.selectedMarker.content = this.getPin(PinElement, true);
 				console.log(`Cam clicked: ${cam.src}`);
-				const closestMarkers = this.getClosestMarkers(marker, this.markers);
-				activateCamsForMarkers([marker, ...closestMarkers]);
+				this.closestMarkers.forEach(m => {
+					m.content = this.getPin(PinElement, false, false);
+				});
+				this.closestMarkers = this.getClosestMarkers(marker, this.markers);
+				this.selectedMarker.content = this.getPin(PinElement, true, false);
+				this.closestMarkers.forEach(m => {
+					m.content = this.getPin(PinElement, false, true);
+				});
+				activateCamsForMarkers([marker, ...this.closestMarkers]);
 			});
 			marker.cam = cam;
 			cam.mrk = marker;
@@ -130,42 +176,11 @@ export class MapService {
 				this.issMarker.setPosition({lat, lng});
 			}
 			setTimeout(() => {
-				this.handleIssMapMarker(map, issCam, onMarkerClick)
+				this.handleIssMapMarker(map, issCam, activateCamsForMarkers)
 			}, 10000);
 		} catch(error) {
 			console.log(error);
 		}
-	}
-
-	rad(x) {
-		return x * Math.PI / 180;
-	};
-
-	getDistance(lat1, lng1, lat2, lng2) {
-		const R = 6378137; // Earth’s mean radius in meters
-		const dLat = this.rad(lat2 - lat1);
-		const dLong = this.rad(lng2 - lng1);
-		const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-		Math.cos(this.rad(lat1)) * Math.cos(this.rad(lat2)) *
-		Math.sin(dLong / 2) * Math.sin(dLong / 2);
-		const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-		return R * c; // returns the distance in meters
-	};
-
-	getClosestMarkers(marker, markers) {
-		const distances = [];
-		const lat1 = marker.position.lat;
-		const lng1 = marker.position.lng;
-		markers.forEach(m => {
-			if (m !== marker) {
-				distances.push({
-					m,
-					d: this.getDistance(lat1, lng1, m.position.lat, m.position.lng)
-				});
-			}
-		});
-		distances.sort((a,b) => a.d - b.d);
-		return [distances[0].m, distances[1].m];
 	}
 
 }
