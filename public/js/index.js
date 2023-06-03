@@ -7,13 +7,13 @@ import { CamService} from './cam-service.js';
 const mapService = new MapService();
 const camService = new CamService();
 
-function handleMarkerClick(cam) {
-	camService.displayLiveCam(cam);
-}
-window.handleGoogleMapLoaded = function() {
-	mapService.init(wctCams, issCam, handleMarkerClick).then(()=>{});
+window.handleGoogleMapLoaded = () => {
+	mapService.init(wctCams, issCam, (cam) => {
+		camService.displayLiveCam(cam);
+	}).then(()=>{});
 }
 
-camService.fixCameraList(wctCams, fixCams);
+camService.init(wctCams, fixCams);
+
 //camService.displayLiveCam(issCam);
 

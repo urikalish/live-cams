@@ -1,17 +1,19 @@
 export class CamService {
 
+	cams = [];
+
 	getCamStr(cam) {
 		return `${cam.name} | ${cam.tags} | ${cam.geo} | ${cam.pos} | ${cam.src}`;
 	}
 
-	removeDeadCams(wctCams, fixCams) {
+	removeDeadCams(fixCams) {
 		let i = 0;
-		while (i < wctCams.length) {
+		while (i < this.cams.length) {
 			let isRemoved = false;
 			for (const [fixedCamId, fixedCamValues] of Object.entries(fixCams)) {
-				if ((wctCams[i].src.includes(fixedCamId) || fixedCamId === wctCams[i].pos) && fixedCamValues._action === 'remove') {
-					console.log(`Removed | ${this.getCamStr(wctCams[i])}`);
-					wctCams.splice(i, 1);
+				if ((this.cams[i].src.includes(fixedCamId) || fixedCamId === this.cams[i].pos) && fixedCamValues._action === 'remove') {
+					console.log(`Removed | ${this.getCamStr(this.cams[i])}`);
+					this.cams.splice(i, 1);
 					isRemoved = true;
 					break;
 				}
@@ -22,14 +24,14 @@ export class CamService {
 		}
 	}
 
-	updateCams(wctCams, fixCams) {
+	updateCams(fixCams) {
 		let i = 0;
-		while (i < wctCams.length) {
+		while (i < this.cams.length) {
 			for (const [fixedCamId, fixedCamValues] of Object.entries(fixCams)) {
-				const cam = wctCams[i];
-				if ((cam.src.includes(fixedCamId) || fixedCamId === wctCams[i].pos) && fixedCamValues._action !== 'remove') {
-					wctCams[i] = {...cam, ...fixedCamValues};
-					console.log(`Updated | ${this.getCamStr(wctCams[i])}`);
+				const cam = this.cams[i];
+				if ((cam.src.includes(fixedCamId) || fixedCamId === this.cams[i].pos) && fixedCamValues._action !== 'remove') {
+					this.cams[i] = {...cam, ...fixedCamValues};
+					console.log(`Updated | ${this.getCamStr(this.cams[i])}`);
 					break;
 				}
 			}
@@ -37,40 +39,40 @@ export class CamService {
 		}
 	}
 
-	removeNoSourceCams(wctCams) {
+	removeNoSourceCams() {
 		let i = 0;
-		while (i < wctCams.length) {
-			const cam = wctCams[i];
+		while (i < this.cams.length) {
+			const cam = this.cams[i];
 			if (!cam.src) {
 				console.log(`No source | ${this.getCamStr(cam)}`);
-				wctCams.splice(i, 1);
+				this.cams.splice(i, 1);
 			} else {
 				i++;
 			}
 		}
 	}
 
-	removeNoPositionCams(wctCams) {
+	removeNoPositionCams() {
 		let i = 0;
-		while (i < wctCams.length) {
-			const cam = wctCams[i];
+		while (i < this.cams.length) {
+			const cam = this.cams[i];
 			if (!cam.pos) {
 				console.log(`No position | ${this.getCamStr(cam)}`);
-				wctCams.splice(i, 1);
+				this.cams.splice(i, 1);
 			} else {
 				i++;
 			}
 		}
 	}
 
-	handleDuplicatedCams(wctCams) {
+	handleDuplicatedCams() {
 		let i = 0;
-		while (i < wctCams.length) {
-			const cam = wctCams[i];
+		while (i < this.cams.length) {
+			const cam = this.cams[i];
 			let sameCam = null;
 			for (let j = 0; j < i; j++) {
-				if (wctCams[i].src === wctCams[j].src) {
-					sameCam = wctCams[j];
+				if (this.cams[i].src === this.cams[j].src) {
+					sameCam = this.cams[j];
 					break;
 				}
 			}
@@ -89,21 +91,22 @@ export class CamService {
 					}
 				}
 				console.log(`Duplicated | ${this.getCamStr(cam)}`);
-				wctCams.splice(i, 1);
+				this.cams.splice(i, 1);
 			} else {
 				i++;
 			}
 		}
 	}
 
-	fixCameraList(wctCams, fixCams) {
-		console.log(`Number of cameras before fix: ${wctCams.length}`);
-		this.removeDeadCams(wctCams, fixCams);
-		this.updateCams(wctCams, fixCams);
-		this.removeNoSourceCams(wctCams);
-		this.removeNoPositionCams(wctCams);
-		this.handleDuplicatedCams(wctCams);
-		console.log(`Number of cameras after fix: ${wctCams.length}`);
+	init(cams, fixCams) {
+		this.cams = cams;
+		console.log(`Number of cameras before fix: ${this.cams.length}`);
+		this.removeDeadCams(fixCams);
+		this.updateCams(fixCams);
+		this.removeNoSourceCams();
+		this.removeNoPositionCams();
+		this.handleDuplicatedCams();
+		console.log(`Number of cameras after fix: ${this.cams.length}`);
 	}
 
 	addSrcQueryParams(src) {
@@ -139,4 +142,5 @@ export class CamService {
 		const frElm = this.createCameraFrame(src);
 		mainElm.appendChild(frElm);
 	}
+
 }
