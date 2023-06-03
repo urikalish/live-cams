@@ -82,7 +82,11 @@ export class CamService {
 					sameCam.tags = Array.from(tagSet).join(',');
 				}
 				if (cam.name !== sameCam.name) {
-					sameCam.name = `${sameCam.name} / ${cam.name}`;
+					if (cam.name.includes(sameCam.name) && cam.name.length > sameCam.name.length) {
+						sameCam.name = cam.name;
+					} else {
+						sameCam.name = `${sameCam.name} / ${cam.name}`;
+					}
 				}
 				console.log(`Duplicated | ${this.getCamStr(cam)}`);
 				wctCams.splice(i, 1);
