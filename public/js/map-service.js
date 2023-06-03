@@ -46,7 +46,7 @@ export class MapService {
 			const marker = new AdvancedMarkerElement({
 				map,
 				position: {lat, lng},
-				title: cam.name,
+				title: `${cam.name}\n${cam.tags ? cam.tags + '\n' : ''}${cam.geo}\n${lat.toFixed(5)},${lng.toFixed(5)}`,
 				content: cam.src.includes('youtube.com') ? redPinStyle.element : yellowPinStyle.element
 				//collisionBehavior: 'OPTIONAL_AND_HIDES_LOWER_PRIORITY'
 			});
@@ -77,7 +77,7 @@ export class MapService {
 				issMarker = new google.maps.Marker({
 					map,
 					position: {lat, lng},
-					title: 'The International Space Station',
+					title: `${issCam.name}\n${issCam.tags}\n${issCam.geo}\n${lat.toFixed(5)},${lng.toFixed(5)}`,
 					icon: svgMarker,
 				});
 				google.maps.event.addListener(issMarker, 'click', () => {
