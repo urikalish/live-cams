@@ -2,24 +2,20 @@ export class CamService {
 
 	cams = [];
 
-	getCams() {
-		return this.cams;
-	}
-
 	getCamStr(cam) {
 		return `${cam.name}${cam.tags ? ' | ' + cam.tags : ''}${cam.ytc ? ' | YTC | ' + cam.ytc : ''}${cam.ytv ? ' | YTV | ' + cam.ytv : ''} | ${cam.geo} | ${cam.pos} | ${cam.src}`;
 	}
 
-	removeDeadCams(fixCams) {
+	removeDeadCams(errCamIds) {
 		let i = 0;
 		while (i < this.cams.length) {
 			let isRemoved = false;
-			for (const [fixedCamId, fixedCamValues] of Object.entries(fixCams)) {
-				if ((this.cams[i].src.includes(fixedCamId) || fixedCamId === this.cams[i].pos) && fixedCamValues._action === 'remove') {
+			for (let errCamId of errCamIds) {
+				const cam = this.cams[i];
+				if (cam.src.includes(errCamId) || errCamId === cam.pos) {
+					isRemoved = true;
 					//console.log(`Removed | ${this.getCamStr(this.cams[i])}`);
 					this.cams.splice(i, 1);
-					isRemoved = true;
-					break;
 				}
 			}
 			if (!isRemoved) {
@@ -32,9 +28,8 @@ export class CamService {
 		let i = 0;
 		while (i < this.cams.length) {
 			for (const [fixedCamId, fixedCamValues] of Object.entries(fixCams)) {
-				const cam = this.cams[i];
-				if ((cam.src.includes(fixedCamId) || fixedCamId === this.cams[i].pos) && fixedCamValues._action !== 'remove') {
-					this.cams[i] = {...cam, ...fixedCamValues};
+				if (this.cams[i].src.includes(fixedCamId) || this.cams[i].pos === fixedCamId) {
+					this.cams[i] = {...this.cams[i], ...fixedCamValues};
 					//console.log(`Updated | ${this.getCamStr(this.cams[i])}`);
 					break;
 				}
@@ -121,16 +116,16 @@ export class CamService {
 		});
 	}
 
-	init(cams, fixCams) {
+	init(cams, errCamIds, fixCams) {
 		this.cams = cams;
-		console.log(`Number of cameras before fix: ${this.cams.length}`);
-		this.removeDeadCams(fixCams);
+		console.log(`All cameras: ${this.cams.length}`);
+		this.removeDeadCams(errCamIds);
 		this.updateCams(fixCams);
 		this.handleDuplicatedCams();
 		this.removeNoSourceCams();
 		this.removeNoPositionCams();
 		this.addYouTubeIds();
-		console.log(`Number of cameras after fix: ${this.cams.length}`);
+		console.log(`Valid cameras: ${this.cams.length}`);
 	}
 
 	addSrcQueryParams(src) {
