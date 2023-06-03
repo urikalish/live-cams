@@ -2,6 +2,10 @@ export class CamService {
 
 	cams = [];
 
+	getCams() {
+		return this.cams;
+	}
+
 	getCamStr(cam) {
 		return `${cam.name} | ${cam.tags} | ${cam.geo} | ${cam.pos} | ${cam.src}`;
 	}
