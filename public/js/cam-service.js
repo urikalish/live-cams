@@ -10,19 +10,13 @@ export class CamService {
 		return `${cam.name}${cam.tags ? ' | ' + cam.tags : ''}${cam.ytc ? ' | YTC | ' + cam.ytc : ''}${cam.ytv ? ' | YTV | ' + cam.ytv : ''} | ${cam.geo} | ${cam.pos} | ${cam.src}`;
 	}
 
-	removeDeadCams(errCams) {
+	removeDeadCams(errCamSources) {
 		let i = 0;
 		while (i < this.cams.length) {
-			let isRemoved = false;
-			for (let errCamId of errCams) {
-				const cam = this.cams[i];
-				if (cam.src.includes(errCamId)) {
-					isRemoved = true;
-					//console.log(`Removed | ${this.getCamStr(this.cams[i])}`);
-					this.cams.splice(i, 1);
-				}
-			}
-			if (!isRemoved) {
+			if (errCamSources.includes(this.cams[i].src)) {
+				//console.log(`Removed | ${this.getCamStr(this.cams[i])}`);
+				this.cams.splice(i, 1);
+			} else {
 				i++;
 			}
 		}
@@ -120,10 +114,10 @@ export class CamService {
 		});
 	}
 
-	init(cams, errCams, fixCams) {
+	init(cams, errCamSources, fixCams) {
 		this.cams = cams;
 		console.log(`All cameras: ${this.cams.length}`);
-		this.removeDeadCams(errCams);
+		this.removeDeadCams(errCamSources);
 		this.updateCams(fixCams);
 		this.handleDuplicatedCams();
 		this.removeNoSourceCams();

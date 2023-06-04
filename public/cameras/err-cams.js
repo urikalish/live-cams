@@ -1,4 +1,4 @@
-export const errCams =
+export const errCamSources =
 [
 	"https://www.youtube.com/embed/QrLm1sJNQAA",
 	"https://www.youtube.com/embed/UTPxSEP3YRc",
