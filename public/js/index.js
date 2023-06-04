@@ -1,5 +1,5 @@
 import { wctCams } from '../cameras/wct-cams.js';
-import { errCamIds } from '../cameras/err-cams.js';
+import { errCams } from '../cameras/err-cams.js';
 import { fixCams } from '../cameras/fix-cams.js';
 import { issCam } from '../cameras/iss-cam.js';
 import { MapService} from './map-service.js';
@@ -16,7 +16,7 @@ window.handleGoogleMapLoaded = () => {
 	mapService.init(wctCams, issCam, activateCamsForMarkers).then(()=>{});
 }
 
-camService.init(wctCams, errCamIds, fixCams);
+camService.init(wctCams, errCams, fixCams);
 
 //camService.displayLiveCam(issCam);
 
