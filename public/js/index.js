@@ -12,6 +12,14 @@ function activateCamsForMarkers(markers) {
 	camService.displayLiveCams(markers.map(m => m.cam));
 }
 
+window.handleGoogleMapLoaded = () => {
+	mapService.init(wctCams, issCam, activateCamsForMarkers).then(()=>{});
+}
+
+camService.init(wctCams, errCamSources, fixCams);
+
+//camService.displayLiveCam(issCam);
+
 // function displayAllDeadCameras() {
 // 	//IMPORTANT - while using, comment out the removal of error cams in camService.init()
 // 	const deadCams = [];
@@ -23,12 +31,3 @@ function activateCamsForMarkers(markers) {
 // 	});
 // 	camService.displayLiveCams(deadCams);
 // }
-
-window.handleGoogleMapLoaded = () => {
-	mapService.init(wctCams, issCam, activateCamsForMarkers).then(()=>{});
-}
-
-camService.init(wctCams, errCamSources, fixCams);
-
-//camService.displayLiveCam(issCam);
-
