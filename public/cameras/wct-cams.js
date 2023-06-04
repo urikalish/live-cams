@@ -1975,13 +1975,6 @@ export const wctCams =
     "src": "https://www.youtube.com/embed/uKw3ey7VNN8"
   },
   {
-    "name": "Hvide Sande North Cam",
-    "tags": "",
-    "geo": "Denmark/Central Denmark Region",
-    "pos": "56.02103065854395,8.125998190184989",
-    "src": "https://www.youtube.com/embed/uKw3ey7VNN8"
-  },
-  {
     "name": "Nuuk Airport North Cam",
     "tags": "Airport",
     "geo": "Denmark/Greenland",
@@ -4315,13 +4308,6 @@ export const wctCams =
   {
     "name": "Assisi, Town Square",
     "tags": "Christmas,Square",
-    "geo": "Italy/Umbria",
-    "pos": "",
-    "src": "https://www.youtube.com/embed/CkNeltsc5ps"
-  },
-  {
-    "name": "Assisi, Town Square",
-    "tags": "",
     "geo": "Italy/Umbria",
     "pos": "",
     "src": "https://www.youtube.com/embed/CkNeltsc5ps"
@@ -8983,13 +8969,6 @@ export const wctCams =
   },
   {
     "name": "Playa de La Mata, Torrevieja",
-    "tags": "Sea,Beach,4k",
-    "geo": "Spain/Alicante",
-    "pos": "38.010636818954254,-0.66075470356911",
-    "src": "https://www.youtube.com/embed/j2oP4uecYgg?rel=0&autoplay=1"
-  },
-  {
-    "name": "Playa de La Mata, Torrevieja",
     "tags": "",
     "geo": "Spain/Alicante",
     "pos": "38.010636818954254,-0.66075470356911",
@@ -10996,13 +10975,6 @@ export const wctCams =
     "geo": "Usa/California",
     "pos": "",
     "src": "https://www.youtube.com/embed/live_stream?channel=UCNYdL7-9PEk0rhCHzquQP8Q&autoplay=1"
-  },
-  {
-    "name": "Unbound Main Park, Mammoth",
-    "tags": "Ski,Landscape",
-    "geo": "Usa/California",
-    "pos": "37.64679561517599,-119.03652863365905",
-    "src": "https://www.youtube.com/embed/lxFbWFBQNwo"
   },
   {
     "name": "Unbound Main Park, Mammoth",
