@@ -88,7 +88,7 @@ export class MapService {
 		return R * c; // returns the distance in meters
 	};
 
-	getClosestMarkers(marker, markers) {
+	getClosestMarkers(marker, markers, count) {
 		const distances = [];
 		const lat1 = marker.position.lat;
 		const lng1 = marker.position.lng;
@@ -101,7 +101,8 @@ export class MapService {
 			}
 		});
 		distances.sort((a,b) => a.d - b.d);
-		return [distances[0].m, distances[1].m];
+		distances.length = count;
+		return distances.map(d => d.m);
 	}
 
 	async addLocationMarkers(map, cams, activateCamsForMarkers) {
@@ -128,14 +129,15 @@ export class MapService {
 				}
 				this.selectedMarker = marker;
 				console.log(`Cam clicked: ${cam.src}`);
-				this.closestMarkers.forEach(m => {
-					m.content = this.getPin(PinElement, false, false);
-				});
-				this.closestMarkers = this.getClosestMarkers(marker, this.markers);
 				this.selectedMarker.content = this.getPin(PinElement, true, false);
+				this.closestMarkers = this.getClosestMarkers(marker, this.markers, 0);
 				this.closestMarkers.forEach(m => {
 					m.content = this.getPin(PinElement, false, true);
 				});
+				this.closestMarkers.forEach((m, i) => {
+					console.log(`Closest #${i+1}: ${m.cam.src}`);
+				});
+
 				activateCamsForMarkers([marker, ...this.closestMarkers]);
 			});
 			marker.cam = cam;
