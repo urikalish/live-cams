@@ -34,6 +34,7 @@ if (!testErrCams) {
 		const cam = allCams.find(cam => cam.src.includes(e));
 		if (cam) {
 			deadCams.push(cam);
+			console.log(cam.name);
 			newErrCamSources.push(e);
 		} else {
 			console.warn(`Error cam not found in cam list: ${e}`);
