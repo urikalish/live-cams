@@ -116,6 +116,7 @@ export const errCamSources =
 	"https://www.youtube.com/embed/live_stream?channel=UCnGokALk4B59nuWINsnMW8Q",
 	"https://www.youtube.com/embed/live_stream?channel=UCp2ovW7Ou8MW_iUWafOBwuA",
 	"https://www.youtube.com/embed/live_stream?channel=UCwlHa7Aw0SiBLUH4LY0yiPQ",
+	"https://www.youtube.com/embed/live_stream?channel=UCyS3fQ0zsZFK8ArfjbCweHg",
 	"https://www.youtube.com/embed/live_stream?channel=UCyZ91n51FX7iBwyVoIW9HPA&autoplay=1",
 	"https://www.youtube.com/embed/live_stream?channel=UCyde73_gwGO5NXsXsfMunQw&autoplay=1",
 	"https://www.youtube.com/embed/live_stream?channel=UCzedhRNavDW3hGBUfFBjbkg",
