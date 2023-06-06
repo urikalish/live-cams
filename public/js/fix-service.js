@@ -6,7 +6,7 @@ export class FixService {
 
 	addCams(cams, addCams) {
 		addCams.forEach(cam => {
-			console.log(`Added | ${this.getCamStr(cam)}`);
+			//console.log(`Added | ${this.getCamStr(cam)}`);
 			cams.push(cam);
 		})
 	}
@@ -15,7 +15,7 @@ export class FixService {
 		let i = 0;
 		while (i < cams.length) {
 			if (remCams.find(e => cams[i].src.includes(e))) {
-				console.log(`Removed | ${this.getCamStr(cams[i])}`);
+				//console.log(`Removed | ${this.getCamStr(cams[i])}`);
 				cams.splice(i, 1);
 			} else {
 				i++;
@@ -29,7 +29,7 @@ export class FixService {
 			for (const [updCamId, updCamValues] of Object.entries(updCams)) {
 				if (cams[i].src.includes(updCamId) || cams[i].pos === updCamId) {
 					cams[i] = {...cams[i], ...updCamValues};
-					console.log(`Updated | ${this.getCamStr(cams[i])}`);
+					//console.log(`Updated | ${this.getCamStr(cams[i])}`);
 					break;
 				}
 			}
@@ -42,7 +42,7 @@ export class FixService {
 		while (i < cams.length) {
 			const cam = cams[i];
 			if (!cam.src) {
-				console.log(`No source | ${this.getCamStr(cam)}`);
+				//console.log(`No source | ${this.getCamStr(cam)}`);
 				cams.splice(i, 1);
 			} else {
 				i++;
@@ -55,7 +55,7 @@ export class FixService {
 		while (i < cams.length) {
 			const cam = cams[i];
 			if (!cam.pos) {
-				console.log(`No position | ${this.getCamStr(cam)}`);
+				//console.log(`No position | ${this.getCamStr(cam)}`);
 				cams.splice(i, 1);
 			} else {
 				i++;
@@ -63,18 +63,20 @@ export class FixService {
 		}
 	}
 
-	handleDuplicatedCams(cams) {
+	handleClonedCams(cams) {
 		let i = 0;
 		while (i < cams.length) {
 			const cam = cams[i];
 			let prevCam = null;
 			for (let j = 0; j < i; j++) {
-				if (cams[i].src === cams[j].src) {
+				if (cams[i].src && cams[i].src === cams[j].src) {
 					prevCam = cams[j];
 					break;
 				}
 			}
 			if (prevCam) {
+				//console.log(`Clone1 | ${this.getCamStr(prevCam)}`);
+				//console.log(`Clone2 | ${this.getCamStr(cam)}`);
 				if (cam.name !== prevCam.name) {
 					if (cam.name.includes(prevCam.name) && cam.name.length > prevCam.name.length) {
 						prevCam.name = cam.name;
@@ -82,16 +84,15 @@ export class FixService {
 						prevCam.name = `${prevCam.name} / ${cam.name}`;
 					}
 				}
-				if (cam.position && !prevCam.position) {
-					prevCam.position = cam.position;
-				}
 				if (cam.tags !== prevCam.tags) {
 					const tagSet = new Set();
 					prevCam.tags.split(',').forEach(t => tagSet.add(t));
 					cam.tags.split(',').forEach(t => tagSet.add(t));
 					prevCam.tags = Array.from(tagSet).join(',');
 				}
-				console.log(`Duplicated | ${this.getCamStr(cam)}`);
+				if (cam.position && !prevCam.position) {
+					prevCam.position = cam.position;
+				}
 				cams.splice(i, 1);
 			} else {
 				i++;
@@ -121,7 +122,7 @@ export class FixService {
 		this.removeCams(cams, remCams);
 		this.addCams(cams, addCams);
 		this.updateCams(cams, updCams);
-		this.handleDuplicatedCams(cams);
+		this.handleClonedCams(cams);
 		this.removeNoSourceCams(cams);
 		this.removeNoPositionCams(cams);
 		// this.addYouTubeIds(cams);
