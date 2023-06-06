@@ -3,5 +3,5 @@ export const issCam = {
   "tags": "Astronomy",
   "geo": "Space/Earth's orbit",
   "pos": "",
-  "src": "https://www.youtube.com/embed/itdpuGHAcpg",
+  "src": "https://www.youtube.com/embed/KG6SL6Mf7ak",
 }
