@@ -5,7 +5,7 @@ import { issCam } from '../cameras/iss-cam.js';
 import { MapService} from './map-service.js';
 import { CamService} from './cam-service.js';
 
-const testErrCams = false;
+const testErrCams = true;
 const autoShowIssCam = true;
 const closestCount = 16;
 
@@ -29,10 +29,16 @@ if (!testErrCams) {
 	camService.init(wctCams, [], fixCams);
 	const deadCams = [];
 	const allCams = camService.getCams();
-	allCams.forEach(c => {
-		if (errCamSources.find(e => c.src.includes(e))) {
-			deadCams.push(c);
+	const newErrCamSources = [];
+	errCamSources.forEach(e => {
+		const cam = allCams.find(cam => cam.src.includes(e));
+		if (cam) {
+			deadCams.push(cam);
+			newErrCamSources.push(e);
+		} else {
+			console.log(`err cam not found in cam list: ${e}`);
 		}
 	});
+	console.log(newErrCamSources.sort());
 	camService.displayLiveCams(deadCams);
 }
