@@ -127,8 +127,11 @@ export class MapService {
 			});
 			marker.addListener('click', () => {
 				if (this.selectedMarker) {
-					this.selectedMarker.content = this.getPin(PinElement, false);
+					this.selectedMarker.content = this.getPin(PinElement, false, false);
 				}
+				this.closestMarkers.forEach(m => {
+					m.content = this.getPin(PinElement, false, false);
+				});
 				this.selectedMarker = marker;
 				console.log(`Cam clicked: ${cam.src}`);
 				this.selectedMarker.content = this.getPin(PinElement, true, false);
