@@ -57,7 +57,6 @@ export const errCamSources =
 	"youtube.com/embed/cr9M1KqT8y4",
 	"youtube.com/embed/dG4LVD1_rdg",
 	"youtube.com/embed/dI3QzBOwA84",
-	"youtube.com/embed/dI3QzBOwA84",
 	"youtube.com/embed/f6Fz4iZbnlk",
 	"youtube.com/embed/fsyhsbEAOt0",
 	"youtube.com/embed/g7Hc38fXxYw",
