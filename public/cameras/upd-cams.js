@@ -1,4 +1,4 @@
-export const fixCams =
+export const updCams =
 {
 	"47.32225297906458,12.790955951615528": {src: "https://www.youtube.com/embed/tQBGH__Fq_0"},
 	"Azbdr5jbN6o": {pos: "42.77268358443426,141.69829881637892"},

@@ -1,4 +1,4 @@
-export const errCamSources =
+export const remCams =
 [
 	"g2.ipcamlive.com/player/player.php?alias=5de00341d5a32",
 	"in2thebeach.es/callbacks/camviewer_ext2.php?id=60",

@@ -1,3 +1,5 @@
+import { FixService } from './fix-service.js';
+
 export class CamService {
 
 	cams = [];
@@ -6,124 +8,9 @@ export class CamService {
 		return this.cams;
 	}
 
-	getCamStr(cam) {
-		return `${cam.name}${cam.tags ? ' | ' + cam.tags : ''} | ${cam.geo} | ${cam.pos} | ${cam.src}`;
-	}
-
-	removeDeadCams(errCamSources) {
-		let i = 0;
-		while (i < this.cams.length) {
-			if (errCamSources.find(e => this.cams[i].src.includes(e))) {
-				//console.log(`Removed | ${this.getCamStr(this.cams[i])}`);
-				this.cams.splice(i, 1);
-			} else {
-				i++;
-			}
-		}
-	}
-
-	updateCams(fixCams) {
-		let i = 0;
-		while (i < this.cams.length) {
-			for (const [fixedCamId, fixedCamValues] of Object.entries(fixCams)) {
-				if (this.cams[i].src.includes(fixedCamId) || this.cams[i].pos === fixedCamId) {
-					this.cams[i] = {...this.cams[i], ...fixedCamValues};
-					//console.log(`Updated | ${this.getCamStr(this.cams[i])}`);
-					break;
-				}
-			}
-			i++;
-		}
-	}
-
-	removeNoSourceCams() {
-		let i = 0;
-		while (i < this.cams.length) {
-			const cam = this.cams[i];
-			if (!cam.src) {
-				//console.log(`No source | ${this.getCamStr(cam)}`);
-				this.cams.splice(i, 1);
-			} else {
-				i++;
-			}
-		}
-	}
-
-	removeNoPositionCams() {
-		let i = 0;
-		while (i < this.cams.length) {
-			const cam = this.cams[i];
-			if (!cam.pos) {
-				//console.log(`No position | ${this.getCamStr(cam)}`);
-				this.cams.splice(i, 1);
-			} else {
-				i++;
-			}
-		}
-	}
-
-	handleDuplicatedCams() {
-		let i = 0;
-		while (i < this.cams.length) {
-			const cam = this.cams[i];
-			let prevCam = null;
-			for (let j = 0; j < i; j++) {
-				if (this.cams[i].src === this.cams[j].src) {
-					prevCam = this.cams[j];
-					break;
-				}
-			}
-			if (prevCam) {
-				if (cam.name !== prevCam.name) {
-					if (cam.name.includes(prevCam.name) && cam.name.length > prevCam.name.length) {
-						prevCam.name = cam.name;
-					} else {
-						prevCam.name = `${prevCam.name} / ${cam.name}`;
-					}
-				}
-				if (cam.position && !prevCam.position) {
-					prevCam.position = cam.position;
-				}
-				if (cam.tags !== prevCam.tags) {
-					const tagSet = new Set();
-					prevCam.tags.split(',').forEach(t => tagSet.add(t));
-					cam.tags.split(',').forEach(t => tagSet.add(t));
-					prevCam.tags = Array.from(tagSet).join(',');
-				}
-				//console.log(`Duplicated | ${this.getCamStr(cam)}`);
-				this.cams.splice(i, 1);
-			} else {
-				i++;
-			}
-		}
-	}
-
-	// addYouTubeIds() {
-	// 	this.cams.forEach(cam => {
-	// 		let match = /(^https:\/\/www\.youtube\.com\/embed\/live_stream\?channel=)([0-9a-zA-Z_-]*)/.exec(cam.src);
-	// 		if (match && match[2]) {
-	// 			cam.ytc = match[2];
-	// 			//console.log(`YT channel | ${this.getCamStr(cam)}`);
-	// 		} else {
-	// 			match = /(^https:\/\/www\.youtube\.com\/embed\/)([0-9a-zA-Z_-]*)/.exec(cam.src);
-	// 			if (match && match[2]) {
-	// 				cam.ytv = match[2];
-	// 				//console.log(`YT video | ${this.getCamStr(cam)}`);
-	// 			}
-	// 		}
-	// 	});
-	// }
-
-	init(cams, errCamSources, fixCams) {
-		this.cams = cams;
-		console.log(`All cameras: ${this.cams.length}`);
-		this.removeDeadCams(errCamSources);
-		this.updateCams(fixCams);
-		this.handleDuplicatedCams();
-		this.removeNoSourceCams();
-		this.removeNoPositionCams();
-		// this.addYouTubeIds();
-		console.log(`Valid cameras: ${this.cams.length}`);
+	init(wctCams, addCams, remCams, updCams) {
+		const fixService = new FixService();
+		this.cams = fixService.fix(wctCams, addCams, remCams, updCams);
 	}
 
 	addSrcQueryParams(src) {
