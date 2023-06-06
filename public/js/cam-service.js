@@ -13,7 +13,7 @@ export class CamService {
 	removeDeadCams(errCamSources) {
 		let i = 0;
 		while (i < this.cams.length) {
-			if (errCamSources.includes(this.cams[i].src)) {
+			if (errCamSources.find(e => this.cams[i].src.includes(e))) {
 				//console.log(`Removed | ${this.getCamStr(this.cams[i])}`);
 				this.cams.splice(i, 1);
 			} else {

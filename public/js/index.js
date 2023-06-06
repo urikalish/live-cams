@@ -30,7 +30,7 @@ if (!testErrCams) {
 	const deadCams = [];
 	const allCams = camService.getCams();
 	allCams.forEach(c => {
-		if (errCamSources.includes(c.src)) {
+		if (errCamSources.find(e => c.src.includes(e))) {
 			deadCams.push(c);
 		}
 	});
