@@ -36,7 +36,7 @@ if (!testErrCams) {
 			deadCams.push(cam);
 			newErrCamSources.push(e);
 		} else {
-			console.log(`err cam not found in cam list: ${e}`);
+			console.warn(`Error cam not found in cam list: ${e}`);
 		}
 	});
 	console.log(newErrCamSources.sort());
