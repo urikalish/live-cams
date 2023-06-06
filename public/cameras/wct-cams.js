@@ -12426,6 +12426,13 @@ export const wctCams =
     "src": "https://www.youtube.com/embed/live_stream?channel=UCwi9OZaPpVD5119djKkxf7A"
   },
   {
+    "name": "Alpaca Farm, Martha's Vineyard",
+    "tags": "Animals",
+    "geo": "Usa/Massachusetts",
+    "pos": "41.42240399370119,-70.61040428723865",
+    "src": "https://www.youtube.com/embed/a_WjWhIsVVU"
+  },
+  {
     "name": "Annisquam Yacht Club Cam, MA",
     "tags": "Boats,Marina,River",
     "geo": "Usa/Massachusetts",
