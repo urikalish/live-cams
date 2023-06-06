@@ -28,19 +28,19 @@ if (!testErrCams) {
 	}
 } else {
 	camService.init(wctCams, addCams, [], updCams);
-	const deadCams = [];
+	const unwantedCams = [];
 	const allCams = camService.getCams();
-	const newErrCamSources = [];
-	errCamSources.forEach(e => {
-		const cam = allCams.find(cam => cam.src.includes(e));
+	const newRemCams = [];
+	remCams.forEach(remCam => {
+		const cam = allCams.find(cam => cam.src.includes(remCam));
 		if (cam) {
-			deadCams.push(cam);
+			unwantedCams.push(cam);
 			console.log(cam.name);
-			newErrCamSources.push(e);
+			newRemCams.push(remCam);
 		} else {
-			console.warn(`Error cam not found in cam list: ${e}`);
+			console.warn(`Rem cam not found in cam list: ${remCam}`);
 		}
 	});
-	console.log(newErrCamSources.sort());
-	camService.displayLiveCams(deadCams);
+	console.log(newRemCams.sort());
+	camService.displayLiveCams(unwantedCams);
 }
