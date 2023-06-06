@@ -38,6 +38,7 @@ export const remCams =
 	"youtube.com/embed/HuQqoopY9VA",
 	"youtube.com/embed/LLNfejk1A6c",
 	"youtube.com/embed/LRU32W9q0Go",
+	"youtube.com/embed/P2-X-z6DxxM",
 	"youtube.com/embed/PGNYPax7YCQ",
 	"youtube.com/embed/PXf2dCawje8",
 	"youtube.com/embed/P_LkGnVbrKs",
