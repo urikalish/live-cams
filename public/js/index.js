@@ -16,18 +16,22 @@ window.handleGoogleMapLoaded = () => {
 	mapService.init(wctCams, issCam, activateCamsForMarkers).then(()=>{});
 }
 
-camService.init(wctCams, errCamSources, fixCams);
+const testErrCams = false;
+const autoShowIssCam = false;
 
-//camService.displayLiveCam(issCam);
-
-// function displayAllDeadCameras() {
-// 	//IMPORTANT - while using, comment out the removal of error cams in camService.init()
-// 	const deadCams = [];
-// 	const allCams = camService.getCams();
-// 	allCams.forEach(c => {
-// 		if (errCamSources.includes(c.src)) {
-// 			deadCams.push(c);
-// 		}
-// 	});
-// 	camService.displayLiveCams(deadCams);
-// }
+if (!testErrCams) {
+	camService.init(wctCams, errCamSources, fixCams);
+	if (autoShowIssCam) {
+		camService.displayLiveCams([issCam]);
+	}
+} else {
+	camService.init(wctCams, [], fixCams);
+	const deadCams = [];
+	const allCams = camService.getCams();
+	allCams.forEach(c => {
+		if (errCamSources.includes(c.src)) {
+			deadCams.push(c);
+		}
+	});
+	camService.displayLiveCams(deadCams);
+}
