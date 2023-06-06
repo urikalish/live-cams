@@ -132,17 +132,17 @@ export class CamService {
 		const urlParams = new URLSearchParams(srcQuery);
 		if (src.includes('youtube.com')) {
 			urlParams.set('vq', 'hd1080');
+			urlParams.set('autoplay', '1');
+			urlParams.set('mute', '1');
 		}
-		urlParams.set('autoplay', '1');
-		urlParams.set('mute', '1');
 		return srcLocation + '?' + urlParams.toString();
 	}
 
-	createCameraFrame(src) {
+	createCameraFrame(src, isLarge) {
 		const frElm = document.createElement('iframe');
 		frElm.setAttribute('src', src);
-		frElm.setAttribute('width', '950');
-		frElm.setAttribute('height', '534');
+		frElm.setAttribute('width', isLarge ? '950': '475');
+		frElm.setAttribute('height', isLarge ? '534' : '267');
 		frElm.setAttribute('title', 'Video player frame');
 		frElm.setAttribute('frameborder', '0');
 		frElm.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
@@ -155,9 +155,9 @@ export class CamService {
 		const mapElm = document.getElementById('map');
 		mainElm.replaceChildren();
 		mainElm.appendChild(mapElm);
-		cams.forEach(cam => {
+		cams.forEach((cam, i) => {
 			let src = this.addSrcQueryParams(cam.src);
-			const frElm = this.createCameraFrame(src);
+			const frElm = this.createCameraFrame(src, i === 0);
 			mainElm.appendChild(frElm);
 		});
 	}

@@ -18,9 +18,15 @@ body {
 }
 .main {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 950px);
+    grid-template-columns: repeat(auto-fit, 475px);
 }
 .map {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
     width: 950px;
     height: 534px;
+}
+#main > iframe:first-of-type {
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 2;
 }

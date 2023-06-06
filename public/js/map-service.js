@@ -130,7 +130,7 @@ export class MapService {
 				this.selectedMarker = marker;
 				console.log(`Cam clicked: ${cam.src}`);
 				this.selectedMarker.content = this.getPin(PinElement, true, false);
-				this.closestMarkers = this.getClosestMarkers(marker, this.markers, 0);
+				this.closestMarkers = this.getClosestMarkers(marker, this.markers, 16);
 				this.closestMarkers.forEach(m => {
 					m.content = this.getPin(PinElement, false, true);
 				});
