@@ -131,9 +131,11 @@ export class CamService {
 		const srcQuery = src.replace(srcLocation, '').replace('?', '');
 		const urlParams = new URLSearchParams(srcQuery);
 		if (src.includes('youtube.com')) {
-			urlParams.set('vq', 'hd1080');
 			urlParams.set('autoplay', '1');
 			urlParams.set('mute', '1');
+			urlParams.set('vq', 'hd1080');
+		} else if (src.includes('livestream.com')) {
+			urlParams.set('mute', 'true');
 		}
 		return srcLocation + '?' + urlParams.toString();
 	}
