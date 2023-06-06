@@ -6,6 +6,7 @@ export class MapService {
 	closestMarkers = [];
 	issMarker = null;
 	mapZoom = 2;
+	closestCount = 0;
 
 	debounce(func, timeout = 1000){
 		let timer;
@@ -33,12 +34,13 @@ export class MapService {
 		return pinElement.element;
 	}
 
-	async init(cams, issCam, activateCamsForMarkers) {
+	async init(cams, issCam, closestCount, activateCamsForMarkers) {
 		//@ts-ignore
 		const { Map } = await google.maps.importLibrary('maps');
 		//@ts-ignore
 		const { PinElement } = await google.maps.importLibrary('marker');
 
+		this.closestCount = closestCount;
 		const debouncePinUpdate = this.debounce(() => {
 			this.markers.forEach(m => {
 				m.content = this.getPin(PinElement, m === this.selectedMarker, this.closestMarkers.includes(m));
@@ -130,7 +132,7 @@ export class MapService {
 				this.selectedMarker = marker;
 				console.log(`Cam clicked: ${cam.src}`);
 				this.selectedMarker.content = this.getPin(PinElement, true, false);
-				this.closestMarkers = this.getClosestMarkers(marker, this.markers, 16);
+				this.closestMarkers = this.getClosestMarkers(marker, this.markers, this.closestCount);
 				this.closestMarkers.forEach(m => {
 					m.content = this.getPin(PinElement, false, true);
 				});

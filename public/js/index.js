@@ -5,6 +5,10 @@ import { issCam } from '../cameras/iss-cam.js';
 import { MapService} from './map-service.js';
 import { CamService} from './cam-service.js';
 
+const testErrCams = false;
+const autoShowIssCam = true;
+const closestCount = 16;
+
 const mapService = new MapService();
 const camService = new CamService();
 
@@ -13,11 +17,8 @@ function activateCamsForMarkers(markers) {
 }
 
 window.handleGoogleMapLoaded = () => {
-	mapService.init(wctCams, issCam, activateCamsForMarkers).then(()=>{});
+	mapService.init(wctCams, issCam, closestCount, activateCamsForMarkers).then(()=>{});
 }
-
-const testErrCams = false;
-const autoShowIssCam = false;
 
 if (!testErrCams) {
 	camService.init(wctCams, errCamSources, fixCams);
