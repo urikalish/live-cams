@@ -27,12 +27,15 @@ export class CamService {
 		return srcLocation + '?' + urlParams.toString();
 	}
 
-	createCameraFrame(src, isLarge) {
+	createCameraFrame(name, geo, pos, src, isLarge) {
 		const frElm = document.createElement('iframe');
+		frElm.setAttribute('cam-name', name);
+		frElm.setAttribute('cam-geo', geo);
+		frElm.setAttribute('cam-pos', pos);
 		frElm.setAttribute('src', src);
 		frElm.setAttribute('width', isLarge ? '950': '475');
 		frElm.setAttribute('height', isLarge ? '534' : '267');
-		frElm.setAttribute('title', 'Video player frame');
+		frElm.setAttribute('title', name);
 		frElm.setAttribute('frameborder', '0');
 		frElm.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
 		frElm.setAttribute('allowfullscreen', 'true');
@@ -46,7 +49,7 @@ export class CamService {
 		mainElm.appendChild(mapElm);
 		cams.forEach((cam, i) => {
 			let src = this.addSrcQueryParams(cam.src);
-			const frElm = this.createCameraFrame(src, i === 0);
+			const frElm = this.createCameraFrame(cam.name, cam.geo, cam.pos, src, i === 0);
 			mainElm.appendChild(frElm);
 		});
 	}
