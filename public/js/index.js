@@ -5,7 +5,7 @@ import { issCam } from '../cameras/iss-cam.js';
 import { MapService} from './map-service.js';
 import { CamService} from './cam-service.js';
 
-const testErrCams = true;
+const testErrCams = false;
 const autoShowIssCam = true;
 const closestCount = 16;
 
