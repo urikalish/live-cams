@@ -15,6 +15,7 @@ export const errCamSources =
 	"https://rtsp.me/embed/RNsNiBhT/",
 	"https://rtsp.me/embed/f682rABs/?rel=0&autoplay=1",
 	"https://v.angelcam.com/iframe?v=b91yx13loj&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkb21haW4iOiJob3RlbC1saXBwZXJ0LmNsaWNrMnN0cmVhbS5jb20iLCJjYW1lcmFfaWQiOjMyMiwiZXhwIjoxNjg1MjA0MDMyfQ.Vo9dZ-r7VlgxYj_LjnwxMaD6IrY0dTTbvD21kAZA2Xo&autoplay=1",
+	"https://video.nest.com/embedded/live/yh2UXjEHgH?autoplay=1",
 	"https://www.resortcams.com/embed.php?cam=hogs-breath-raw-bar",
 	"https://www.youtube.com/embed/09Aaq59WIAE",
 	"https://www.youtube.com/embed/0O3iyYqwYuM",
