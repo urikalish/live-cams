@@ -77,6 +77,7 @@ export const remCams =
 	"kF6WBvEIVP0",
 	"livestream.com/accounts/8525652/events/4001070",
 	"lt_w9qtgusk",
+	"mYORE8tGtiE",
 	"oP3j_zVH5T8",
 	"player.twitch.tv/?channel=kitebeachcenteruaq",
 	"player.twitch.tv/?channel=skopeloslive",
