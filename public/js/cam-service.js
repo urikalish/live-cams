@@ -8,6 +8,10 @@ export class CamService {
 		return this.cams;
 	}
 
+	setCams(cams) {
+		this.cams = cams;
+	}
+
 	init(wctCams, addCams, remCams, updCams) {
 		const fixService = new FixService();
 		this.cams = fixService.fix(wctCams, addCams, remCams, updCams);

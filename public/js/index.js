@@ -41,6 +41,7 @@ if (!testErrCams) {
 			console.warn(`Rem cam not found in cam list: ${remCam}`);
 		}
 	});
-	console.log(newRemCams.sort());
+	camService.setCams(unwantedCams);
 	camService.displayLiveCams(unwantedCams);
+	console.log(newRemCams.sort());
 }

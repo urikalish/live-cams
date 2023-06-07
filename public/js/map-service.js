@@ -103,7 +103,7 @@ export class MapService {
 			}
 		});
 		distances.sort((a,b) => a.d - b.d);
-		distances.length = count;
+		distances.length = Math.min(distances.length, count);
 		return distances.map(d => d.m);
 	}
 
