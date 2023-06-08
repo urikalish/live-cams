@@ -1373,6 +1373,13 @@ export const wctCams =
     "src": "https://g0.ipcamlive.com/player/player.php?alias=portofgruz001"
   },
   {
+    "name": "Barban Town Cam, Croatia",
+    "tags": "Traffic,Business",
+    "geo": "Croatia/Istria",
+    "pos": "45.064048971070264,14.014299077462882",
+    "src": "https://www.youtube.com/embed/LyUpfb-MPdY"
+  },
+  {
     "name": "Crveni Vrh, Croatia",
     "tags": "Sea",
     "geo": "Croatia/Istria",
