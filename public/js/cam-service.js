@@ -71,29 +71,30 @@ export class CamService {
 		this.displayLiveCams(unwantedCams, false);
 	}
 
-	// async checkYouTubeCams(wctCams, errCams, remCams, addCams, updCams) {
-	// 	this.init(wctCams, [], remCams, addCams, updCams);
-	// 	const ytCams = [];
-	// 	this.cams.forEach(cam => {
-	// 		if (cam.src?.includes('youtube.com')) {
-	// 			ytCams.push(cam);
-	// 		}
-	// 	})
-	// 	for (let cam of ytCams) {
-	// 		let src = this.addSrcQueryParams(cam.src, false);
-	// 		const res = await fetch(src, {
-	// 			mode: 'no-cors',
-	// 			headers: {'Access-Control-Allow-Origin': '*'}
-	// 		});
-	// 		const htmlString = await res.text();
-	// 		const parser = new DOMParser();
-	// 		const doc = parser.parseFromString(htmlString, 'text/html');
-	// 		if (doc.querySelector('.ytp-error')) {
-	// 			console.log(`Youtube N/A: ${cam.src}`);
-	// 		} else {
-	// 			console.log(`OK`);
-	// 		}
-	// 	}
-	// }
+	async checkYouTubeCams(wctCams, errCams, remCams, addCams, updCams) {
+		this.init(wctCams, errCams, remCams, addCams, updCams);
+		const ytCams = [];
+		this.cams.forEach(cam => {
+			if (cam.src?.includes('youtube.com')) {
+				ytCams.push(cam);
+			}
+		})
+		ytCams.length = 1;
+		for (let cam of ytCams) {
+			let src = this.addSrcQueryParams(cam.src, false);
+			const res = await fetch(src, {
+				mode: 'no-cors',
+				headers: {'Access-Control-Allow-Origin': '*'}
+			});
+			const htmlString = await res.text();
+			const parser = new DOMParser();
+			const doc = parser.parseFromString(htmlString, 'text/html');
+			if (doc.querySelector('.ytp-error')) {
+				console.log(`Youtube N/A: ${cam.src}`);
+			} else {
+				console.log(`OK`);
+			}
+		}
+	}
 
 }
