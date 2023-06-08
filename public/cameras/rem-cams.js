@@ -94,6 +94,7 @@ export const remCams =
 	"rtsp.me/embed/f682rABs",
 	"sGj41QieAdg",
 	"wL0quidoJs4",
+	"webcamtaxi.com/yellowstonecam.php",
 	"x6I-9UEe5PY",
 	"xhaHcDZkQL0",
 	"yKgAkxfFNPQ",
