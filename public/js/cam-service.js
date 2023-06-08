@@ -27,19 +27,42 @@ export class CamService {
 		return srcLocation + '?' + urlParams.toString();
 	}
 
-	createCameraFrame(name, geo, pos, src, isLarge) {
+	createCamView(name, geo, pos, src, id, isLarge) {
+		const width = isLarge ? 950: 475;
+		const height = isLarge ? 534 : 267;
+		const wrapperElm = document.createElement('div');
+		wrapperElm.classList.add('cam-container');
+		if (isLarge) {
+			wrapperElm.classList.add('cam-container--large');
+		}
+		wrapperElm.setAttribute('name', name);
+		wrapperElm.setAttribute('geo', geo);
+		wrapperElm.setAttribute('pos', pos);
+		wrapperElm.setAttribute('src', src);
+		wrapperElm.style['width'] = width + 'px';
+		wrapperElm.style['height'] = height + 'px';
+
 		const frElm = document.createElement('iframe');
-		frElm.setAttribute('cam-name', name);
-		frElm.setAttribute('cam-geo', geo);
-		frElm.setAttribute('cam-pos', pos);
 		frElm.setAttribute('src', src);
-		frElm.setAttribute('width', isLarge ? '950': '475');
-		frElm.setAttribute('height', isLarge ? '534' : '267');
+		frElm.setAttribute('width', '' + width);
+		frElm.setAttribute('height', '' + height);
 		frElm.setAttribute('title', name);
 		frElm.setAttribute('frameborder', '0');
 		frElm.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
 		frElm.setAttribute('allowfullscreen', 'true');
-		return frElm;
+		wrapperElm.appendChild(frElm);
+
+		if (id) {
+			const buttonElm = document.createElement('button');
+			buttonElm.textContent = '';
+			buttonElm.classList.add('info-btn');
+			buttonElm.addEventListener('click', () => {
+				console.log(id);
+			})
+			wrapperElm.appendChild(buttonElm);
+		}
+
+		return wrapperElm;
 	}
 
 	displayLiveCams(cams, autoPlay) {
@@ -49,7 +72,7 @@ export class CamService {
 		mainElm.appendChild(mapElm);
 		cams.forEach((cam, i) => {
 			let src = this.addSrcQueryParams(cam.src, autoPlay);
-			const frElm = this.createCameraFrame(cam.name, cam.geo, cam.pos, src, i === 0);
+			const frElm = this.createCamView(cam.name, cam.geo, cam.pos, src, cam.id, i === 0);
 			mainElm.appendChild(frElm);
 		});
 	}
@@ -71,30 +94,30 @@ export class CamService {
 		this.displayLiveCams(unwantedCams, false);
 	}
 
-	async checkYouTubeCams(wctCams, errCams, remCams, addCams, updCams) {
-		this.init(wctCams, errCams, remCams, addCams, updCams);
-		const ytCams = [];
-		this.cams.forEach(cam => {
-			if (cam.src?.includes('youtube.com')) {
-				ytCams.push(cam);
-			}
-		})
-		ytCams.length = 1;
-		for (let cam of ytCams) {
-			let src = this.addSrcQueryParams(cam.src, false);
-			const res = await fetch(src, {
-				mode: 'no-cors',
-				headers: {'Access-Control-Allow-Origin': '*'}
-			});
-			const htmlString = await res.text();
-			const parser = new DOMParser();
-			const doc = parser.parseFromString(htmlString, 'text/html');
-			if (doc.querySelector('.ytp-error')) {
-				console.log(`Youtube N/A: ${cam.src}`);
-			} else {
-				console.log(`OK`);
-			}
-		}
-	}
+	// async checkYouTubeCams(wctCams, errCams, remCams, addCams, updCams) {
+	// 	this.init(wctCams, errCams, remCams, addCams, updCams);
+	// 	const ytCams = [];
+	// 	this.cams.forEach(cam => {
+	// 		if (cam.src?.includes('youtube.com')) {
+	// 			ytCams.push(cam);
+	// 		}
+	// 	})
+	// 	ytCams.length = 1;
+	// 	for (let cam of ytCams) {
+	// 		let src = this.addSrcQueryParams(cam.src, false);
+	// 		const res = await fetch(src, {
+	// 			mode: 'no-cors',
+	// 			headers: {'Access-Control-Allow-Origin': '*'}
+	// 		});
+	// 		const htmlString = await res.text();
+	// 		const parser = new DOMParser();
+	// 		const doc = parser.parseFromString(htmlString, 'text/html');
+	// 		if (doc.querySelector('.ytp-error')) {
+	// 			console.log(`Youtube N/A: ${cam.src}`);
+	// 		} else {
+	// 			console.log(`OK`);
+	// 		}
+	// 	}
+	// }
 
 }

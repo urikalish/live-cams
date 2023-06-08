@@ -26,7 +26,21 @@ body {
     width: 950px;
     height: 534px;
 }
-#main > iframe:first-of-type {
+.cam-container {
+    position: relative;
+}
+.cam-container--large {
     grid-column: 3 / span 2;
     grid-row: 1 / span 2;
+}
+.info-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    color: transparent;
+    border: none;
+    cursor: pointer;
 }
