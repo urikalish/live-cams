@@ -1,7 +1,7 @@
 export class FixService {
 
 	getCamStr(cam) {
-		return `${cam.name}${cam.tags ? ' | ' + cam.tags : ''} | ${cam.geo} | ${cam.pos} | ${cam.src}`;
+		return `${cam.name}${cam.tags ? ' | ' + cam.tags : ''} | ${cam.geo} | ${cam.pos} | ${cam.src} | ${cam.id}`;
 	}
 
 	addCams(cams, addCams) {
@@ -106,21 +106,34 @@ export class FixService {
 		}
 	}
 
-	// addYouTubeIds(cams) {
-	// 	cams.forEach(cam => {
-	// 		let match = /(^https:\/\/www\.youtube\.com\/embed\/live_stream\?channel=)([0-9a-zA-Z_-]*)/.exec(cam.src);
-	// 		if (match && match[2]) {
-	// 			cam.ytc = match[2];
-	// 			//console.log(`YT channel | ${this.getCamStr(cam)}`);
-	// 		} else {
-	// 			match = /(^https:\/\/www\.youtube\.com\/embed\/)([0-9a-zA-Z_-]*)/.exec(cam.src);
-	// 			if (match && match[2]) {
-	// 				cam.ytv = match[2];
-	// 				//console.log(`YT video | ${this.getCamStr(cam)}`);
-	// 			}
-	// 		}
-	// 	});
-	// }
+	addIds(cams) {
+		cams.forEach(cam => {
+			let found = false;
+			let match = /(^https:\/\/www\.youtube\.com\/embed\/live_stream\?channel=)([0-9a-zA-Z_-]*)/.exec(cam.src);
+			if (match && match[2]) {
+				cam.id = match[2];
+				found = true;
+			}
+			if (!found) {
+				match = /(^https:\/\/www\.youtube\.com\/embed\/)([0-9a-zA-Z_-]*)/.exec(cam.src);
+				if (match && match[2]) {
+					cam.id = match[2];
+					found = true;
+				}
+			}
+			if (!found) {
+				match = /(^https:\/\/)(\S*)/.exec(cam.src);
+				if (match && match[2]) {
+					cam.id = match[2];
+					found = true;
+				}
+			}
+			if (!found) {
+				cam.id = cam.src;
+			}
+			//console.log(`Add ID | ${this.getCamStr(cam)}`);
+		});
+	}
 
 	fix(wctCams, errCams, remCams, addCams, updCams) {
 		const cams = [...wctCams];
@@ -131,7 +144,7 @@ export class FixService {
 		this.handleClonedCams(cams);
 		this.removeNoSourceCams(cams);
 		this.removeNoPositionCams(cams);
-		// this.addYouTubeIds(cams);
+		this.addIds(cams);
 		console.log(`Valid cameras: ${cams.length}`);
 		return cams;
 	}
