@@ -12,9 +12,9 @@ export class CamService {
 		this.cams = cams;
 	}
 
-	init(wctCams, addCams, remCams, updCams) {
+	init(wctCams, errCams, remCams, addCams, updCams) {
 		const fixService = new FixService();
-		this.cams = fixService.fix(wctCams, addCams, remCams, updCams);
+		this.cams = fixService.fix(wctCams, errCams, remCams, addCams, updCams);
 	}
 
 	addSrcQueryParams(src) {

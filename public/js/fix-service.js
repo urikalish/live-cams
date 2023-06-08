@@ -11,10 +11,13 @@ export class FixService {
 		})
 	}
 
-	removeCams(cams, remCams) {
+	removeCams(cams, unwantedCams) {
+		if (unwantedCams.length === 0) {
+			return;
+		}
 		let i = 0;
 		while (i < cams.length) {
-			if (remCams.find(e => cams[i].src.includes(e))) {
+			if (unwantedCams.find(e => cams[i].src.includes(e))) {
 				//console.log(`Removed | ${this.getCamStr(cams[i])}`);
 				cams.splice(i, 1);
 			} else {
@@ -24,6 +27,9 @@ export class FixService {
 	}
 
 	updateCams(cams, updCams) {
+		if (updCams.length === 0) {
+			return;
+		}
 		let i = 0;
 		while (i < cams.length) {
 			for (const [updCamId, updCamValues] of Object.entries(updCams)) {
@@ -116,10 +122,10 @@ export class FixService {
 	// 	});
 	// }
 
-	fix(wctCams, addCams, remCams, updCams) {
+	fix(wctCams, errCams, remCams, addCams, updCams) {
 		const cams = [...wctCams];
 		console.log(`WCT:${wctCams.length}, Add:${addCams.length}, Remove:${remCams.length}, Update:${Object.keys(updCams).length}`);
-		this.removeCams(cams, remCams);
+		this.removeCams(cams, [...errCams, ...remCams]);
 		this.addCams(cams, addCams);
 		this.updateCams(cams, updCams);
 		this.handleClonedCams(cams);

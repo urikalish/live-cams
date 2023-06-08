@@ -1,5 +1,6 @@
 import { wctCams } from '../cameras/wct-cams.js';
 import { addCams } from "../cameras/add-cams.js";
+import { errCams } from '../cameras/err-cams.js';
 import { remCams } from '../cameras/rem-cams.js';
 import { updCams } from '../cameras/upd-cams.js';
 import { issCam } from '../cameras/iss-cam.js';
@@ -22,26 +23,23 @@ window.handleGoogleMapLoaded = () => {
 }
 
 if (!testErrCams) {
-	camService.init(wctCams, addCams, remCams, updCams);
+	camService.init(wctCams, errCams, remCams, addCams, updCams);
 	if (autoShowIssCam) {
 		camService.displayLiveCams([issCam]);
 	}
 } else {
-	camService.init(wctCams, addCams, [], updCams);
+	camService.init(wctCams, [], remCams, addCams, updCams);
 	const unwantedCams = [];
 	const allCams = camService.getCams();
-	const newRemCams = [];
-	remCams.forEach(remCam => {
-		const cam = allCams.find(cam => cam.src.includes(remCam));
+	errCams.forEach(unwantedCam => {
+		const cam = allCams.find(cam => cam.src.includes(unwantedCam));
 		if (cam) {
 			unwantedCams.push(cam);
 			console.log(cam.name);
-			newRemCams.push(remCam);
 		} else {
-			console.warn(`Rem cam not found in cam list: ${remCam}`);
+			console.warn(`Unwanted cam not found in cam list: ${unwantedCam}`);
 		}
 	});
 	camService.setCams(unwantedCams);
 	camService.displayLiveCams(unwantedCams);
-	console.log(newRemCams.sort());
 }
