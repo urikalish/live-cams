@@ -8,15 +8,15 @@ import { MapService} from './map-service.js';
 import { CamService} from './cam-service.js';
 
 const displayAllErrCams = false;
-//const checkYouTubeCams = false;
 const autoShowIssCam = true;
+const autoPlay = true;
 const closestCount = 16;
 
 const mapService = new MapService();
 const camService = new CamService();
 
 function activateCamsForMarkers(markers) {
-	camService.displayLiveCams(markers.map(m => m.cam), true);
+	camService.displayLiveCams(markers.map(m => m.cam), autoPlay);
 }
 
 window.handleGoogleMapLoaded = () => {
@@ -25,11 +25,9 @@ window.handleGoogleMapLoaded = () => {
 
 if (displayAllErrCams) {
 	camService.displayAllErrCams(wctCams, errCams, remCams, addCams, updCams);
-// } else if (checkYouTubeCams) {
-// 	camService.checkYouTubeCams(wctCams, errCams, remCams, addCams, updCams);
 } else {
 	camService.init(wctCams, errCams, remCams, addCams, updCams);
 	if (autoShowIssCam) {
-		camService.displayLiveCams([issCam], true);
+		camService.displayLiveCams([issCam], autoPlay);
 	}
 }
