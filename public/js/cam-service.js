@@ -8,10 +8,6 @@ export class CamService {
 		return this.cams;
 	}
 
-	setCams(cams) {
-		this.cams = cams;
-	}
-
 	init(wctCams, errCams, remCams, addCams, updCams) {
 		const fixService = new FixService();
 		this.cams = fixService.fix(wctCams, errCams, remCams, addCams, updCams);
@@ -75,39 +71,29 @@ export class CamService {
 		this.displayLiveCams(unwantedCams, false);
 	}
 
-	getYouTubeCams(cams) {
-		const ytCams = [];
-		cams.forEach(cam => {
-			if (cam.src?.includes('youtube.com')) {
-				ytCams.push(cam);
-			}
-		})
-		return ytCams;
-	}
-
-	async testYouTubeCams(ytCams) {
-		for (let cam of ytCams) {
-			let src = this.addSrcQueryParams(cam.src, false);
-			const res = await fetch(src, {
-				mode: 'no-cors',
-				headers: {'Access-Control-Allow-Origin': '*'}
-			});
-			const htmlString = await res.text();
-			const parser = new DOMParser();
-			const doc = parser.parseFromString(htmlString, 'text/html');
-			if (doc.querySelector('.ytp-error')) {
-				console.log(`Youtube N/A: ${cam.src}`);
-			} else {
-				console.log(`OK`);
-			}
-		}
-	}
-
-
-	checkYouTubeCams(wctCams, errCams, remCams, addCams, updCams) {
-		this.init(wctCams, [], remCams, addCams, updCams);
-		const ytCams = this.getYouTubeCams(this.cams);
-		this.testYouTubeCams(ytCams).then(()=>{});
-	}
+	// async checkYouTubeCams(wctCams, errCams, remCams, addCams, updCams) {
+	// 	this.init(wctCams, [], remCams, addCams, updCams);
+	// 	const ytCams = [];
+	// 	this.cams.forEach(cam => {
+	// 		if (cam.src?.includes('youtube.com')) {
+	// 			ytCams.push(cam);
+	// 		}
+	// 	})
+	// 	for (let cam of ytCams) {
+	// 		let src = this.addSrcQueryParams(cam.src, false);
+	// 		const res = await fetch(src, {
+	// 			mode: 'no-cors',
+	// 			headers: {'Access-Control-Allow-Origin': '*'}
+	// 		});
+	// 		const htmlString = await res.text();
+	// 		const parser = new DOMParser();
+	// 		const doc = parser.parseFromString(htmlString, 'text/html');
+	// 		if (doc.querySelector('.ytp-error')) {
+	// 			console.log(`Youtube N/A: ${cam.src}`);
+	// 		} else {
+	// 			console.log(`OK`);
+	// 		}
+	// 	}
+	// }
 
 }

@@ -8,7 +8,7 @@ import { MapService} from './map-service.js';
 import { CamService} from './cam-service.js';
 
 const displayAllErrCams = false;
-const checkYouTubeCams = false;
+//const checkYouTubeCams = false;
 const autoShowIssCam = true;
 const closestCount = 16;
 
@@ -25,8 +25,8 @@ window.handleGoogleMapLoaded = () => {
 
 if (displayAllErrCams) {
 	camService.displayAllErrCams(wctCams, errCams, remCams, addCams, updCams);
-} else if (checkYouTubeCams) {
-	camService.checkYouTubeCams(wctCams, errCams, remCams, addCams, updCams);
+// } else if (checkYouTubeCams) {
+// 	camService.checkYouTubeCams(wctCams, errCams, remCams, addCams, updCams);
 } else {
 	camService.init(wctCams, errCams, remCams, addCams, updCams);
 	if (autoShowIssCam) {

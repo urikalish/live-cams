@@ -12,7 +12,7 @@ export const wctCams =
     "tags": "City",
     "geo": "Argentina/Buenos Aires",
     "pos": "-34.59054498036687,-58.38476204868749",
-    "src": "https://www.youtube.com/embed/if91GyWP3zQ?rel=0&autoplay=1"
+    "src": "https://www.youtube.com/embed/0q04F-t7sbU"
   },
   {
     "name": "Pinamar Beach Cam",
