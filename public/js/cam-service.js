@@ -17,12 +17,12 @@ export class CamService {
 		this.cams = fixService.fix(wctCams, errCams, remCams, addCams, updCams);
 	}
 
-	addSrcQueryParams(src) {
+	addSrcQueryParams(src, autoPlay) {
 		const srcLocation = src.split('?')[0];
 		const srcQuery = src.replace(srcLocation, '').replace('?', '');
 		const urlParams = new URLSearchParams(srcQuery);
 		if (src.includes('youtube.com')) {
-			urlParams.set('autoplay', '1');
+			urlParams.set('autoplay', autoPlay ? '1' : '0');
 			urlParams.set('mute', '1');
 			urlParams.set('vq', 'hd1080');
 		} else if (src.includes('livestream.com')) {
@@ -46,13 +46,13 @@ export class CamService {
 		return frElm;
 	}
 
-	displayLiveCams(cams) {
+	displayLiveCams(cams, autoPlay) {
 		const mainElm = document.getElementById('main');
 		const mapElm = document.getElementById('map');
 		mainElm.replaceChildren();
 		mainElm.appendChild(mapElm);
 		cams.forEach((cam, i) => {
-			let src = this.addSrcQueryParams(cam.src);
+			let src = this.addSrcQueryParams(cam.src, autoPlay);
 			const frElm = this.createCameraFrame(cam.name, cam.geo, cam.pos, src, i === 0);
 			mainElm.appendChild(frElm);
 		});

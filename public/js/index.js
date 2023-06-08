@@ -15,7 +15,7 @@ const mapService = new MapService();
 const camService = new CamService();
 
 function activateCamsForMarkers(markers) {
-	camService.displayLiveCams(markers.map(m => m.cam));
+	camService.displayLiveCams(markers.map(m => m.cam), true);
 }
 
 window.handleGoogleMapLoaded = () => {
@@ -25,7 +25,7 @@ window.handleGoogleMapLoaded = () => {
 if (!testErrCams) {
 	camService.init(wctCams, errCams, remCams, addCams, updCams);
 	if (autoShowIssCam) {
-		camService.displayLiveCams([issCam]);
+		camService.displayLiveCams([issCam], true);
 	}
 } else {
 	camService.init(wctCams, [], remCams, addCams, updCams);
@@ -41,5 +41,5 @@ if (!testErrCams) {
 		}
 	});
 	camService.setCams(unwantedCams);
-	camService.displayLiveCams(unwantedCams);
+	camService.displayLiveCams(unwantedCams, true);
 }
