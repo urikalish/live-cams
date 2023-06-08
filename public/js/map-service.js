@@ -133,15 +133,15 @@ export class MapService {
 					m.content = this.getPin(PinElement, false, false);
 				});
 				this.selectedMarker = marker;
-				console.log(`Cam clicked: ${cam.src}`);
+				//console.log(`Cam clicked: ${cam.src}`);
 				this.selectedMarker.content = this.getPin(PinElement, true, false);
 				this.closestMarkers = this.getClosestMarkers(marker, this.markers, this.closestCount);
 				this.closestMarkers.forEach(m => {
 					m.content = this.getPin(PinElement, false, true);
 				});
-				this.closestMarkers.forEach((m, i) => {
-					console.log(`Closest #${i+1}: ${m.cam.src}`);
-				});
+				//this.closestMarkers.forEach((m, i) => {
+					//console.log(`Closest #${i+1}: ${m.cam.src}`);
+				//});
 
 				activateCamsForMarkers([marker, ...this.closestMarkers]);
 			});
