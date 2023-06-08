@@ -5,6 +5,7 @@ export const remCams =
 	"3x6ZPzO_4PQ",
 	"UC0XwlUj1WxwF1e-gzxwRSUw",
 	"UCMuBZXmPvGSgN_xAQz3iFQA",
+	"UCyS3fQ0zsZFK8ArfjbCweHg",
 	"jwplayer.com/players/QfGPTxWt-PvmcpbOb",
 	"g2.ipcamlive.com/player/player.php?alias=5de00341d5a32",
 	"in2thebeach.es/callbacks/camviewer_ext2.php?id=60",
