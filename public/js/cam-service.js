@@ -58,4 +58,56 @@ export class CamService {
 		});
 	}
 
+	displayAllErrCams(wctCams, errCams, remCams, addCams, updCams) {
+		this.init(wctCams, [], remCams, addCams, updCams);
+		const unwantedCams = [];
+		const allCams = this.cams;
+		errCams.forEach(unwantedCam => {
+			const cam = allCams.find(cam => cam.src.includes(unwantedCam));
+			if (cam) {
+				unwantedCams.push(cam);
+				console.log(cam.name);
+			} else {
+				console.warn(`Unwanted cam not found in cam list: ${unwantedCam}`);
+			}
+		});
+		this.cams = unwantedCams;
+		this.displayLiveCams(unwantedCams, false);
+	}
+
+	getYouTubeCams(cams) {
+		const ytCams = [];
+		cams.forEach(cam => {
+			if (cam.src?.includes('youtube.com')) {
+				ytCams.push(cam);
+			}
+		})
+		return ytCams;
+	}
+
+	async testYouTubeCams(ytCams) {
+		for (let cam of ytCams) {
+			let src = this.addSrcQueryParams(cam.src, false);
+			const res = await fetch(src, {
+				mode: 'no-cors',
+				headers: {'Access-Control-Allow-Origin': '*'}
+			});
+			const htmlString = await res.text();
+			const parser = new DOMParser();
+			const doc = parser.parseFromString(htmlString, 'text/html');
+			if (doc.querySelector('.ytp-error')) {
+				console.log(`Youtube N/A: ${cam.src}`);
+			} else {
+				console.log(`OK`);
+			}
+		}
+	}
+
+
+	checkYouTubeCams(wctCams, errCams, remCams, addCams, updCams) {
+		this.init(wctCams, [], remCams, addCams, updCams);
+		const ytCams = this.getYouTubeCams(this.cams);
+		this.testYouTubeCams(ytCams).then(()=>{});
+	}
+
 }

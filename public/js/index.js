@@ -7,7 +7,8 @@ import { issCam } from '../cameras/iss-cam.js';
 import { MapService} from './map-service.js';
 import { CamService} from './cam-service.js';
 
-const testErrCams = false;
+const displayAllErrCams = false;
+const checkYouTubeCams = false;
 const autoShowIssCam = true;
 const closestCount = 16;
 
@@ -22,24 +23,13 @@ window.handleGoogleMapLoaded = () => {
 	mapService.init(camService.getCams(), issCam, closestCount, activateCamsForMarkers).then(()=>{});
 }
 
-if (!testErrCams) {
+if (displayAllErrCams) {
+	camService.displayAllErrCams(wctCams, errCams, remCams, addCams, updCams);
+} else if (checkYouTubeCams) {
+	camService.checkYouTubeCams(wctCams, errCams, remCams, addCams, updCams);
+} else {
 	camService.init(wctCams, errCams, remCams, addCams, updCams);
 	if (autoShowIssCam) {
 		camService.displayLiveCams([issCam], true);
 	}
-} else {
-	camService.init(wctCams, [], remCams, addCams, updCams);
-	const unwantedCams = [];
-	const allCams = camService.getCams();
-	errCams.forEach(unwantedCam => {
-		const cam = allCams.find(cam => cam.src.includes(unwantedCam));
-		if (cam) {
-			unwantedCams.push(cam);
-			console.log(cam.name);
-		} else {
-			console.warn(`Unwanted cam not found in cam list: ${unwantedCam}`);
-		}
-	});
-	camService.setCams(unwantedCams);
-	camService.displayLiveCams(unwantedCams, true);
 }
