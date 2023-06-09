@@ -42,7 +42,6 @@ export const errCams =
 	"UCdMj2twWfMHXrWgX5oVdoyA",
 	"UCfNjakTTS4WVLmX7TSr1qWg",
 	"UCfi_toBXJNT2YnToQACcgFA",
-	"UCjDEavK41zIQCyAsqmz7A4w",
 	"UCnGokALk4B59nuWINsnMW8Q",
 	"UCp2ovW7Ou8MW_iUWafOBwuA",
 	"UCwlHa7Aw0SiBLUH4LY0yiPQ",
