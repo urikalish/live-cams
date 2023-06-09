@@ -84,18 +84,21 @@ export class CamService {
 	displayAllErrCams(wctCams, errCams, remCams, addCams, updCams) {
 		this.init(wctCams, [], remCams, addCams, updCams);
 		const unwantedCams = [];
+		const unwantedCamIds = [];
 		const allCams = this.cams;
 		errCams.forEach(unwantedCam => {
 			const cam = allCams.find(cam => cam.src.includes(unwantedCam));
 			if (cam) {
 				unwantedCams.push(cam);
-				console.log(cam.name);
+				unwantedCamIds.push(cam.id);
+				//console.log(cam.name);
 			} else {
-				console.log(`Unwanted cam not found in cam list: ${unwantedCam}`);
+				//console.log(`Unwanted cam not found in cam list: ${unwantedCam}`);
 			}
 		});
 		this.cams = unwantedCams;
 		this.displayLiveCams(unwantedCams, false);
+		console.log(unwantedCamIds.sort());
 	}
 
 	// async checkYouTubeCams(wctCams, errCams, remCams, addCams, updCams) {
