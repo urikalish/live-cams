@@ -137,7 +137,7 @@ export class FixService {
 
 	fix(wctCams, errCams, remCams, addCams, updCams) {
 		const cams = [...wctCams];
-		console.log(`WCT:${wctCams.length}, Add:${addCams.length}, Remove:${remCams.length}, Update:${Object.keys(updCams).length}`);
+		console.log(`WCT:${wctCams.length}, Err:${addCams.length}, Remove:${remCams.length}, Add:${addCams.length}, Update:${Object.keys(updCams).length}`);
 		this.removeCams(cams, [...errCams, ...remCams]);
 		this.addCams(cams, addCams);
 		this.updateCams(cams, updCams);
