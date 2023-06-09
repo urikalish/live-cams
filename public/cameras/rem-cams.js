@@ -6,12 +6,12 @@ export const remCams =
 	"UC0XwlUj1WxwF1e-gzxwRSUw",
 	"UCMuBZXmPvGSgN_xAQz3iFQA",
 	"UCyS3fQ0zsZFK8ArfjbCweHg",
+	"ipcamlive.com/player/player.php?alias=westin1",
+	"jwplayer.com/players/QfGPTxWt-PvmcpbOb",
 	"g2.ipcamlive.com/player/player.php?alias=5de00341d5a32",
 	"in2thebeach.es/callbacks/camviewer_ext2.php?id=20",
 	"in2thebeach.es/callbacks/camviewer_ext2.php?id=60",
-	"ipcamlive.com/player/player.php?alias=westin1",
 	"jDW3BObg-Dk",
-	"jwplayer.com/players/QfGPTxWt-PvmcpbOb",
 	"livestream.com/accounts/8525652/events/4001070",
 	"open.ivideon.com/embed/v2/?server=100-980e7d235ef4f0b9f0173793db07ae11&camera=655360",
 	"play.player.im/player/kamera/playif.php?kamera=cleopatra",
@@ -25,5 +25,4 @@ export const remCams =
 	"rtsp.me/embed/RNsNiBhT",
 	"rtsp.me/embed/f682rABs",
 	"webcamtaxi.com/yellowstonecam.php",
-	"x6I-9UEe5PY"
 ];
