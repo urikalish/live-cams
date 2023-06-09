@@ -13203,6 +13203,13 @@ export const wctCams =
 		"src": "https://www.youtube.com/embed/live_stream?channel=UCjBTdlFa28vCjI6m9kIM7gA"
 	},
 	{
+		"name": "Bob's Grill Ocean City Pier, NJ",
+		"tags": "Beach,Fishing,Sea",
+		"geo": "Usa/New Jersey",
+		"pos": "39.27137997164659,-74.58322592271831",
+		"src": "https://www.youtube.com/embed/c4Nf2dBFQVo"
+	},
+	{
 		"name": "Kitkat Playroom Cam, NJ",
 		"tags": "Animals",
 		"geo": "Usa/New Jersey",
