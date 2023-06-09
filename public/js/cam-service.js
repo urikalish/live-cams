@@ -62,6 +62,7 @@ export class CamService {
 			buttonElm.classList.add('info-btn');
 			buttonElm.addEventListener('click', () => {
 				console.log(cam.id);
+				navigator.clipboard.writeText(cam.id).then(() => {});
 			})
 			wrapperElm.appendChild(buttonElm);
 		}
@@ -90,7 +91,7 @@ export class CamService {
 				unwantedCams.push(cam);
 				console.log(cam.name);
 			} else {
-				console.warn(`Unwanted cam not found in cam list: ${unwantedCam}`);
+				console.log(`Unwanted cam not found in cam list: ${unwantedCam}`);
 			}
 		});
 		this.cams = unwantedCams;
