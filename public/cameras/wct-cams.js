@@ -600,7 +600,7 @@ export const wctCams =
 		"tags": "Airport,Sound",
 		"geo": "Brazil/Rio de Janeiro",
 		"pos": "-22.90998929626542,-43.17204582175348",
-		"src": "https://www.youtube.com/embed/wVRpTxD8xtc"
+		"src": "https://www.youtube.com/embed/ZZgIkAi49dA"
 	},
 	{
 		"name": "Saquarema Cam, Brazil",
@@ -614,7 +614,7 @@ export const wctCams =
 		"tags": "Square,Traffic",
 		"geo": "Brazil/Rio Grande do Sul",
 		"pos": "-29.41499530924704,-53.030049783855134",
-		"src": "https://www.youtube.com/embed/P2-X-z6DxxM"
+		"src": "https://www.youtube.com/embed/nAO3XMZXdXI"
 	},
 	{
 		"name": "Lake Guaíba, Porto Alegre",
@@ -4681,7 +4681,7 @@ export const wctCams =
 		"tags": "4k,Airport",
 		"geo": "Japan/Fukuoka Prefecture",
 		"pos": "33.581597460239315,130.44266405482213",
-		"src": "https://www.youtube.com/embed/OYRO30Bdz7s"
+		"src": "https://www.youtube.com/embed/TUVordWfvZM"
 	},
 	{
 		"name": "Hakata Station, Japan",
@@ -5017,7 +5017,7 @@ export const wctCams =
 		"tags": "Traffic",
 		"geo": "Japan/Okinawa Prefecture",
 		"pos": "24.336808085333644,124.14967201409497",
-		"src": "https://www.youtube.com/embed/dPJ6klBB1zY"
+		"src": "https://www.youtube.com/embed/n5Knloygs6s"
 	},
 	{
 		"name": "Ginowan City",
@@ -6158,7 +6158,7 @@ export const wctCams =
 		"tags": "Bar,Restaurant,Square",
 		"geo": "Netherlands/Friesland",
 		"pos": "53.03253220577191,5.657816951888941",
-		"src": "https://www.youtube.com/embed/n-iWmXF4AFo"
+		"src": "https://www.youtube.com/embed/HVHAuJqrUnk"
 	},
 	{
 		"name": "Oldehoofsterkerkhof, Leeuwarden",
@@ -7922,7 +7922,7 @@ export const wctCams =
 		"tags": "Church,Square",
 		"geo": "Romania/Cluj County",
 		"pos": "46.768927653354815,23.587272951769865",
-		"src": "https://www.youtube.com/embed/eKkmi_NfNHw"
+		"src": "https://www.youtube.com/embed/HzOUQ-3B3S8"
 	},
 	{
 		"name": "Targu Secuiesc Cam, Covasna",
@@ -8237,7 +8237,7 @@ export const wctCams =
 		"tags": "Bridge,Island,Monument,River",
 		"geo": "Russia/Saint Petersburg",
 		"pos": "59.9487034828098,30.310936264648557",
-		"src": "https://www.youtube.com/embed/Lj0lK2XnsPw"
+		"src": "https://www.youtube.com/embed/pYZX8hq5sR8"
 	},
 	{
 		"name": "Central Square Cam, Mirny",
@@ -9112,7 +9112,7 @@ export const wctCams =
 		"tags": "Beach,Sea",
 		"geo": "Spain/Basque Country",
 		"pos": "43.32925812604962,-1.9797010334817344",
-		"src": "https://www.youtube.com/embed/8SDTH0e0EwA"
+		"src": "https://www.youtube.com/embed/iXRXGcYI48Q"
 	},
 	{
 		"name": "Plaza de Sevilla",
@@ -9997,6 +9997,13 @@ export const wctCams =
 		"src": "https://www.youtube.com/embed/JhQuR77AR7U"
 	},
 	{
+		"name": "Back Cihu Park Cam",
+		"tags": "Lake,Nature",
+		"geo": "Taiwan/Taoyuan City",
+		"pos": "24.845532651972235,121.3000613160631",
+		"src": "https://www.youtube.com/embed/00_cG4RbXCU"
+	},
+	{
 		"name": "Cihu Memorial Sculpture Park",
 		"tags": "Bridge,Garden,Monument,River",
 		"geo": "Taiwan/Taoyuan City",
@@ -10449,7 +10456,7 @@ export const wctCams =
 		"tags": "Traffic",
 		"geo": "Usa/Alabama",
 		"pos": "33.928888980544535,-87.819051048305",
-		"src": "https://www.youtube.com/embed/gQSenjvrUY0"
+		"src": "https://www.youtube.com/embed/s8Of3d8oTmQ"
 	},
 	{
 		"name": "Cliffside Marina Cam, Alaska",
@@ -11072,14 +11079,14 @@ export const wctCams =
 		"tags": "Animals",
 		"geo": "Usa/Connecticut",
 		"pos": "41.536142459966825,-72.22928238384303",
-		"src": "https://www.youtube.com/embed/8kOZScgpFak"
+		"src": "https://www.youtube.com/embed/hUXQ1S0TmH8"
 	},
 	{
 		"name": "Goat Barn Cam, Salem",
 		"tags": "Animals",
 		"geo": "Usa/Connecticut",
 		"pos": "41.536142459966825,-72.22928238384303",
-		"src": "https://www.youtube.com/embed/8kOZScgpFak"
+		"src": "https://www.youtube.com/embed/th3dheeeZko"
 	},
 	{
 		"name": "Kitten Academy Cam, CT",
@@ -12521,7 +12528,7 @@ export const wctCams =
 		"tags": "Bridge,River,Traffic,Trains",
 		"geo": "Usa/Massachusetts",
 		"pos": "42.12986505759844,-72.74679978372717",
-		"src": "https://www.youtube.com/embed/bkJOKRMrgZ0"
+		"src": "https://www.youtube.com/embed/WfHlXHgl4Wg"
 	},
 	{
 		"name": "Hanover Center Cam, MA",
@@ -14243,7 +14250,7 @@ export const wctCams =
 		"tags": "Island",
 		"geo": "Usa/Utah",
 		"pos": "37.01452050769489,-110.21773262406377",
-		"src": "https://www.youtube.com/embed/WlnpiwBwrh4"
+		"src": "https://www.youtube.com/embed/XfXvXyQVoPc"
 	},
 	{
 		"name": "SUU Library & Quad, Utah",
@@ -14978,7 +14985,7 @@ export const wctCams =
 		"tags": "Animals,United Kingdom",
 		"geo": "Wales/Gwynedd",
 		"pos": "52.955245055453574,-4.1008222946683786",
-		"src": "https://www.youtube.com/embed/kyQl9vVnNYI"
+		"src": "https://www.youtube.com/embed/B-khNpjhsUo"
 	},
 	{
 		"name": "Saundersfoot Beach Cam",
@@ -15001,4 +15008,4 @@ export const wctCams =
 		"pos": "52.56573198633047,-3.923721804954616",
 		"src": "https://www.youtube.com/embed/live_stream?channel=UCk70QelhKG9mVuj7jN4I5Cg"
 	}
-]
+];
