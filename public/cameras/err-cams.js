@@ -4,7 +4,6 @@ export const errCams =
 	"-G1aZYMCOfs",
 	"-PnTdQz0JSE",
 	"0q04F-t7sbU",
-	"2LqV6NMg3DY",
 	"5thDWWMt8MA",
 	"8eMjVwBeFEM",
 	"8z5aoYCUQd0",
@@ -41,7 +40,6 @@ export const errCams =
 	"XBm9CWX1k74",
 	"aXAsMcmtJTc",
 	"bHU1zgSmMY8",
-	"boZwdGt1uYQ",
 	"dG4LVD1_rdg",
 	"dI3QzBOwA84",
 	"efZJB19f4_Y",
@@ -63,7 +61,6 @@ export const errCams =
 	"x6I-9UEe5PY",
 	"xopd67ohcc4",
 	"yKgAkxfFNPQ",
-	"ywH7uPTpd98",
 	"zBNhXENp09k",
 	"zJSW4NAQG5k"
 ];
