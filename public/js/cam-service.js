@@ -93,7 +93,7 @@ export class CamService {
 				unwantedCamIds.push(cam.id);
 				console.log(cam.name);
 			} else {
-				//console.log(`Unwanted cam not found in cam list: ${unwantedCam}`);
+				console.log(`Unwanted cam not found in cam list: ${unwantedCam}`);
 			}
 		});
 		this.cams = unwantedCams;
