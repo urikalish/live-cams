@@ -3708,7 +3708,7 @@ export const wctCams =
 		"tags": "Animals,Zoo and Safari",
 		"geo": "Hungary/Csongrád-Csanád",
 		"pos": "46.249679970977326,20.112077713109358",
-		"src": "https://www.youtube.com/embed/2LqV6NMg3DY"
+		"src": "https://www.youtube.com/embed/wjwG2JvpqAI"
 	},
 	{
 		"name": "Main square, Sopron",
@@ -4632,7 +4632,7 @@ export const wctCams =
 		"tags": "Airport",
 		"geo": "Japan/Akita Prefecture",
 		"pos": "39.612020112107025,140.21762031607545",
-		"src": "https://www.youtube.com/embed/boZwdGt1uYQ"
+		"src": "https://www.youtube.com/embed/ADpQ2K1KBMQ"
 	},
 	{
 		"name": "Akita City Cam, Japan",
@@ -7614,7 +7614,7 @@ export const wctCams =
 		"tags": "Beach,Landscape,Nature,Sea,Traffic",
 		"geo": "Portugal/Madeira",
 		"pos": "32.65683680877624,-17.00176885185584",
-		"src": "https://www.youtube.com/embed/D3mJwmd8C3U"
+		"src": "https://www.youtube.com/embed/ETry02TeL0E"
 	},
 	{
 		"name": "Calheta Beach Cam, Madeira",
@@ -7824,7 +7824,7 @@ export const wctCams =
 		"tags": "Beach",
 		"geo": "Portugal/Setúbal",
 		"pos": "38.60161317970102,-9.210929790898755",
-		"src": "https://www.youtube.com/embed/ywH7uPTpd98"
+		"src": "https://www.youtube.com/embed/gkj0kdQfTGY"
 	},
 	{
 		"name": "Madeira Island Rolling Cam",
@@ -13774,7 +13774,7 @@ export const wctCams =
 		"tags": "Trains",
 		"geo": "Usa/Ohio",
 		"pos": "39.110349971679334,-84.54063092268224",
-		"src": "https://www.youtube.com/embed/3VumG2PKtlQ"
+		"src": "https://www.youtube.com/embed/vXtrlFN6nz4"
 	},
 	{
 		"name": "Cleveland Water Crib Cam",
@@ -15008,4 +15008,4 @@ export const wctCams =
 		"pos": "52.56573198633047,-3.923721804954616",
 		"src": "https://www.youtube.com/embed/live_stream?channel=UCk70QelhKG9mVuj7jN4I5Cg"
 	}
-];
+]
