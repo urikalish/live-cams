@@ -113,6 +113,14 @@ export class MapService {
 		return distances.map(d => d.m);
 	}
 
+	zoomOnMarkers(markers) {
+		const latLngBounds = new google.maps.LatLngBounds();
+		markers.forEach(m => {
+			latLngBounds.extend(m.position);
+		});
+		this.map.fitBounds(latLngBounds);
+	}
+
 	drawLineBetweenMarkers(map, m1, m2, color) {
 		const line = new google.maps.Polyline({
 			path: [m1.position, m2.position],
