@@ -47,10 +47,10 @@ export class MapService {
 			});
 		}, 1000);
 
-		this.map = new Map(document.getElementById("map"), {
+		this.map = new Map(document.getElementById('map'), {
 			zoom: 2,
 			center: {lat: 20, lng: 11},
-			mapId: "world-map",
+			mapId: 'world-map',
 			labels: false,
 			disableDefaultUI: true,
 			mapTypeId: 'hybrid' // 'roadmap' | 'satellite' | 'hybrid'
@@ -62,6 +62,10 @@ export class MapService {
 			}
 			this.mapZoom = mapZoom;
 			debouncePinUpdate();
+		});
+		this.map.addListener('click', (mapsMouseEvent) => {
+			console.log(mapsMouseEvent.latLng.lat() + ',' + mapsMouseEvent.latLng.lng());
+
 		});
 		await this.addLocationMarkers(this.map, cams, activateCamsForMarkers);
 		await this.handleIssMapMarker(this.map, issCam, activateCamsForMarkers);
