@@ -111,6 +111,17 @@ export class MapService {
 		return distances.map(d => d.m);
 	}
 
+	drawLineBetweenMarkers(map, marker1, marker2, color) {
+		const line = new google.maps.Polyline({
+			path: [marker1.position, marker2.position],
+			geodesic: true,
+			strokeColor: color,
+			strokeOpacity: 1.0,
+			strokeWeight: 2
+		});
+		line.setMap(map);
+	}
+
 	async addLocationMarkers(map, cams, activateCamsForMarkers) {
 		//@ts-ignore
 		const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary('marker');
