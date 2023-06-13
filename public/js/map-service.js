@@ -83,7 +83,11 @@ export class MapService {
 		return x * Math.PI / 180;
 	};
 
-	getDistance(lat1, lng1, lat2, lng2) {
+	getDistanceBetweenMarkers(m1, m2) {
+		const lat1 = m1.position.lat;
+		const lng1 = m1.position.lng;
+		const lat2 = m2.position.lat;
+		const lng2 = m2.position.lng;
 		const R = 6378137; // Earth’s mean radius in meters
 		const dLat = this.rad(lat2 - lat1);
 		const dLong = this.rad(lng2 - lng1);
@@ -96,13 +100,11 @@ export class MapService {
 
 	getClosestMarkers(marker, markers, count) {
 		const distances = [];
-		const lat1 = marker.position.lat;
-		const lng1 = marker.position.lng;
 		markers.forEach(m => {
 			if (m !== marker) {
 				distances.push({
 					m,
-					d: this.getDistance(lat1, lng1, m.position.lat, m.position.lng)
+					d: this.getDistanceBetweenMarkers(marker, m)
 				});
 			}
 		});
@@ -111,9 +113,9 @@ export class MapService {
 		return distances.map(d => d.m);
 	}
 
-	drawLineBetweenMarkers(map, marker1, marker2, color) {
+	drawLineBetweenMarkers(map, m1, m2, color) {
 		const line = new google.maps.Polyline({
-			path: [marker1.position, marker2.position],
+			path: [m1.position, m2.position],
 			geodesic: true,
 			strokeColor: color,
 			strokeOpacity: 1.0,
