@@ -537,7 +537,7 @@ export const wctCams =
 		"tags": "Animals,Beach,Nature,Sea",
 		"geo": "Bermuda/St George's Parish",
 		"pos": "32.34822671302982,-64.6642164838434",
-		"src": "https://www.youtube.com/embed/1kpVaXefnQg"
+		"src": "https://www.youtube.com/embed/O1BylSTUJZc"
 	},
 	{
 		"name": "St. James church, Medjugorje",
@@ -600,7 +600,7 @@ export const wctCams =
 		"tags": "Airport,Sound",
 		"geo": "Brazil/Rio de Janeiro",
 		"pos": "-22.90998929626542,-43.17204582175348",
-		"src": "https://www.youtube.com/embed/mkXlXtEp1QE"
+		"src": "https://www.youtube.com/embed/qXaSPDe5Aio"
 	},
 	{
 		"name": "Saquarema Cam, Brazil",
@@ -1538,7 +1538,7 @@ export const wctCams =
 		"tags": "Boats,Harbour,Sea",
 		"geo": "Croatia/Šibenik-Knin",
 		"pos": "43.66189085978442,15.655897950904759",
-		"src": "https://www.youtube.com/embed/aEGrPKnasso"
+		"src": "https://www.youtube.com/embed/9rCo9y7_c9A"
 	},
 	{
 		"name": "Pirovac Marina",
@@ -5024,7 +5024,7 @@ export const wctCams =
 		"tags": "Traffic",
 		"geo": "Japan/Okinawa Prefecture",
 		"pos": "24.336808085333644,124.14967201409497",
-		"src": "https://www.youtube.com/embed/PfoyX7JuwuE"
+		"src": "https://www.youtube.com/embed/EmUW-Rcn4YM"
 	},
 	{
 		"name": "Ginowan City",
@@ -5941,7 +5941,7 @@ export const wctCams =
 		"tags": "Boats,Harbour,Sea",
 		"geo": "Mexico/Quintana Roo",
 		"pos": "20.480175011652165,-86.97504768394708",
-		"src": "https://www.youtube.com/embed/NE_qgx07h1M"
+		"src": "https://www.youtube.com/embed/8cq6S_PtKU4"
 	},
 	{
 		"name": "Playa de Cancún",
@@ -6144,7 +6144,7 @@ export const wctCams =
 		"tags": "Bar,Restaurant,Square",
 		"geo": "Netherlands/Friesland",
 		"pos": "53.03253220577191,5.657816951888941",
-		"src": "https://www.youtube.com/embed/uUoEMP1wujU"
+		"src": "https://www.youtube.com/embed/7RDiXCMrXxU"
 	},
 	{
 		"name": "Oldehoofsterkerkhof, Leeuwarden",
@@ -7166,7 +7166,7 @@ export const wctCams =
 		"tags": "Business,Sound",
 		"geo": "Philippines/Davao region",
 		"pos": "7.082190318353277,125.62134295139658",
-		"src": "https://www.youtube.com/embed/d9X8LjWvVj4"
+		"src": "https://www.youtube.com/embed/xvqZQOMj_iI"
 	},
 	{
 		"name": "Market Area, Agdao",
@@ -8720,7 +8720,7 @@ export const wctCams =
 		"tags": "City,New Year’s Eve",
 		"geo": "South Africa/Western Cape",
 		"pos": "-33.908189928536835,18.393144615841937",
-		"src": "https://www.youtube.com/embed/8l8O9Xzjaq8"
+		"src": "https://www.youtube.com/embed/CCpk5GxX2uw"
 	},
 	{
 		"name": "Clifton 4th Beach, Cape Town",
@@ -8784,6 +8784,13 @@ export const wctCams =
 		"geo": "South Korea/Jeju",
 		"pos": "33.43302172017159,126.91691315397391",
 		"src": "https://www.youtube.com/embed/live_stream?channel=UCRzuyj_qGaQULd6qX1pwITw"
+	},
+	{
+		"name": "Hamdeok Beach, Jeju Island",
+		"tags": "Beach,Sea",
+		"geo": "South Korea/Jeju",
+		"pos": "33.54446097335257,126.67128807712352",
+		"src": "https://www.youtube.com/embed/BXYHN7J7trQ"
 	},
 	{
 		"name": "Gwanghwamun",
@@ -10827,7 +10834,7 @@ export const wctCams =
 		"tags": "Animals",
 		"geo": "Usa/California",
 		"pos": "38.38724942197909,-122.75726576148976",
-		"src": "https://www.youtube.com/embed/UIzGmlBv1gM"
+		"src": "https://www.youtube.com/embed/rBvB1qVPJFg"
 	},
 	{
 		"name": "Snow Summit Cam, CA",
@@ -11030,7 +11037,7 @@ export const wctCams =
 		"tags": "Animals",
 		"geo": "Usa/Connecticut",
 		"pos": "41.536142459966825,-72.22928238384303",
-		"src": "https://www.youtube.com/embed/hUXQ1S0TmH8"
+		"src": "https://www.youtube.com/embed/7chrgZKML3c"
 	},
 	{
 		"name": "Goat Barn Cam, Salem",
@@ -11583,7 +11590,7 @@ export const wctCams =
 		"tags": "Beach,Miami,Sea",
 		"geo": "Usa/Florida",
 		"pos": "25.79744781333374,-80.12928404851851",
-		"src": "https://www.youtube.com/embed/C027BaHS6xM"
+		"src": "https://www.youtube.com/embed/-e-q-BQQn1Y"
 	},
 	{
 		"name": "Miramar Beach Cam, FL",
@@ -11730,7 +11737,7 @@ export const wctCams =
 		"tags": "Beach,Sea",
 		"geo": "Usa/Florida",
 		"pos": "29.769282438382916,-81.25547184828484",
-		"src": "https://www.youtube.com/embed/-AgOfoeLjMM"
+		"src": "https://www.youtube.com/embed/HltzPSqLXG4"
 	},
 	{
 		"name": "St. Petersburg waterfront, FL",
