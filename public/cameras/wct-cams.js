@@ -600,7 +600,7 @@ export const wctCams =
 		"tags": "Airport,Sound",
 		"geo": "Brazil/Rio de Janeiro",
 		"pos": "-22.90998929626542,-43.17204582175348",
-		"src": "https://www.youtube.com/embed/4dFK0H4ggVM"
+		"src": "https://www.youtube.com/embed/mkXlXtEp1QE"
 	},
 	{
 		"name": "Saquarema Cam, Brazil",
@@ -1114,13 +1114,6 @@ export const wctCams =
 		"src": "https://www.youtube.com/embed/WPMgP2C3_co"
 	},
 	{
-		"name": "Downtown Sudbury",
-		"tags": "Traffic",
-		"geo": "Canada/Ontario",
-		"pos": "46.49333066406643,-80.99366728705628",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCIy1GIJ3Uw3ZOXSTM3RDuuw"
-	},
-	{
 		"name": "Goat Cam Ontario, Canada",
 		"tags": "Animals",
 		"geo": "Canada/Ontario",
@@ -1531,7 +1524,7 @@ export const wctCams =
 		"tags": "Beach",
 		"geo": "Croatia/Primorje-Gorski Kotar",
 		"pos": "44.82228158396257,14.336528151403662",
-		"src": "https://www.youtube.com/embed/JG6JOtczscQ"
+		"src": "https://www.youtube.com/embed/mTuW8_WxT7c"
 	},
 	{
 		"name": "Veli Žal Beach, Lošinj",
@@ -1580,7 +1573,7 @@ export const wctCams =
 		"tags": "Boats,Harbour",
 		"geo": "Croatia/Šibenik-Knin",
 		"pos": "43.75651232963992,15.767323430728492",
-		"src": "https://www.youtube.com/embed/XwdxKz8I0Sw"
+		"src": "https://www.youtube.com/embed/JonnljdxVZc"
 	},
 	{
 		"name": "Zaton Village Cam, Croatia",
@@ -4688,7 +4681,7 @@ export const wctCams =
 		"tags": "4k,Airport",
 		"geo": "Japan/Fukuoka Prefecture",
 		"pos": "33.581597460239315,130.44266405482213",
-		"src": "https://www.youtube.com/embed/Wc_cdPdC2lc"
+		"src": "https://www.youtube.com/embed/HlgAQivUM1A"
 	},
 	{
 		"name": "Hakata Station, Japan",
@@ -4891,7 +4884,7 @@ export const wctCams =
 		"tags": "Island,Sea,Traffic",
 		"geo": "Japan/Kanagawa Prefecture",
 		"pos": "35.307472980283045,139.48235031628917",
-		"src": "https://www.youtube.com/embed/loXyo-QAQfo"
+		"src": "https://www.youtube.com/embed/htoLcVUbG28"
 	},
 	{
 		"name": "Hayama Port Cam",
@@ -5052,7 +5045,7 @@ export const wctCams =
 		"tags": "Traffic",
 		"geo": "Japan/Okinawa Prefecture",
 		"pos": "26.218563983431483,127.69286631600359",
-		"src": "https://www.youtube.com/embed/fTNHwloqvGE"
+		"src": "https://www.youtube.com/embed/v0zszI5HTME"
 	},
 	{
 		"name": "Naha Airport Cam",
@@ -5129,14 +5122,14 @@ export const wctCams =
 		"tags": "Trains",
 		"geo": "Japan/Osaka Prefecture",
 		"pos": "34.77774398031864,135.57203895187982",
-		"src": "https://www.youtube.com/embed/iZ9V16nx1TI"
+		"src": "https://www.youtube.com/embed/K_OEGvmlvJM"
 	},
 	{
 		"name": "Saitama Japan Train Cam",
 		"tags": "4k,Trains",
 		"geo": "Japan/Saitama Prefecture",
 		"pos": "35.89595232577183,139.6292833160226",
-		"src": "https://www.youtube.com/embed/TXSklgly4hA"
+		"src": "https://www.youtube.com/embed/oiiuyLWSHME"
 	},
 	{
 		"name": "Lake Biwa Flower Fountain",
@@ -5417,6 +5410,13 @@ export const wctCams =
 		"geo": "Japan/Yamanashi Prefecture",
 		"pos": "35.61541835951771,139.1061475841175",
 		"src": "https://www.youtube.com/embed/slOgQojt8w8"
+	},
+	{
+		"name": "Fuji Motosuko Resort, Japan",
+		"tags": "Garden,Landscape,Nature",
+		"geo": "Japan/Yamanashi Prefecture",
+		"pos": "35.44240601156901,138.5992616063798",
+		"src": "https://www.youtube.com/embed/8z5aoYCUQd0"
 	},
 	{
 		"name": "JR Chuo Main Line, Fuefuki",
@@ -6007,13 +6007,6 @@ export const wctCams =
 		"src": "https://www.youtube.com/embed/ehPSji0mJpM"
 	},
 	{
-		"name": "Xcaret Beach",
-		"tags": "Beach",
-		"geo": "Mexico/Quintana Roo",
-		"pos": "20.578310608310034,-87.12166624899702",
-		"src": "https://www.youtube.com/embed/r9Cefmal-2o"
-	},
-	{
 		"name": "Popocatépetl Volcano, Mexico",
 		"tags": "Volcanoes",
 		"geo": "Mexico/State of Mexico",
@@ -6082,20 +6075,6 @@ export const wctCams =
 		"geo": "Namibia/Oshana Region",
 		"pos": "-19.17829323223905,15.913999886667373",
 		"src": "https://www.youtube.com/embed/live_stream?channel=UCfn4vrrgKXCCg3rxxLRGOvg"
-	},
-	{
-		"name": "Kathmandu Cam, Nepal",
-		"tags": "Landscape",
-		"geo": "Nepal/Kathmandu District",
-		"pos": "27.69989473242445,85.30949731592831",
-		"src": "https://www.youtube.com/embed/wL0quidoJs4"
-	},
-	{
-		"name": "Himalayan Lodge Lukla, Nepal",
-		"tags": "Airport,Hotels & Resorts,Landscape",
-		"geo": "Nepal/Solukhumbu district",
-		"pos": "27.687136652572043,86.73227399371369",
-		"src": "https://www.youtube.com/embed/dG4LVD1_rdg"
 	},
 	{
 		"name": "Bonaire Coral Reef Cam, NL",
@@ -6819,13 +6798,6 @@ export const wctCams =
 		"src": "https://www.youtube.com/embed/live_stream?channel=UCBjUHriUzlL1c9dr9YK61rg"
 	},
 	{
-		"name": "Wellington City Centre, NZ",
-		"tags": "Landscape",
-		"geo": "New Zealand/Wellington",
-		"pos": "",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UC4qtdqbwXUBxi1xsF6P_4rg"
-	},
-	{
 		"name": "Wellington International Airport",
 		"tags": "Airport",
 		"geo": "New Zealand/Wellington",
@@ -7286,6 +7258,13 @@ export const wctCams =
 		"geo": "Poland/Kuyavian-Pomeranian",
 		"pos": "52.86457877002221,17.942106572559204",
 		"src": "https://www.youtube.com/embed/live_stream?channel=UCCKQkSP57tZOO1Pnqns6Vhg"
+	},
+	{
+		"name": "Papal Altar Stary Sącz, Poland",
+		"tags": "Landscape,Monument,Religion",
+		"geo": "Poland/Lesser Poland",
+		"pos": "49.558958971435736,20.646041077616815",
+		"src": "https://www.youtube.com/embed/MPLSIyW6OGc"
 	},
 	{
 		"name": "Stary Sącz Market Cam 2",
@@ -8755,7 +8734,7 @@ export const wctCams =
 		"tags": "Beach,Landscape,Sea,Surf",
 		"geo": "South Africa/Western Cape",
 		"pos": "-34.10803298049556,18.467857951686902",
-		"src": "https://www.youtube.com/embed/gdcfCACjFtY"
+		"src": "https://www.youtube.com/embed/xhhlUijHWQk"
 	},
 	{
 		"name": "Sea Point Promenade",
@@ -9091,7 +9070,7 @@ export const wctCams =
 		"tags": "Beach,Sea",
 		"geo": "Spain/Basque Country",
 		"pos": "43.32925812604962,-1.9797010334817344",
-		"src": "https://www.youtube.com/embed/m843goEErBk"
+		"src": "https://www.youtube.com/embed/qo3J_W3x5tU"
 	},
 	{
 		"name": "Plaza de Sevilla",
@@ -9218,6 +9197,13 @@ export const wctCams =
 		"geo": "Spain/Gran Canaria",
 		"pos": "27.75771772979793,-15.579553048913494",
 		"src": "https://www.youtube.com/embed/xWlZip2pwjU"
+	},
+	{
+		"name": "Playa de las Burras Beach Cam",
+		"tags": "Beach,Canary Islands,Sea,Traffic",
+		"geo": "Spain/Gran Canaria",
+		"pos": "27.764615829577423,-15.562077583874816",
+		"src": "https://in2thebeach.es/callbacks/camviewer_ext2.php?id=58"
 	},
 	{
 		"name": "Playa del Inglés Beach Cam",
@@ -11051,7 +11037,7 @@ export const wctCams =
 		"tags": "Animals",
 		"geo": "Usa/Connecticut",
 		"pos": "41.536142459966825,-72.22928238384303",
-		"src": "https://www.youtube.com/embed/rZo2H-vz99I"
+		"src": "https://www.youtube.com/embed/-sZ9TS88HOI"
 	},
 	{
 		"name": "Kitten Academy Cam, CT",
@@ -11453,6 +11439,13 @@ export const wctCams =
 		"src": "https://www.youtube.com/embed/qYs-SMoyH_k"
 	},
 	{
+		"name": "Hog's Breath Saloon, Bar",
+		"tags": "Bar,Sound",
+		"geo": "Usa/Florida",
+		"pos": "24.559413984196766,-81.80844768383781",
+		"src": "https://www.resortcams.com/embed.php?cam=hogs-breath-raw-bar"
+	},
+	{
 		"name": "Hollywood Beach Broadwalk",
 		"tags": "Beach,Sea",
 		"geo": "Usa/Florida",
@@ -11471,7 +11464,7 @@ export const wctCams =
 		"tags": "Boats,Business,Marina",
 		"geo": "Usa/Florida",
 		"pos": "27.78652243822867,-82.78435152932333",
-		"src": "https://www.youtube.com/embed/vIrutOSAaFI"
+		"src": "https://www.youtube.com/embed/AZEzrNUKhx8"
 	},
 	{
 		"name": "Inlet Reef Beach Destin, FL",
@@ -12311,7 +12304,7 @@ export const wctCams =
 		"tags": "Animals,Bird Feeders",
 		"geo": "Usa/Maine",
 		"pos": "45.284346015787506,-69.03367702426792",
-		"src": "https://www.youtube.com/embed/rTQoq262HNo"
+		"src": "https://www.youtube.com/embed/ELURQANGPTE"
 	},
 	{
 		"name": "Stage Neck Inn Cam, York",
@@ -14720,13 +14713,6 @@ export const wctCams =
 		"geo": "Vietnam/Da Nang",
 		"pos": "16.074125287978305,108.21590482921714",
 		"src": "https://www.youtube.com/embed/rPC7axd3ptg"
-	},
-	{
-		"name": "ran Thi Ly Bridge, Hàn River, Vietnam",
-		"tags": "Bridge,City,River,Traffic",
-		"geo": "Vietnam/Da Nang",
-		"pos": "16.060749988886208,108.22067241608367",
-		"src": "https://www.youtube.com/embed/P_LkGnVbrKs"
 	},
 	{
 		"name": "Rear Gate Da Nang Hospital C",
