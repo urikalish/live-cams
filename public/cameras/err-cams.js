@@ -1,6 +1,5 @@
 export const errCams =
 [
-	"-AgOfoeLjMM",
 	"-PnTdQz0JSE",
 	"0q04F-t7sbU",
 	"BCO0tMtCyHY",
@@ -12,7 +11,6 @@ export const errCams =
 	"UCdMj2twWfMHXrWgX5oVdoyA",
 	"UCfNjakTTS4WVLmX7TSr1qWg",
 	"UCfi_toBXJNT2YnToQACcgFA",
-	"UCjFxmGy49kJjLf5RSQSwrCA",
 	"UCjNhxVEOKYZIw8fYwOixNiA",
 	"UCnGokALk4B59nuWINsnMW8Q",
 	"UCp2ovW7Ou8MW_iUWafOBwuA",
