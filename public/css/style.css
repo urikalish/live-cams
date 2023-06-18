@@ -48,9 +48,6 @@ body {
     0% {
         color: rgba(255,255,255,1.0);
     }
-    50% {
-        color: rgba(255,255,255,0);
-    }
     100% {
         color: rgba(255,255,255,0);
     }
@@ -59,8 +56,8 @@ body {
 .cam-cover {
     position: absolute;
     inset: 0;
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 13%, rgba(0,0,0,0) 87%, rgba(0,0,0,1) 90%, rgba(0,0,0,1) 100%);
-    animation: animation-fade-in 3s ease-in forwards;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 8%, rgba(0,0,0,0) 9%, rgba(0,0,0,0) 88%, rgba(0,0,0,1) 89%, rgba(0,0,0,1) 100%);
+    animation: animation-fade-in 1s ease-in forwards;
     font-size: 40px;
     display: grid;
     place-items: center;
@@ -79,7 +76,7 @@ body {
 .next-button {
     margin-top: 12px;
     border-radius: 8px;
-    padding: 8px 16px;
+    padding: 12px 24px;
     font-size: 24px;
     cursor: pointer;
 }
