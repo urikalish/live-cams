@@ -14,7 +14,7 @@ export class GameService {
 		const coverElm = document.createElement('div');
 		coverElm.setAttribute('id', 'cam-cover');
 		coverElm.classList.add('cam-cover');
-		coverElm.textContent = '';
+		coverElm.textContent = '?';
 		containerElm.appendChild(coverElm);
 	}
 
@@ -33,7 +33,7 @@ export class GameService {
 	}
 
 	async handleGuess(guessLat, guessLng) {
-		if (!this.waitingForGuess || (Date.now() - this.waitingForGuessStartTime < 2000)) {
+		if (!this.waitingForGuess || (Date.now() - this.waitingForGuessStartTime < 3000)) {
 			return;
 		}
 		this.waitingForGuess = false;
