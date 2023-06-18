@@ -6,8 +6,10 @@ export class GameService {
 	gamePanelElm = null;
 	gameMessageElm = null;
 
-	async handleGuess(lat, lng) {
-		const guessMarker = await this.mapService.addGuessMarker(lat, lng);
+	async handleGuess(guessLat, guessLng) {
+		const trueLat = Number.parseFloat(this.cam.pos.split(',')[0]);
+		const trueLng = Number.parseFloat(this.cam.pos.split(',')[1]);
+		await this.mapService.displayGuess(guessLat, guessLng, trueLat, trueLng);
 	}
 
 	init(mapService, camService) {

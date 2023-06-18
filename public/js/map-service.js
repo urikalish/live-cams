@@ -41,10 +41,10 @@ export class MapService {
 			m.content = this.getPin(PinElement, color);
 		});
 		if (this.guessMarker) {
-			this.guessMarker.content = this.getPin(PinElement, '#fc0');
+			this.guessMarker.content = this.getPin(PinElement, '#f00');
 		}
 		if (this.trueMarker) {
-			this.trueMarker = this.getPin(PinElement, '#f00');
+			this.trueMarker.content = this.getPin(PinElement, '#f00');
 		}
 	}
 
@@ -228,7 +228,6 @@ export class MapService {
 	clearGuessMarker() {
 		if (this.guessMarker) {
 			this.guessMarker.map = null;
-			this.guessMarker = null;
 		}
 	}
 
@@ -241,7 +240,7 @@ export class MapService {
 			map,
 			position: {lat, lng},
 			title: 'Your guess',
-			content: this.getPin(PinElement, '#fc0'),
+			content: this.getPin(PinElement, '#f00'),
 		});
 		return this.guessMarker;
 	}
@@ -249,7 +248,6 @@ export class MapService {
 	clearTrueMarker() {
 		if (this.trueMarker) {
 			this.trueMarker.map = null;
-			this.trueMarker = null;
 		}
 	}
 
@@ -278,13 +276,13 @@ export class MapService {
 	clearDistanceLine() {
 		if (this.distanceLine) {
 			this.distanceLine.setMap(null);
-			this.distanceLine = null;
 		}
 	}
 	drawLineBetweenMarkers(map, m1, m2, color) {
+		this.clearDistanceLine();
 		this.distanceLine = new google.maps.Polyline({
 			path: [m1.position, m2.position],
-			geodesic: true,
+			geodesic: false,
 			strokeColor: color,
 			strokeOpacity: 1.0,
 			strokeWeight: 2
@@ -292,6 +290,11 @@ export class MapService {
 		this.distanceLine.setMap(map);
 	}
 
-
+	async displayGuess(guessLat, guessLng, trueLat, trueLng) {
+		const guessMarker = await this.addGuessMarker(guessLat, guessLng);
+		const trueMarker = await this.addTrueMarker(trueLat, trueLng);
+		this.drawLineBetweenMarkers(this.map, guessMarker, trueMarker, '#f00');
+		this.zoomOnMarkers([guessMarker, trueMarker]);
+	}
 
 }
