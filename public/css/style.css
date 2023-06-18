@@ -45,8 +45,15 @@ body {
     cursor: pointer;
 }
 .game-message {
-    padding: 0.5em;
+    padding: 24px;
     font-size: 40px;
+}
+.next-button {
+    margin-left: 24px;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 24px;
+    cursor: pointer;
 }
 .hidden {
     display: none;

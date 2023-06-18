@@ -41,11 +41,16 @@ export class MapService {
 			m.content = this.getPin(PinElement, color);
 		});
 		if (this.guessMarker) {
-			this.guessMarker.content = this.getPin(PinElement, '#f00');
+			this.guessMarker.content = this.getPin(PinElement, '#fc0');
 		}
 		if (this.trueMarker) {
 			this.trueMarker.content = this.getPin(PinElement, '#f00');
 		}
+	}
+
+	resetMapCenterAndZoom() {
+		this.map.setCenter({lat: 20, lng: 11});
+		this.map.setZoom(2);
 	}
 
 	async createMap() {
@@ -57,6 +62,7 @@ export class MapService {
 			mapId: 'world-map',
 			labels: false,
 			disableDefaultUI: true,
+			defaultCursor: 'crosshair',
 			mapTypeId: 'hybrid' // 'roadmap' | 'satellite' | 'hybrid'
 		});
 	}
@@ -240,7 +246,7 @@ export class MapService {
 			map,
 			position: {lat, lng},
 			title: 'Your guess',
-			content: this.getPin(PinElement, '#f00'),
+			content: this.getPin(PinElement, '#fc0'),
 		});
 		return this.guessMarker;
 	}
@@ -296,6 +302,13 @@ export class MapService {
 		this.drawLineBetweenMarkers(this.map, guessMarker, trueMarker, '#f00');
 		this.zoomOnMarkers([guessMarker, trueMarker]);
 		return this.getDistanceBetweenMarkers(guessMarker, trueMarker);
+	}
+
+	clearGuess() {
+		this.clearGuessMarker();
+		this.clearTrueMarker();
+		this.clearDistanceLine();
+		this.resetMapCenterAndZoom();
 	}
 
 }
