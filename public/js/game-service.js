@@ -7,10 +7,33 @@ export class GameService {
 	gameMessageElm = null;
 	nextButtonElm = null;
 	waitingForGuess = true;
-	waitingForGuessStartTime = Date.now();
+	waitingForGuessStartTime = 0;
+
+	addCoverElm() {
+		const containerElm = document.querySelector('.cam-container');
+		const coverElm = document.createElement('div');
+		coverElm.setAttribute('id', 'cam-cover');
+		coverElm.classList.add('cam-cover');
+		coverElm.textContent = 'Where is this camera?';
+		containerElm.appendChild(coverElm);
+	}
+
+	startUserGuess() {
+		this.nextButtonElm.classList.toggle('hidden', true);
+		this.mapService.clearGuess();
+		const cams = this.camService.getCams();
+		const index = Math.trunc(Math.random()*cams.length);
+		this.cam = cams[index];
+		this.camService.displayLiveCams([this.cam], true);
+		this.addCoverElm();
+		this.gameMessageElm.style.color = '#fff';
+		this.gameMessageElm.textContent = '';
+		this.waitingForGuessStartTime = Date.now();
+		this.waitingForGuess = true;
+	}
 
 	async handleGuess(guessLat, guessLng) {
-		if (!this.waitingForGuess) {
+		if (!this.waitingForGuess || (Date.now() - this.waitingForGuessStartTime < 8000)) {
 			return;
 		}
 		this.waitingForGuess = false;
@@ -28,19 +51,6 @@ export class GameService {
 		const dd = distance / maxDistance;
 		this.gameMessageElm.style.color = `hsl(${120 - dd*120}, 100%, 50%)`;
 		this.nextButtonElm.classList.toggle('hidden', false);
-	}
-
-	startUserGuess() {
-		this.nextButtonElm.classList.toggle('hidden', true);
-		this.mapService.clearGuess();
-		const cams = this.camService.getCams();
-		const index = Math.trunc(Math.random()*cams.length);
-		this.cam = cams[index];
-		this.camService.displayLiveCams([this.cam], true);
-		this.gameMessageElm.style.color = '#fff';
-		this.gameMessageElm.textContent = 'Where is this camera?';
-		this.waitingForGuessStartTime = Date.now();
-		this.waitingForGuess = true;
 	}
 
 	init(mapService, camService) {

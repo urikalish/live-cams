@@ -44,6 +44,30 @@ body {
     border: none;
     cursor: pointer;
 }
+@keyframes animation-fade-in {
+    0% {
+        background-color: rgba(0,0,0,1.0);
+        color: rgba(255,255,255,1.0);
+    }
+    50% {
+        background-color: rgba(0,0,0,1.0);
+        color: rgba(255,255,255,0);
+    }
+    100% {
+        background-color: rgba(0,0,0,0);
+        color: rgba(255,255,255,0);
+    }
+}
+
+.cam-cover {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.5);
+    animation: animation-fade-in 8s ease-in forwards;
+    font-size: 40px;
+    display: grid;
+    place-items: center;
+}
 .game-message {
     padding: 24px;
     font-size: 40px;
