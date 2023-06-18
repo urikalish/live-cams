@@ -25,7 +25,7 @@ if (mode === 'view') {
 			camService.displayLiveCams(markers.map(m => m.cam), autoPlay);
 		});
 	}
-	camService.init(wctCams, errCams, remCams, addCams, updCams, issCam);
+	camService.init(wctCams, errCams, remCams, addCams, updCams, issCam, false);
 	if (autoShowIssCam) {
 		camService.displayLiveCams([issCam], autoPlay);
 	}
@@ -34,8 +34,9 @@ if (mode === 'view') {
 		await mapService.initForGuess(camService);
 		gameService.startUserGuess();
 	}
-	camService.init(wctCams, errCams, remCams, addCams, updCams, issCam);
+	camService.init(wctCams, errCams, remCams, addCams, updCams, issCam, true);
 	gameService.init(mapService, camService);
 } else if (mode === 'check') {
-	camService.displayAllErrCams(wctCams, errCams, remCams, addCams, updCams);
+	camService.init(wctCams, [], remCams, addCams, updCams, null, false);
+	camService.displayAllErrCams(wctCams, errCams);
 }

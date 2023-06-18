@@ -13,9 +13,9 @@ export class CamService {
 		return this.issCam;
 	}
 
-	init(wctCams, errCams, remCams, addCams, updCams, issCam) {
+	init(wctCams, errCams, remCams, addCams, updCams, issCam, onlyYouTube) {
 		const fixService = new FixService();
-		this.cams = fixService.fix(wctCams, errCams, remCams, addCams, updCams);
+		this.cams = fixService.fix(wctCams, errCams, remCams, addCams, updCams, onlyYouTube);
 		this.issCam = issCam;
 	}
 
@@ -87,8 +87,7 @@ export class CamService {
 		});
 	}
 
-	displayAllErrCams(wctCams, errCams, remCams, addCams, updCams) {
-		this.init(wctCams, [], remCams, addCams, updCams);
+	displayAllErrCams(wctCams, errCams) {
 		const unwantedCams = [];
 		const unwantedCamIds = [];
 		const allCams = this.cams;

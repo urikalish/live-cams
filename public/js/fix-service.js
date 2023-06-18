@@ -135,7 +135,18 @@ export class FixService {
 		});
 	}
 
-	fix(wctCams, errCams, remCams, addCams, updCams) {
+	leaveOnlyYouTubeCams(cams) {
+		let i = 0;
+		while (i < cams.length) {
+			if (cams[i].src.includes('youtube.com')) {
+				i++;
+			} else {
+				cams.splice(i, 1);
+			}
+		}
+	}
+
+	fix(wctCams, errCams, remCams, addCams, updCams, onlyYouTube) {
 		const cams = [...wctCams];
 		console.log(`WCT:${wctCams.length}, Err:${addCams.length}, Remove:${remCams.length}, Add:${addCams.length}, Update:${Object.keys(updCams).length}`);
 		this.removeCams(cams, [...errCams, ...remCams]);
@@ -145,6 +156,9 @@ export class FixService {
 		this.removeNoSourceCams(cams);
 		this.removeNoPositionCams(cams);
 		this.addIds(cams);
+		if (onlyYouTube) {
+			this.leaveOnlyYouTubeCams(cams);
+		}
 		console.log(`Valid cameras: ${cams.length}`);
 		return cams;
 	}

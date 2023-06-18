@@ -46,15 +46,12 @@ body {
 }
 @keyframes animation-fade-in {
     0% {
-        background-color: rgba(0,0,0,1.0);
         color: rgba(255,255,255,1.0);
     }
     50% {
-        background-color: rgba(0,0,0,1.0);
         color: rgba(255,255,255,0);
     }
     100% {
-        background-color: rgba(0,0,0,0);
         color: rgba(255,255,255,0);
     }
 }
@@ -62,8 +59,8 @@ body {
 .cam-cover {
     position: absolute;
     inset: 0;
-    background-color: rgba(0,0,0,0.5);
-    animation: animation-fade-in 8s ease-in forwards;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 85%, rgba(0,0,0,1) 90%, rgba(0,0,0,1) 100%);
+    animation: animation-fade-in 3s ease-in forwards;
     font-size: 40px;
     display: grid;
     place-items: center;

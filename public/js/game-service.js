@@ -14,7 +14,7 @@ export class GameService {
 		const coverElm = document.createElement('div');
 		coverElm.setAttribute('id', 'cam-cover');
 		coverElm.classList.add('cam-cover');
-		coverElm.textContent = 'Where is this camera?';
+		coverElm.textContent = '';
 		containerElm.appendChild(coverElm);
 	}
 
@@ -33,7 +33,7 @@ export class GameService {
 	}
 
 	async handleGuess(guessLat, guessLng) {
-		if (!this.waitingForGuess || (Date.now() - this.waitingForGuessStartTime < 8000)) {
+		if (!this.waitingForGuess || (Date.now() - this.waitingForGuessStartTime < 2000)) {
 			return;
 		}
 		this.waitingForGuess = false;
@@ -47,9 +47,13 @@ export class GameService {
 		} else {
 			this.gameMessageElm.textContent = `${Math.round(distance)} m`;
 		}
-		const maxDistance = Math.PI * 6378137;
-		const dd = distance / maxDistance;
-		this.gameMessageElm.style.color = `hsl(${120 - dd*120}, 100%, 50%)`;
+		if (distance > 3000000) {
+			this.gameMessageElm.style.color = '#f00';
+		} else {
+			const maxDistance = Math.PI * 6378137;
+			const dd = distance / maxDistance;
+			this.gameMessageElm.style.color = `hsl(${120 - dd * 120}, 100%, 50%)`;
+		}
 		this.nextButtonElm.classList.toggle('hidden', false);
 	}
 
