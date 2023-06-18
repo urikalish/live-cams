@@ -600,7 +600,7 @@ export const wctCams =
 		"tags": "Airport,Sound",
 		"geo": "Brazil/Rio de Janeiro",
 		"pos": "-22.90998929626542,-43.17204582175348",
-		"src": "https://www.youtube.com/embed/qXaSPDe5Aio"
+		"src": "https://www.youtube.com/embed/pI19g0rkUcw"
 	},
 	{
 		"name": "Saquarema Cam, Brazil",
@@ -663,7 +663,7 @@ export const wctCams =
 		"tags": "Landscape,Sea,Traffic",
 		"geo": "Brazil/Santa Catarina",
 		"pos": "-27.587307572533838,-48.5574680700433",
-		"src": "https://www.youtube.com/embed/Fo9jsJSpzD8"
+		"src": "https://www.youtube.com/embed/_tvEX5-nEqE"
 	},
 	{
 		"name": "FG Big Wheel, Balneário Camboriú",
@@ -1461,7 +1461,7 @@ export const wctCams =
 		"tags": "Boats,Harbour,Hotels & Resorts,Sea",
 		"geo": "Croatia/Primorje-Gorski Kotar",
 		"pos": "45.12280833912049,14.487902280217579",
-		"src": "https://www.youtube.com/embed/X7qS3pVJHWs"
+		"src": "https://www.youtube.com/embed/MM1D5zG_MUU"
 	},
 	{
 		"name": "Klimno Port Cam, Krk, Croatia",
@@ -4681,7 +4681,7 @@ export const wctCams =
 		"tags": "4k,Airport",
 		"geo": "Japan/Fukuoka Prefecture",
 		"pos": "33.581597460239315,130.44266405482213",
-		"src": "https://www.youtube.com/embed/HlgAQivUM1A"
+		"src": "https://www.youtube.com/embed/BzFLK-bVAf0"
 	},
 	{
 		"name": "Hakata Station, Japan",
@@ -4884,7 +4884,7 @@ export const wctCams =
 		"tags": "Island,Sea,Traffic",
 		"geo": "Japan/Kanagawa Prefecture",
 		"pos": "35.307472980283045,139.48235031628917",
-		"src": "https://www.youtube.com/embed/htoLcVUbG28"
+		"src": "https://www.youtube.com/embed/Oc6fZpEhfGs"
 	},
 	{
 		"name": "Hayama Port Cam",
@@ -5024,7 +5024,7 @@ export const wctCams =
 		"tags": "Traffic",
 		"geo": "Japan/Okinawa Prefecture",
 		"pos": "24.336808085333644,124.14967201409497",
-		"src": "https://www.youtube.com/embed/EmUW-Rcn4YM"
+		"src": "https://www.youtube.com/embed/MV5TJS3Bvfc"
 	},
 	{
 		"name": "Ginowan City",
@@ -5045,7 +5045,7 @@ export const wctCams =
 		"tags": "Traffic",
 		"geo": "Japan/Okinawa Prefecture",
 		"pos": "26.218563983431483,127.69286631600359",
-		"src": "https://www.youtube.com/embed/v0zszI5HTME"
+		"src": "https://www.youtube.com/embed/hRNS3yyG8iA"
 	},
 	{
 		"name": "Naha Airport Cam",
@@ -5059,7 +5059,7 @@ export const wctCams =
 		"tags": "Harbour,Sea",
 		"geo": "Japan/Okinawa Prefecture",
 		"pos": "26.448853127480987,127.80335132391757",
-		"src": "https://www.youtube.com/embed/EhaZwgZtCsc"
+		"src": "https://www.youtube.com/embed/iuuF_EqCj5Q"
 	},
 	{
 		"name": "Ryukyu Shimpo Cam, Naha",
@@ -5122,14 +5122,14 @@ export const wctCams =
 		"tags": "Trains",
 		"geo": "Japan/Osaka Prefecture",
 		"pos": "34.77774398031864,135.57203895187982",
-		"src": "https://www.youtube.com/embed/K_OEGvmlvJM"
+		"src": "https://www.youtube.com/embed/bYcTd8qJjfQ"
 	},
 	{
 		"name": "Saitama Japan Train Cam",
 		"tags": "4k,Trains",
 		"geo": "Japan/Saitama Prefecture",
 		"pos": "35.89595232577183,139.6292833160226",
-		"src": "https://www.youtube.com/embed/oiiuyLWSHME"
+		"src": "https://www.youtube.com/embed/lI4biVTPuf8"
 	},
 	{
 		"name": "Lake Biwa Flower Fountain",
@@ -5899,7 +5899,7 @@ export const wctCams =
 		"tags": "City,Landscape",
 		"geo": "Mexico/Nuevo León",
 		"pos": "25.67805063924277,-100.4511988669247",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCY0IjBioIXzWWHhF9Gqi4JQ"
+		"src": "https://www.youtube.com/embed/xEifLLP6HnY"
 	},
 	{
 		"name": "Volcanoes, Puebla",
@@ -6144,7 +6144,7 @@ export const wctCams =
 		"tags": "Bar,Restaurant,Square",
 		"geo": "Netherlands/Friesland",
 		"pos": "53.03253220577191,5.657816951888941",
-		"src": "https://www.youtube.com/embed/7RDiXCMrXxU"
+		"src": "https://www.youtube.com/embed/EePGIN22C6w"
 	},
 	{
 		"name": "Oldehoofsterkerkhof, Leeuwarden",
@@ -7222,7 +7222,7 @@ export const wctCams =
 		"tags": "Trains",
 		"geo": "Poland/Greater Poland",
 		"pos": "52.106805979638786,16.1110999520331",
-		"src": "https://www.youtube.com/embed/2xd9xyqIzHY"
+		"src": "https://www.youtube.com/embed/BZc2u4CYjFw"
 	},
 	{
 		"name": "Locomotive, Wolsztyn",
@@ -9077,7 +9077,7 @@ export const wctCams =
 		"tags": "Beach,Sea",
 		"geo": "Spain/Basque Country",
 		"pos": "43.32925812604962,-1.9797010334817344",
-		"src": "https://www.youtube.com/embed/qo3J_W3x5tU"
+		"src": "https://www.youtube.com/embed/brTTuJd43Lc"
 	},
 	{
 		"name": "Plaza de Sevilla",
@@ -9085,6 +9085,13 @@ export const wctCams =
 		"geo": "Spain/Cadiz",
 		"pos": "",
 		"src": "https://www.youtube.com/embed/live_stream?channel=UCt01tczohsGmH6X6csUS6iQ"
+	},
+	{
+		"name": "Isla Latorre, Santander, Spain",
+		"tags": "Beach,Boats,Landscape,Monument,Sea",
+		"geo": "Spain/Cantabria",
+		"pos": "43.46512397111157,-3.7740379225890806",
+		"src": "https://www.youtube.com/embed/fBU-8siU6k4"
 	},
 	{
 		"name": "Laredo Beach",
@@ -10729,7 +10736,7 @@ export const wctCams =
 		"tags": "Airport",
 		"geo": "Usa/California",
 		"pos": "33.94723943070369,-118.39533968483956",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCfNjakTTS4WVLmX7TSr1qWg"
+		"src": "https://www.youtube.com/embed/live_stream?channel=oME9HgU1ayU"
 	},
 	{
 		"name": "Porto Marina Way Cam, CA",
@@ -13732,7 +13739,7 @@ export const wctCams =
 		"tags": "Trains",
 		"geo": "Usa/Ohio",
 		"pos": "39.110349971679334,-84.54063092268224",
-		"src": "https://www.youtube.com/embed/vXtrlFN6nz4"
+		"src": "https://www.youtube.com/embed/fFxp8fE1LP8"
 	},
 	{
 		"name": "Cleveland Water Crib Cam",
