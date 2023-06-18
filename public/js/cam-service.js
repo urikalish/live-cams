@@ -3,14 +3,20 @@ import { FixService } from './fix-service.js';
 export class CamService {
 
 	cams = [];
+	issCam = null;
 
 	getCams() {
 		return this.cams;
 	}
 
-	init(wctCams, errCams, remCams, addCams, updCams) {
+	getIssCam() {
+		return this.issCam;
+	}
+
+	init(wctCams, errCams, remCams, addCams, updCams, issCam) {
 		const fixService = new FixService();
 		this.cams = fixService.fix(wctCams, errCams, remCams, addCams, updCams);
+		this.issCam = issCam;
 	}
 
 	addSrcQueryParams(src, autoPlay) {

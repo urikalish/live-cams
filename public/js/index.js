@@ -6,10 +6,13 @@ import { updCams } from '../cameras/upd-cams.js';
 import { issCam } from '../cameras/iss-cam.js';
 import { MapService} from './map-service.js';
 import { CamService} from './cam-service.js';
+import { GameService } from './game-service.js';
 
 const mapService = new MapService();
 const camService = new CamService();
+const gameService = new GameService();
 
+window.handleGoogleMapLoaded = () => {};
 const urlParams = new URLSearchParams(window.location.search);
 const mode = urlParams.get('mode') || 'view';
 
@@ -17,14 +20,21 @@ if (mode === 'view') {
 	const autoShowIssCam = true;
 	const autoPlay = true;
 	const closestCount = 16;
-	window.handleGoogleMapLoaded = () => {
-		mapService.init(camService.getCams(), issCam, closestCount, markers => {camService.displayLiveCams(markers.map(m => m.cam), autoPlay);}).then(()=>{});
+	window.handleGoogleMapLoaded = async () => {
+		await mapService.initForView(camService, closestCount, markers => {
+			camService.displayLiveCams(markers.map(m => m.cam), autoPlay);
+		});
 	}
-	camService.init(wctCams, errCams, remCams, addCams, updCams);
+	camService.init(wctCams, errCams, remCams, addCams, updCams, issCam);
 	if (autoShowIssCam) {
 		camService.displayLiveCams([issCam], autoPlay);
 	}
+} else if (mode === 'guess') {
+	window.handleGoogleMapLoaded = async () => {
+		await mapService.initForGuess(camService);
+	}
+	camService.init(wctCams, errCams, remCams, addCams, updCams, issCam);
+	gameService.init(mapService, camService);
 } else if (mode === 'check') {
-	window.handleGoogleMapLoaded = () => {};
 	camService.displayAllErrCams(wctCams, errCams, remCams, addCams, updCams);
 }

@@ -8,6 +8,8 @@ export class MapService {
 	mapZoom = 2;
 	closestCount = 0;
 	debounceUpdatePins = null;
+	camService = null;
+	activateCamsForMarkers = () => {};
 
 	debounce(func, timeout = 1000) {
 		let timer;
@@ -69,14 +71,23 @@ export class MapService {
 		console.log(mapsMouseEvent.latLng.lat() + ',' + mapsMouseEvent.latLng.lng());
 	}
 
-	async init(cams, issCam, closestCount, activateCamsForMarkers) {
-		this.closestCount = closestCount;
-		this.debounceUpdatePins = this.debounce(this.updatePins, 1000);
-		await this.createMap();
-		this.map.addListener('zoom_changed', this.handleMapZoomChanged.bind(this));
-		this.map.addListener('click', this.handleMapClicked.bind(this));
-		await this.addLocationMarkers(this.map, cams, activateCamsForMarkers);
-		await this.handleIssMapMarker(this.map, issCam, activateCamsForMarkers);
+	async handleMarkerClicked(marker) {
+		//@ts-ignore
+		const { PinElement } = await google.maps.importLibrary('marker');
+
+		if (this.selectedMarker) {
+			this.selectedMarker.content = this.getPin(PinElement, false, false);
+		}
+		this.closestMarkers.forEach(m => {
+			m.content = this.getPin(PinElement, false, false);
+		});
+		this.selectedMarker = marker;
+		this.selectedMarker.content = this.getPin(PinElement, true, false);
+		this.closestMarkers = this.getClosestMarkers(marker, this.markers, this.closestCount);
+		this.closestMarkers.forEach(m => {
+			m.content = this.getPin(PinElement, false, true);
+		});
+		this.activateCamsForMarkers([marker, ...this.closestMarkers]);
 	}
 
 	getMarkerTitle(cam) {
@@ -121,31 +132,13 @@ export class MapService {
 		return distances.map(d => d.m);
 	}
 
-	zoomOnMarkers(markers) {
-		const latLngBounds = new google.maps.LatLngBounds();
-		markers.forEach(m => {
-			latLngBounds.extend(m.position);
-		});
-		this.map.fitBounds(latLngBounds);
-	}
-
-	drawLineBetweenMarkers(map, m1, m2, color) {
-		const line = new google.maps.Polyline({
-			path: [m1.position, m2.position],
-			geodesic: true,
-			strokeColor: color,
-			strokeOpacity: 1.0,
-			strokeWeight: 2
-		});
-		line.setMap(map);
-	}
-
-	async addLocationMarkers(map, cams, activateCamsForMarkers) {
+	async addLocationMarkers() {
 		//@ts-ignore
 		const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary('marker');
 
+		const map = this.map;
 		this.markers = [];
-		cams.forEach(cam => {
+		this.camService.getCams().forEach(cam => {
 			if (!cam.src || !cam.pos) {
 				return;
 			}
@@ -158,25 +151,8 @@ export class MapService {
 				content: this.getPin(PinElement, false),
 				//collisionBehavior: 'OPTIONAL_AND_HIDES_LOWER_PRIORITY'
 			});
-			marker.addListener('click', () => {
-				if (this.selectedMarker) {
-					this.selectedMarker.content = this.getPin(PinElement, false, false);
-				}
-				this.closestMarkers.forEach(m => {
-					m.content = this.getPin(PinElement, false, false);
-				});
-				this.selectedMarker = marker;
-				//console.log(`Cam clicked: ${cam.src}`);
-				this.selectedMarker.content = this.getPin(PinElement, true, false);
-				this.closestMarkers = this.getClosestMarkers(marker, this.markers, this.closestCount);
-				this.closestMarkers.forEach(m => {
-					m.content = this.getPin(PinElement, false, true);
-				});
-				//this.closestMarkers.forEach((m, i) => {
-					//console.log(`Closest #${i+1}: ${m.cam.src}`);
-				//});
-
-				activateCamsForMarkers([marker, ...this.closestMarkers]);
+			marker.addListener('click', async () => {
+				await this.handleMarkerClicked(marker);
 			});
 			marker.cam = cam;
 			cam.mrk = marker;
@@ -184,11 +160,13 @@ export class MapService {
 		});
 	}
 
-	async handleIssMapMarker(map, issCam, activateCamsForMarkers) {
+	async handleIssMapMarker() {
+		const issCam = this.camService.getIssCam();
 		if (!issCam) {
 			return;
 		}
 		try {
+			const map = this.map;
 			const req = await fetch('https://api.wheretheiss.at/v1/satellites/25544');
 			const json = await req.json();
 			const lat = Number(json.latitude);
@@ -211,7 +189,7 @@ export class MapService {
 					icon: svgMarker,
 				});
 				google.maps.event.addListener(this.issMarker, 'click', () => {
-					activateCamsForMarkers([this.issMarker]);
+					this.activateCamsForMarkers([this.issMarker]);
 				});
 				this.issMarker.cam = issCam;
 				issCam.mrk = this.issMarker;
@@ -219,11 +197,56 @@ export class MapService {
 				this.issMarker.setPosition({lat, lng});
 			}
 			setTimeout(() => {
-				this.handleIssMapMarker(map, issCam, activateCamsForMarkers)
+				this.handleIssMapMarker(issCam)
 			}, 10000);
 		} catch(error) {
 			console.log(error);
 		}
 	}
+
+	async init(camService) {
+		this.debounceUpdatePins = this.debounce(this.updatePins, 1000);
+		await this.createMap();
+		this.map.addListener('zoom_changed', () => {
+			this.handleMapZoomChanged();
+		});
+		this.camService = camService;
+	}
+
+	async initForView(camService, closestCount, activateCamsForMarkers) {
+		await this.init(camService);
+		this.closestCount = closestCount;
+		this.activateCamsForMarkers = activateCamsForMarkers;
+		await this.addLocationMarkers();
+		await this.handleIssMapMarker();
+	}
+
+	async initForGuess(camService) {
+		await this.init(camService);
+		this.map.addListener('click', (mapsMouseEvent) => {
+			this.handleMapClicked(mapsMouseEvent);
+		});
+	}
+
+	zoomOnMarkers(markers) {
+		const latLngBounds = new google.maps.LatLngBounds();
+		markers.forEach(m => {
+			latLngBounds.extend(m.position);
+		});
+		this.map.fitBounds(latLngBounds);
+	}
+
+	drawLineBetweenMarkers(map, m1, m2, color) {
+		const line = new google.maps.Polyline({
+			path: [m1.position, m2.position],
+			geodesic: true,
+			strokeColor: color,
+			strokeOpacity: 1.0,
+			strokeWeight: 2
+		});
+		line.setMap(map);
+	}
+
+
 
 }
