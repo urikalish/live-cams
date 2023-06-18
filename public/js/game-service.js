@@ -9,7 +9,14 @@ export class GameService {
 	async handleGuess(guessLat, guessLng) {
 		const trueLat = Number.parseFloat(this.cam.pos.split(',')[0]);
 		const trueLng = Number.parseFloat(this.cam.pos.split(',')[1]);
-		await this.mapService.displayGuess(guessLat, guessLng, trueLat, trueLng);
+		const distance = await this.mapService.displayGuess(guessLat, guessLng, trueLat, trueLng);
+		if (distance >= 10000) {
+			this.gameMessageElm.textContent = Math.round(distance / 1000) + ' km';
+		} else if (distance > 1000) {
+			this.gameMessageElm.textContent = (distance / 1000).toFixed(1) + ' km';
+		} else {
+			this.gameMessageElm.textContent = Math.round(distance) + ' m'
+		}
 	}
 
 	init(mapService, camService) {

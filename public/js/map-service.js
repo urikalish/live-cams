@@ -295,6 +295,7 @@ export class MapService {
 		const trueMarker = await this.addTrueMarker(trueLat, trueLng);
 		this.drawLineBetweenMarkers(this.map, guessMarker, trueMarker, '#f00');
 		this.zoomOnMarkers([guessMarker, trueMarker]);
+		return this.getDistanceBetweenMarkers(guessMarker, trueMarker);
 	}
 
 }
