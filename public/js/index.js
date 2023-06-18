@@ -32,6 +32,7 @@ if (mode === 'view') {
 } else if (mode === 'guess') {
 	window.handleGoogleMapLoaded = async () => {
 		await mapService.initForGuess(camService);
+		gameService.goRandomCam();
 	}
 	camService.init(wctCams, errCams, remCams, addCams, updCams, issCam);
 	gameService.init(mapService, camService);

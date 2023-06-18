@@ -10,6 +10,10 @@ export class MapService {
 	debounceUpdatePins = null;
 	camService = null;
 	activateCamsForMarkers = () => {};
+	onGuess = () => {};
+	guessMarker = null;
+	trueMarker = null;
+	distanceLine = null;
 
 	debounce(func, timeout = 1000) {
 		let timer;
@@ -19,19 +23,11 @@ export class MapService {
 		};
 	}
 
-	getPin(PinElement, isSelected, isClosest) {
-		let background;
-		if (isSelected) {
-			background = '#f00';
-		} else if (isClosest) {
-			background = '#f90';
-		} else {
-			background = '#fc0';
-		}
+	getPin(PinElement, color) {
 		const pinElement = new PinElement({
 			scale: 0.0375 * this.mapZoom + 0.25, //0.04 * this.mapZoom + 0.2
 			borderColor: '#000',
-			background,
+			background: color,
 			glyphColor: '#000',
 		})
 		return pinElement.element;
@@ -41,8 +37,15 @@ export class MapService {
 		//@ts-ignore
 		const { PinElement } = await google.maps.importLibrary('marker');
 		this.markers.forEach(m => {
-			m.content = this.getPin(PinElement, m === this.selectedMarker, this.closestMarkers.includes(m));
+			const color = m === this.selectedMarker ? '#f00' : (this.closestMarkers.includes(m) ? '#f90' : '#fc0');
+			m.content = this.getPin(PinElement, color);
 		});
+		if (this.guessMarker) {
+			this.guessMarker.content = this.getPin(PinElement, '#fc0');
+		}
+		if (this.trueMarker) {
+			this.trueMarker = this.getPin(PinElement, '#f00');
+		}
 	}
 
 	async createMap() {
@@ -67,25 +70,20 @@ export class MapService {
 		this.debounceUpdatePins();
 	}
 
-	handleMapClicked(mapsMouseEvent) {
-		console.log(mapsMouseEvent.latLng.lat() + ',' + mapsMouseEvent.latLng.lng());
-	}
-
 	async handleMarkerClicked(marker) {
 		//@ts-ignore
 		const { PinElement } = await google.maps.importLibrary('marker');
-
 		if (this.selectedMarker) {
-			this.selectedMarker.content = this.getPin(PinElement, false, false);
+			this.selectedMarker.content = this.getPin(PinElement, '#fc0');
 		}
 		this.closestMarkers.forEach(m => {
-			m.content = this.getPin(PinElement, false, false);
+			m.content = this.getPin(PinElement, '#fc0');
 		});
 		this.selectedMarker = marker;
-		this.selectedMarker.content = this.getPin(PinElement, true, false);
+		this.selectedMarker.content = this.getPin(PinElement, '#f00');
 		this.closestMarkers = this.getClosestMarkers(marker, this.markers, this.closestCount);
 		this.closestMarkers.forEach(m => {
-			m.content = this.getPin(PinElement, false, true);
+			m.content = this.getPin(PinElement, '#f90');
 		});
 		this.activateCamsForMarkers([marker, ...this.closestMarkers]);
 	}
@@ -132,10 +130,9 @@ export class MapService {
 		return distances.map(d => d.m);
 	}
 
-	async addLocationMarkers() {
+	async addAllViewLocationMarkers() {
 		//@ts-ignore
 		const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary('marker');
-
 		const map = this.map;
 		this.markers = [];
 		this.camService.getCams().forEach(cam => {
@@ -148,7 +145,7 @@ export class MapService {
 				map,
 				position: {lat, lng},
 				title: this.getMarkerTitle(cam),
-				content: this.getPin(PinElement, false),
+				content: this.getPin(PinElement, '#fc0'),
 				//collisionBehavior: 'OPTIONAL_AND_HIDES_LOWER_PRIORITY'
 			});
 			marker.addListener('click', async () => {
@@ -160,7 +157,7 @@ export class MapService {
 		});
 	}
 
-	async handleIssMapMarker() {
+	async addViewIssMarker() {
 		const issCam = this.camService.getIssCam();
 		if (!issCam) {
 			return;
@@ -217,15 +214,57 @@ export class MapService {
 		await this.init(camService);
 		this.closestCount = closestCount;
 		this.activateCamsForMarkers = activateCamsForMarkers;
-		await this.addLocationMarkers();
-		await this.handleIssMapMarker();
+		await this.addAllViewLocationMarkers();
+		await this.addViewIssMarker();
 	}
 
 	async initForGuess(camService) {
 		await this.init(camService);
 		this.map.addListener('click', (mapsMouseEvent) => {
-			this.handleMapClicked(mapsMouseEvent);
+			this.onGuess(mapsMouseEvent.latLng.lat(), mapsMouseEvent.latLng.lng());
 		});
+	}
+
+	clearGuessMarker() {
+		if (this.guessMarker) {
+			this.guessMarker.map = null;
+			this.guessMarker = null;
+		}
+	}
+
+	async addGuessMarker(lat, lng) {
+		//@ts-ignore
+		const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary('marker');
+		this.clearGuessMarker();
+		const map = this.map;
+		this.guessMarker = new AdvancedMarkerElement({
+			map,
+			position: {lat, lng},
+			title: 'Your guess',
+			content: this.getPin(PinElement, '#fc0'),
+		});
+		return this.guessMarker;
+	}
+
+	clearTrueMarker() {
+		if (this.trueMarker) {
+			this.trueMarker.map = null;
+			this.trueMarker = null;
+		}
+	}
+
+	async addTrueMarker(lat, lng) {
+		//@ts-ignore
+		const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary('marker');
+		this.clearTrueMarker();
+		const map = this.map;
+		this.trueMarker = new AdvancedMarkerElement({
+			map,
+			position: {lat, lng},
+			title: 'Camera location',
+			content: this.getPin(PinElement, '#f00'),
+		});
+		return this.trueMarker;
 	}
 
 	zoomOnMarkers(markers) {
@@ -236,15 +275,21 @@ export class MapService {
 		this.map.fitBounds(latLngBounds);
 	}
 
+	clearDistanceLine() {
+		if (this.distanceLine) {
+			this.distanceLine.setMap(null);
+			this.distanceLine = null;
+		}
+	}
 	drawLineBetweenMarkers(map, m1, m2, color) {
-		const line = new google.maps.Polyline({
+		this.distanceLine = new google.maps.Polyline({
 			path: [m1.position, m2.position],
 			geodesic: true,
 			strokeColor: color,
 			strokeOpacity: 1.0,
 			strokeWeight: 2
 		});
-		line.setMap(map);
+		this.distanceLine.setMap(map);
 	}
 
 
