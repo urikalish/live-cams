@@ -7,8 +7,9 @@ export class MapService {
 	issMarker = null;
 	mapZoom = 2;
 	closestCount = 0;
+	debounceUpdatePins = null;
 
-	debounce(func, timeout = 1000){
+	debounce(func, timeout = 1000) {
 		let timer;
 		return (...args) => {
 			clearTimeout(timer);
@@ -34,19 +35,17 @@ export class MapService {
 		return pinElement.element;
 	}
 
-	async init(cams, issCam, closestCount, activateCamsForMarkers) {
-		//@ts-ignore
-		const { Map } = await google.maps.importLibrary('maps');
+	async updatePins() {
 		//@ts-ignore
 		const { PinElement } = await google.maps.importLibrary('marker');
+		this.markers.forEach(m => {
+			m.content = this.getPin(PinElement, m === this.selectedMarker, this.closestMarkers.includes(m));
+		});
+	}
 
-		this.closestCount = closestCount;
-		const debouncePinUpdate = this.debounce(() => {
-			this.markers.forEach(m => {
-				m.content = this.getPin(PinElement, m === this.selectedMarker, this.closestMarkers.includes(m));
-			});
-		}, 1000);
-
+	async createMap() {
+		//@ts-ignore
+		const { Map } = await google.maps.importLibrary('maps');
 		this.map = new Map(document.getElementById('map'), {
 			zoom: 2,
 			center: {lat: 20, lng: 11},
@@ -55,18 +54,27 @@ export class MapService {
 			disableDefaultUI: true,
 			mapTypeId: 'hybrid' // 'roadmap' | 'satellite' | 'hybrid'
 		});
-		this.map.addListener('zoom_changed', () => {
-			const mapZoom = this.map.getZoom();
-			if (!mapZoom || mapZoom === this.mapZoom) {
-				return;
-			}
-			this.mapZoom = mapZoom;
-			debouncePinUpdate();
-		});
-		this.map.addListener('click', (mapsMouseEvent) => {
-			console.log(mapsMouseEvent.latLng.lat() + ',' + mapsMouseEvent.latLng.lng());
+	}
 
-		});
+	handleMapZoomChanged() {
+		const mapZoom = this.map.getZoom();
+		if (!mapZoom || mapZoom === this.mapZoom) {
+			return;
+		}
+		this.mapZoom = mapZoom;
+		this.debounceUpdatePins();
+	}
+
+	handleMapClicked(mapsMouseEvent) {
+		console.log(mapsMouseEvent.latLng.lat() + ',' + mapsMouseEvent.latLng.lng());
+	}
+
+	async init(cams, issCam, closestCount, activateCamsForMarkers) {
+		this.closestCount = closestCount;
+		this.debounceUpdatePins = this.debounce(this.updatePins, 1000);
+		await this.createMap();
+		this.map.addListener('zoom_changed', this.handleMapZoomChanged.bind(this));
+		this.map.addListener('click', this.handleMapClicked.bind(this));
 		await this.addLocationMarkers(this.map, cams, activateCamsForMarkers);
 		await this.handleIssMapMarker(this.map, issCam, activateCamsForMarkers);
 	}
@@ -177,6 +185,9 @@ export class MapService {
 	}
 
 	async handleIssMapMarker(map, issCam, activateCamsForMarkers) {
+		if (!issCam) {
+			return;
+		}
 		try {
 			const req = await fetch('https://api.wheretheiss.at/v1/satellites/25544');
 			const json = await req.json();
