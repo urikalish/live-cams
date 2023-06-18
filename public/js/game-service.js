@@ -33,7 +33,7 @@ export class GameService {
 	}
 
 	async handleGuess(guessLat, guessLng) {
-		if (!this.waitingForGuess || (Date.now() - this.waitingForGuessStartTime < 3000)) {
+		if (!this.waitingForGuess || (Date.now() - this.waitingForGuessStartTime < 2000)) {
 			return;
 		}
 		this.waitingForGuess = false;
