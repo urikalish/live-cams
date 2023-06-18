@@ -59,7 +59,7 @@ body {
 .cam-cover {
     position: absolute;
     inset: 0;
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 12%, rgba(0,0,0,0) 14%, rgba(0,0,0,0) 86%, rgba(0,0,0,1) 88%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 13%, rgba(0,0,0,0) 87%, rgba(0,0,0,1) 90%, rgba(0,0,0,1) 100%);
     animation: animation-fade-in 3s ease-in forwards;
     font-size: 40px;
     display: grid;

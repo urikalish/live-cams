@@ -33,6 +33,16 @@ export class MapService {
 		return pinElement.element;
 	}
 
+	getZeroSizePin(PinElement) {
+		const pinElement = new PinElement({
+			scale: 0,
+			borderColor: '#000',
+			background: '#fff',
+			glyphColor: '#000',
+		})
+		return pinElement.element;
+	}
+
 	async updatePins() {
 		//@ts-ignore
 		const { PinElement } = await google.maps.importLibrary('marker');
@@ -41,7 +51,7 @@ export class MapService {
 			m.content = this.getPin(PinElement, color);
 		});
 		if (this.guessMarker) {
-			this.guessMarker.content = this.getPin(PinElement, '#f00');
+			this.guessMarker.content = this.getZeroSizePin(PinElement);
 		}
 		if (this.trueMarker) {
 			this.trueMarker.content = this.getPin(PinElement, '#fc0');
@@ -246,7 +256,7 @@ export class MapService {
 			map,
 			position: {lat, lng},
 			title: 'Your guess',
-			content: this.getPin(PinElement, '#f00'),
+			content: this.getZeroSizePin(PinElement),
 		});
 		return this.guessMarker;
 	}

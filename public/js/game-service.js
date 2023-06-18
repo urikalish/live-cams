@@ -34,11 +34,11 @@ export class GameService {
 	}
 
 	async handleGuess(guessLat, guessLng) {
-		if (!this.waitingForGuess || (Date.now() - this.waitingForGuessStartTime < 2000)) {
+		if (!this.waitingForGuess || (Date.now() - this.waitingForGuessStartTime < 1000)) {
 			return;
 		}
 		this.waitingForGuess = false;
-		this.locationMessageElm.textContent = `${this.cam.name} ${this.cam.geo}`;
+		this.locationMessageElm.textContent = `${this.cam.name} - ${this.cam.geo.split('/')[1]}, ${this.cam.geo.split('/')[0]}`;
 		const trueLat = Number.parseFloat(this.cam.pos.split(',')[0]);
 		const trueLng = Number.parseFloat(this.cam.pos.split(',')[1]);
 		const distance = await this.mapService.displayGuess(guessLat, guessLng, trueLat, trueLng);
