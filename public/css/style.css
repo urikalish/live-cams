@@ -45,7 +45,8 @@ body {
     cursor: pointer;
 }
 .game-message {
-    padding: 20px;
+    padding: 0.5em;
+    font-size: 40px;
 }
 .hidden {
     display: none;
