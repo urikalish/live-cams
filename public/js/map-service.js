@@ -41,10 +41,10 @@ export class MapService {
 			m.content = this.getPin(PinElement, color);
 		});
 		if (this.guessMarker) {
-			this.guessMarker.content = this.getPin(PinElement, '#fc0');
+			this.guessMarker.content = this.getPin(PinElement, '#f00');
 		}
 		if (this.trueMarker) {
-			this.trueMarker.content = this.getPin(PinElement, '#f00');
+			this.trueMarker.content = this.getPin(PinElement, '#fc0');
 		}
 	}
 
@@ -246,7 +246,7 @@ export class MapService {
 			map,
 			position: {lat, lng},
 			title: 'Your guess',
-			content: this.getPin(PinElement, '#fc0'),
+			content: this.getPin(PinElement, '#f00'),
 		});
 		return this.guessMarker;
 	}
@@ -265,8 +265,8 @@ export class MapService {
 		this.trueMarker = new AdvancedMarkerElement({
 			map,
 			position: {lat, lng},
-			title: 'Camera location',
-			content: this.getPin(PinElement, '#f00'),
+			title: 'True location',
+			content: this.getPin(PinElement, '#fc0'),
 		});
 		return this.trueMarker;
 	}

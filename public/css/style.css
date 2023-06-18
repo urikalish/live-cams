@@ -65,12 +65,19 @@ body {
     display: grid;
     place-items: center;
 }
-.game-message {
+.game-panel {
     padding: 24px;
+}
+.location-message {
+    font-size: 20px;
+    color: #fc0;
+}
+.distance-message {
+    margin-top: 12px;
     font-size: 40px;
 }
 .next-button {
-    margin-left: 24px;
+    margin-top: 12px;
     border-radius: 8px;
     padding: 8px 16px;
     font-size: 24px;
