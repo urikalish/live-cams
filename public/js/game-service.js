@@ -52,8 +52,8 @@ export class GameService {
 		if (distance > 1000000) {
 			this.distanceMessageElm.style.color = '#f00';
 		} else {
-			const maxDistance = Math.PI * 6378137;
-			const dd = distance / maxDistance;
+			//const maxDistance = Math.PI * 6378137;
+			const dd = distance / 1000000;
 			this.distanceMessageElm.style.color = `hsl(${120 - dd * 120}, 100%, 50%)`;
 		}
 		this.nextButtonElm.classList.toggle('hidden', false);
