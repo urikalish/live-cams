@@ -2,9 +2,11 @@ export const errCams =
 [
 	"-PnTdQz0JSE",
 	"0q04F-t7sbU",
+	"1-1cd4UxplE",
 	"3gNNtHcOTiE",
 	"4VD4xqDUqwo",
 	"5XLeoBOxUsU",
+	"7Nuw3rTBSJU",
 	"7yBxSDIX0Rk",
 	"85T4YAzTukc",
 	"9kvuUMNa5dA",
@@ -15,6 +17,7 @@ export const errCams =
 	"Dd-j8sKwxOw",
 	"Dx7lzLuQyUk",
 	"Fxw-CithrPg",
+	"HzOUQ-3B3S8",
 	"JL57Uqyg5HU",
 	"M7ZvTLZYmWQ",
 	"QJka5O2TG5o",
@@ -63,6 +66,7 @@ export const errCams =
 	"fbefvZ_QOCk",
 	"hMYIc5ZPJL4",
 	"hZyH--SGRgc",
+	"hbfqaF9BVbY",
 	"hpIHjMXyndc",
 	"i3z2_X3y47k",
 	"jQ12w1pBtfo",
@@ -78,6 +82,7 @@ export const errCams =
 	"rBvB1qVPJFg",
 	"rG13FY2ytno",
 	"rPC7axd3ptg",
+	"tpkyMPU7Q0Y",
 	"uwke4Ol3nyc",
 	"vuqLMwZf5sk",
 	"x6I-9UEe5PY",
@@ -88,5 +93,5 @@ export const errCams =
 	"yQPx1V-C-aM",
 	"ySIwJXKj7VU",
 	"zJSW4NAQG5k",
-	"zOc-1ObAXXI",
+	"zOc-1ObAXXI"
 ];
