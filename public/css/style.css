@@ -66,23 +66,26 @@ body {
     user-select: none;
 }
 .game-panel {
-    padding: 24px;
+    padding: 16px;
+}
+.stats-message {
+    grid-column: 1 / 3;
+    font-size: 16px;
+    color: #ccc;
+}
+.guess-info {
+    display: flex;
+}
+.distance-message {
+    font-size: 40px;
 }
 .location-message {
+    margin: 18px 0 0 8px;
     font-size: 20px;
     color: #fc0;
 }
-.distance-message {
-    margin-top: 12px;
-    font-size: 40px;
-}
-.stats-message {
-    margin-top: 12px;
-    font-size: 20px;
-    color: #ccc;
-}
 .next-button {
-    margin-top: 12px;
+    margin-top: 16px;
     border-radius: 8px;
     padding: 12px 24px;
     font-size: 24px;

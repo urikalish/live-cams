@@ -5,9 +5,9 @@ export class GameService {
 	camIndex = 0;
 	cam = null;
 	gamePanelElm = null;
-	locationMessageElm = null;
-	distanceMessageElm = null;
 	statsMessageElm = null;
+	distanceMessageElm = null;
+	locationMessageElm = null;
 	nextButtonElm = null;
 	waitingForGuess = true;
 	waitingForGuessStartTime = 0;
@@ -30,9 +30,10 @@ export class GameService {
 		this.camIndex++;
 		this.camService.displayLiveCams([this.cam], true);
 		this.addCoverElm();
-		this.locationMessageElm.textContent = '';
-		this.distanceMessageElm.textContent = '';
 		this.statsMessageElm.textContent = '';
+		this.distanceMessageElm.textContent = '';
+		this.locationMessageElm.textContent = '';
+		this.displayStats();
 		this.waitingForGuessStartTime = Date.now();
 		this.waitingForGuess = true;
 	}
@@ -59,10 +60,13 @@ export class GameService {
 	}
 
 	displayStats() {
+		if (this.guesses.length === 0) {
+			this.statsMessageElm.textContent = '';
+		}
 		let sortedGuesses = [...this.guesses].sort((a,b) => a-b);
 		const bestGuess = this.getDistanceString(sortedGuesses[0]);
-		//const avgGuess = this.getDistanceString(sortedGuesses.reduce((a,c) => a + c) / sortedGuesses.length);
-		this.statsMessageElm.textContent = `Best: ${bestGuess}`;
+		const avgGuess = this.getDistanceString(sortedGuesses.reduce((a,c) => a + c) / sortedGuesses.length);
+		this.statsMessageElm.textContent = `Guesses: ${sortedGuesses.length} | Average: ${avgGuess} | Best: ${bestGuess}`;
 	}
 
 	async handleGuess(guessLat, guessLng) {
@@ -90,9 +94,9 @@ export class GameService {
 		this.statsMessageElm = document.querySelector('#stats-message');
 		this.nextButtonElm = document.querySelector('#next-button');
 		this.gamePanelElm.classList.toggle('hidden', false);
-		this.locationMessageElm.classList.toggle('hidden', false);
-		this.distanceMessageElm.classList.toggle('hidden', false);
 		this.statsMessageElm.classList.toggle('hidden', false);
+		this.distanceMessageElm.classList.toggle('hidden', false);
+		this.locationMessageElm.classList.toggle('hidden', false);
 		this.nextButtonElm.classList.toggle('hidden', true);
 		this.nextButtonElm.addEventListener('click', () => {
 			this.startUserGuess();
