@@ -28,6 +28,7 @@ body {
 }
 .cam-container {
     position: relative;
+    user-select: none;
 }
 .cam-container--large {
     grid-column: 3 / span 2;
@@ -43,6 +44,7 @@ body {
     color: transparent;
     border: none;
     cursor: pointer;
+    z-index: 1;
 }
 @keyframes animation-fade-in {
     0% {
@@ -61,6 +63,7 @@ body {
     font-size: 40px;
     display: grid;
     place-items: center;
+    user-select: none;
 }
 .game-panel {
     padding: 24px;
@@ -73,12 +76,18 @@ body {
     margin-top: 12px;
     font-size: 40px;
 }
+.stats-message {
+    margin-top: 12px;
+    font-size: 20px;
+    color: #ccc;
+}
 .next-button {
     margin-top: 12px;
     border-radius: 8px;
     padding: 12px 24px;
     font-size: 24px;
     cursor: pointer;
+    user-select: none;
 }
 .hidden {
     display: none;

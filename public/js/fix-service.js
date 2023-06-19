@@ -146,7 +146,17 @@ export class FixService {
 		}
 	}
 
-	fix(wctCams, errCams, remCams, addCams, updCams, onlyYouTube) {
+	randomizeOrder(cams) {
+		let currentIndex = cams.length;
+		let randomIndex;
+		while (currentIndex !== 0) {
+			randomIndex = Math.floor(Math.random() * currentIndex);
+			currentIndex--;
+			[cams[currentIndex], cams[randomIndex]] = [cams[randomIndex], cams[currentIndex]];
+		}
+	}
+
+	fix(wctCams, errCams, remCams, addCams, updCams, onlyYouTube, randomOrder) {
 		const cams = [...wctCams];
 		console.log(`WCT:${wctCams.length}, Err:${addCams.length}, Remove:${remCams.length}, Add:${addCams.length}, Update:${Object.keys(updCams).length}`);
 		this.removeCams(cams, [...errCams, ...remCams]);
@@ -158,6 +168,9 @@ export class FixService {
 		this.addIds(cams);
 		if (onlyYouTube) {
 			this.leaveOnlyYouTubeCams(cams);
+		}
+		if (randomOrder) {
+			this.randomizeOrder(cams);
 		}
 		console.log(`Valid cameras: ${cams.length}`);
 		return cams;

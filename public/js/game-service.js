@@ -2,13 +2,16 @@ export class GameService {
 
 	mapService = null;
 	camService = null;
+	camIndex = 0;
 	cam = null;
 	gamePanelElm = null;
 	locationMessageElm = null;
 	distanceMessageElm = null;
+	statsMessageElm = null;
 	nextButtonElm = null;
 	waitingForGuess = true;
 	waitingForGuessStartTime = 0;
+	guesses = [];
 
 	addCoverElm() {
 		const containerElm = document.querySelector('.cam-container');
@@ -23,14 +26,43 @@ export class GameService {
 		this.nextButtonElm.classList.toggle('hidden', true);
 		this.mapService.clearGuess();
 		const cams = this.camService.getCams();
-		const index = Math.trunc(Math.random()*cams.length);
-		this.cam = cams[index];
+		this.cam = cams[this.camIndex];
+		this.camIndex++;
 		this.camService.displayLiveCams([this.cam], true);
 		this.addCoverElm();
 		this.locationMessageElm.textContent = '';
 		this.distanceMessageElm.textContent = '';
+		this.statsMessageElm.textContent = '';
 		this.waitingForGuessStartTime = Date.now();
 		this.waitingForGuess = true;
+	}
+
+	getDistanceString(distance) {
+		if (distance >= 10000) {
+			return `${Math.round(distance / 1000).toLocaleString('en-US')} km`;
+		} else if (distance > 1000) {
+			return `${(distance / 1000).toFixed(1)} km`;
+		} else {
+			return `${Math.round(distance)} m`;
+		}
+	}
+
+	displayGuessDistance(distance) {
+		this.distanceMessageElm.textContent = this.getDistanceString(distance);
+		if (distance > 1000000) {
+			this.distanceMessageElm.style.color = '#f00';
+		} else {
+			//const maxDistance = Math.PI * 6378137;
+			const dd = distance / 1000000;
+			this.distanceMessageElm.style.color = `hsl(${120 - dd * 120}, 100%, 50%)`;
+		}
+	}
+
+	displayStats() {
+		let sortedGuesses = [...this.guesses].sort((a,b) => a-b);
+		const bestGuess = this.getDistanceString(sortedGuesses[0]);
+		//const avgGuess = this.getDistanceString(sortedGuesses.reduce((a,c) => a + c) / sortedGuesses.length);
+		this.statsMessageElm.textContent = `Best: ${bestGuess}`;
 	}
 
 	async handleGuess(guessLat, guessLng) {
@@ -42,20 +74,9 @@ export class GameService {
 		const trueLat = Number.parseFloat(this.cam.pos.split(',')[0]);
 		const trueLng = Number.parseFloat(this.cam.pos.split(',')[1]);
 		const distance = await this.mapService.displayGuess(guessLat, guessLng, trueLat, trueLng);
-		if (distance >= 10000) {
-			this.distanceMessageElm.textContent = `${Math.round(distance / 1000).toLocaleString('en-US')} km`;
-		} else if (distance > 1000) {
-			this.distanceMessageElm.textContent = `${(distance / 1000).toFixed(1)} km`;
-		} else {
-			this.distanceMessageElm.textContent = `${Math.round(distance)} m`;
-		}
-		if (distance > 1000000) {
-			this.distanceMessageElm.style.color = '#f00';
-		} else {
-			//const maxDistance = Math.PI * 6378137;
-			const dd = distance / 1000000;
-			this.distanceMessageElm.style.color = `hsl(${120 - dd * 120}, 100%, 50%)`;
-		}
+		this.guesses.push(distance);
+		this.displayGuessDistance(distance);
+		this.displayStats();
 		this.nextButtonElm.classList.toggle('hidden', false);
 	}
 
@@ -66,10 +87,12 @@ export class GameService {
 		this.gamePanelElm = document.querySelector('#game-panel');
 		this.distanceMessageElm = document.querySelector('#distance-message');
 		this.locationMessageElm = document.querySelector('#location-message');
+		this.statsMessageElm = document.querySelector('#stats-message');
 		this.nextButtonElm = document.querySelector('#next-button');
 		this.gamePanelElm.classList.toggle('hidden', false);
 		this.locationMessageElm.classList.toggle('hidden', false);
 		this.distanceMessageElm.classList.toggle('hidden', false);
+		this.statsMessageElm.classList.toggle('hidden', false);
 		this.nextButtonElm.classList.toggle('hidden', true);
 		this.nextButtonElm.addEventListener('click', () => {
 			this.startUserGuess();
