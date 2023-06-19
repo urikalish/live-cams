@@ -14,9 +14,16 @@ const gameService = new GameService();
 
 window.handleGoogleMapLoaded = () => {};
 const urlParams = new URLSearchParams(window.location.search);
-const mode = urlParams.get('mode') || 'view';
+const mode = urlParams.get('mode') || 'guess';
 
-if (mode === 'view') {
+if (mode === 'guess') {
+	window.handleGoogleMapLoaded = async () => {
+		await mapService.initForGuess(camService);
+		gameService.startUserGuess();
+	}
+	camService.init(wctCams, errCams, remCams, addCams, updCams, issCam, true);
+	gameService.init(mapService, camService);
+} else if (mode === 'view') {
 	const autoShowIssCam = true;
 	const autoPlay = true;
 	const closestCount = 16;
@@ -29,13 +36,6 @@ if (mode === 'view') {
 	if (autoShowIssCam) {
 		camService.displayLiveCams([issCam], autoPlay);
 	}
-} else if (mode === 'guess') {
-	window.handleGoogleMapLoaded = async () => {
-		await mapService.initForGuess(camService);
-		gameService.startUserGuess();
-	}
-	camService.init(wctCams, errCams, remCams, addCams, updCams, issCam, true);
-	gameService.init(mapService, camService);
 } else if (mode === 'check') {
 	camService.init(wctCams, [], remCams, addCams, updCams, null, false);
 	camService.displayAllErrCams(wctCams, errCams);
