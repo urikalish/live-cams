@@ -24,8 +24,12 @@ export class CamService {
 		const srcQuery = src.replace(srcLocation, '').replace('?', '');
 		const urlParams = new URLSearchParams(srcQuery);
 		if (src.includes('youtube.com')) {
+			urlParams.set('autohide', '2');
 			urlParams.set('autoplay', autoPlay ? '1' : '0');
+			urlParams.set('controls', '0');
+			urlParams.set('modestbranding', '1');
 			urlParams.set('mute', '1');
+			urlParams.set('showinfo', '0');
 			urlParams.set('vq', 'hd1080');
 		} else if (src.includes('livestream.com')) {
 			urlParams.set('mute', 'true');

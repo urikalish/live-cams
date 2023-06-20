@@ -26,9 +26,25 @@ body {
     width: 950px;
     height: 534px;
 }
+@keyframes animation-frame-appear {
+    0% {
+        filter: brightness(0) grayscale(1) blur(3px);
+        transform: scale(3);
+    }
+    100% {
+        filter: brightness(1) grayscale(0) blur(0px);
+        transform: scale(1.2);
+    }
+}
 .cam-container {
     position: relative;
+    overflow: hidden;
     user-select: none;
+}
+.cam-container > iframe {
+    filter: brightness(0) grayscale(1) blur(3px);
+    transform: scale(2.4);
+    animation: animation-frame-appear 5s 2s ease-in-out forwards;
 }
 .cam-container--large {
     grid-column: 3 / span 2;
@@ -46,24 +62,14 @@ body {
     cursor: pointer;
     z-index: 1;
 }
-@keyframes animation-fade-in {
-    0% {
-        color: rgba(255,255,255,1.0);
-    }
-    100% {
-        color: rgba(255,255,255,0);
-    }
-}
-
 .cam-cover {
     position: absolute;
     inset: 0;
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 8%, rgba(0,0,0,0) 9%, rgba(0,0,0,0) 88%, rgba(0,0,0,1) 89%, rgba(0,0,0,1) 100%);
-    animation: animation-fade-in 1s ease-in forwards;
     font-size: 40px;
     display: grid;
     place-items: center;
     user-select: none;
+    color: #fff;
 }
 .game-panel {
     padding: 16px;

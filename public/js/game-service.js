@@ -18,7 +18,7 @@ export class GameService {
 		const coverElm = document.createElement('div');
 		coverElm.setAttribute('id', 'cam-cover');
 		coverElm.classList.add('cam-cover');
-		coverElm.textContent = '?';
+		coverElm.textContent = '';
 		containerElm.appendChild(coverElm);
 	}
 
