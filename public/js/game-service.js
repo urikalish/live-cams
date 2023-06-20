@@ -27,7 +27,7 @@ export class GameService {
 		this.mapService.clearGuess();
 		const cams = this.camService.getCams();
 		this.cam = cams[this.camIndex];
-		this.camIndex++;
+		this.camIndex = (this.camIndex + 1) % cams.length;
 		this.camService.displayLiveCams([this.cam], true);
 		this.addCoverElm();
 		this.statsMessageElm.textContent = '';
