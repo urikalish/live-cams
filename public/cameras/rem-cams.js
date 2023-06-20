@@ -5,6 +5,7 @@ export const remCams =
 	"3x6ZPzO_4PQ",
 	"UC0XwlUj1WxwF1e-gzxwRSUw",
 	"UCMuBZXmPvGSgN_xAQz3iFQA",
+	"UCryGec9PdUCLjpJW2mgCuLw",
 	"UCyS3fQ0zsZFK8ArfjbCweHg",
 	"ipcamlive.com/player/player.php?alias=westin1",
 	"jwplayer.com/players/QfGPTxWt-PvmcpbOb",
