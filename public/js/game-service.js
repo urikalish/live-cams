@@ -66,7 +66,9 @@ export class GameService {
 		let sortedGuesses = [...this.guesses].sort((a,b) => a-b);
 		const bestGuess = this.getDistanceString(sortedGuesses[0]);
 		const avgGuess = this.getDistanceString(sortedGuesses.reduce((a,c) => a + c, 0) / sortedGuesses.length);
-		this.statsMessageElm.textContent = `Guesses: ${sortedGuesses.length} | Average: ${avgGuess} | Best: ${bestGuess}`;
+		if (sortedGuesses.length > 0) {
+			this.statsMessageElm.textContent = `Guesses: ${sortedGuesses.length} / Average: ${avgGuess} / Best: ${bestGuess}`;
+		}
 	}
 
 	async handleGuess(guessLat, guessLng) {
@@ -74,7 +76,7 @@ export class GameService {
 			return;
 		}
 		this.waitingForGuess = false;
-		this.locationMessageElm.textContent = `${this.cam.name} - ${this.cam.geo.split('/')[1]}, ${this.cam.geo.split('/')[0]}`;
+		this.locationMessageElm.textContent = `${this.cam.name} / ${this.cam.geo.split('/')[1]}, ${this.cam.geo.split('/')[0]}`;
 		const trueLat = Number.parseFloat(this.cam.pos.split(',')[0]);
 		const trueLng = Number.parseFloat(this.cam.pos.split(',')[1]);
 		const distance = await this.mapService.displayGuess(guessLat, guessLng, trueLat, trueLng);
