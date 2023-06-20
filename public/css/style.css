@@ -1,3 +1,21 @@
+/* Play font */
+@font-face {
+    font-family: 'play';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Play'),
+    url('../font/play-v12-latin-ext_latin-regular.woff2') format('woff2'),
+    url('../font/play-v12-latin-ext_latin-regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'play';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Play'),
+    url('../font/play-v12-latin-ext_latin-700.woff2') format('woff2'),
+    url('../font/play-v12-latin-ext_latin-700.woff') format('woff');
+}
+
 *,
 *::before,
 *::after {
@@ -14,7 +32,7 @@ body {
     background-color: #111;
     color: #ccc;
     font-size: 1.6rem;
-    font-family: helvetica, sans-serif;
+    font-family: play, helvetica, sans-serif;
 }
 .main {
     display: grid;
@@ -97,6 +115,7 @@ body {
     font-size: 24px;
     cursor: pointer;
     user-select: none;
+    font-family: play, helvetica, sans-serif;
 }
 .hidden {
     display: none;
