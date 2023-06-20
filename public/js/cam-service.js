@@ -94,13 +94,16 @@ export class CamService {
 	displayAllErrCams(wctCams, errCams) {
 		const unwantedCams = [];
 		const unwantedCamIds = [];
+		const unwantedCamNames = [];
+		const unwantedCamUrls = [];
 		const allCams = this.cams;
 		errCams.forEach(unwantedCam => {
 			const cam = allCams.find(cam => cam.src.includes(unwantedCam));
 			if (cam) {
 				unwantedCams.push(cam);
 				unwantedCamIds.push(cam.id);
-				console.log(cam.name);
+				unwantedCamNames.push(cam.name);
+				unwantedCamUrls.push(cam.wct);
 			} else {
 				console.log(`Unwanted cam not found in cam list: ${unwantedCam}`);
 			}
@@ -108,5 +111,7 @@ export class CamService {
 		this.cams = unwantedCams;
 		this.displayLiveCams(unwantedCams, false);
 		console.log(unwantedCamIds.sort());
+		console.log(unwantedCamNames.sort());
+		console.log(unwantedCamUrls.sort());
 	}
 }
