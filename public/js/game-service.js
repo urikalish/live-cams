@@ -65,7 +65,7 @@ export class GameService {
 		}
 		let sortedGuesses = [...this.guesses].sort((a,b) => a-b);
 		const bestGuess = this.getDistanceString(sortedGuesses[0]);
-		const avgGuess = this.getDistanceString(sortedGuesses.reduce((a,c) => a + c) / sortedGuesses.length);
+		const avgGuess = this.getDistanceString(sortedGuesses.reduce((a,c) => a + c, 0) / sortedGuesses.length);
 		this.statsMessageElm.textContent = `Guesses: ${sortedGuesses.length} | Average: ${avgGuess} | Best: ${bestGuess}`;
 	}
 
