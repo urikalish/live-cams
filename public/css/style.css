@@ -46,11 +46,11 @@ body {
 }
 @keyframes animation-frame-appear {
     0% {
-        filter: brightness(0) grayscale(1) blur(3px);
-        transform: scale(3);
+        filter: brightness(0) grayscale(1);
+        transform: scale(1.8);
     }
     100% {
-        filter: brightness(1) grayscale(0) blur(0px);
+        filter: brightness(1) grayscale(0);
         transform: scale(1.2);
     }
 }
@@ -60,8 +60,8 @@ body {
     user-select: none;
 }
 .cam-container > iframe {
-    filter: brightness(0) grayscale(1) blur(3px);
-    transform: scale(2.4);
+    filter: brightness(0) grayscale(1);
+    transform: scale(1.8);
     animation: animation-frame-appear 5s 2s ease-in-out forwards;
 }
 .cam-container--large {
