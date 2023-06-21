@@ -1,9 +1,5 @@
 import { wctCams } from '../cameras/wct-cams.js';
-import { addCams } from "../cameras/add-cams.js";
-import { errCams } from '../cameras/err-cams.js';
-import { remCams } from '../cameras/rem-cams.js';
-import { updCams } from '../cameras/upd-cams.js';
-import { issCam } from '../cameras/iss-cam.js';
+import { errCams, remCams, addCams, updCams, issCam } from '../cameras/upd-cams.js';
 import { MapService} from './map-service.js';
 import { CamService} from './cam-service.js';
 import { GameService } from './game-service.js';
