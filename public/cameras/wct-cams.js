@@ -693,7 +693,7 @@ export const wctCams =
 		"tags": "Airport,Sound",
 		"geo": "Brazil/Rio de Janeiro",
 		"pos": "-22.90998929626542,-43.17204582175348",
-		"src": "https://www.youtube.com/embed/e2ocSq9x_qk",
+		"src": "https://www.youtube.com/embed/9O0MKWK6VzY",
 		"wct": "/en/brazil/rio-de-janeiro-state/riodejaneiro-santosdumontairport.html"
 	},
 	{
@@ -4789,7 +4789,7 @@ export const wctCams =
 		"tags": "Island,Lake",
 		"geo": "Italy/Lombardy",
 		"pos": "45.80419415477632,9.06731453671309",
-		"src": "https://www.youtube.com/embed/3gNNtHcOTiE",
+		"src": "https://www.youtube.com/embed/3-YwKW9BC-Q",
 		"wct": "/en/italy/lombardy/lake-como-skyline-cam.html"
 	},
 	{
@@ -5341,7 +5341,7 @@ export const wctCams =
 		"tags": "4k,Airport",
 		"geo": "Japan/Fukuoka Prefecture",
 		"pos": "33.581597460239315,130.44266405482213",
-		"src": "https://www.youtube.com/embed/XeiW1seVuiY",
+		"src": "https://www.youtube.com/embed/akFuz0075hk",
 		"wct": "/en/japan/fukuoka-prefecture/kyushu-fukuoka-airport.html"
 	},
 	{
@@ -5741,7 +5741,7 @@ export const wctCams =
 		"tags": "Traffic",
 		"geo": "Japan/Okinawa Prefecture",
 		"pos": "24.336808085333644,124.14967201409497",
-		"src": "https://www.youtube.com/embed/dlyynuyT9cw",
+		"src": "https://www.youtube.com/embed/pvgoOppgD-k",
 		"wct": "/en/japan/okinawa-prefecture/ishigaki-730intersection-cam.html"
 	},
 	{
@@ -6577,6 +6577,14 @@ export const wctCams =
 		"wct": "/en/mexico/guerrero/acapulco-marina.html"
 	},
 	{
+		"name": "Ixtapa Beach",
+		"tags": "Beach,Sea",
+		"geo": "Mexico/Guerrero",
+		"pos": "17.660735099570143,-101.60669532015653",
+		"src": "https://www.youtube.com/embed/6GRdyE6kSX8",
+		"wct": "/en/mexico/guerrero/ixtapa-beach.html"
+	},
+	{
 		"name": "La Ropa Beach Cam",
 		"tags": "Beach,Sea",
 		"geo": "Mexico/Guerrero",
@@ -7005,7 +7013,7 @@ export const wctCams =
 		"tags": "Bar,Restaurant,Square",
 		"geo": "Netherlands/Friesland",
 		"pos": "53.03253220577191,5.657816951888941",
-		"src": "https://www.youtube.com/embed/VLjp0uEb09I",
+		"src": "https://www.youtube.com/embed/gCkvo0loyRs",
 		"wct": "/en/netherlands/friesland/sneek-marktstraat-cam.html"
 	},
 	{
@@ -12493,7 +12501,7 @@ export const wctCams =
 		"tags": "Animals",
 		"geo": "Usa/Connecticut",
 		"pos": "41.536142459966825,-72.22928238384303",
-		"src": "https://www.youtube.com/embed/7chrgZKML3c",
+		"src": "https://www.youtube.com/embed/Ew9yHJBquIM",
 		"wct": "/en/usa/connecticut/baby-goat-salem.html"
 	},
 	{
@@ -12501,7 +12509,7 @@ export const wctCams =
 		"tags": "Animals",
 		"geo": "Usa/Connecticut",
 		"pos": "41.536142459966825,-72.22928238384303",
-		"src": "https://www.youtube.com/embed/-sZ9TS88HOI",
+		"src": "https://www.youtube.com/embed/bhu9r_yrxbQ",
 		"wct": "/en/usa/connecticut/symansaysfarms-goatbarn-cam.html"
 	},
 	{
@@ -14489,6 +14497,14 @@ export const wctCams =
 		"wct": "/en/usa/michigan/coldwater-willowbrook-watertower-cam.html"
 	},
 	{
+		"name": "Brainerd Boiler Yard Cam, MN",
+		"tags": "Trains",
+		"geo": "Usa/Minnesota",
+		"pos": "46.35644760476991,-94.1890364053927",
+		"src": "https://www.youtube.com/embed/171bgbot7rY",
+		"wct": "/en/usa/minnesota/brainerd-boiler-yard-cam.html"
+	},
+	{
 		"name": "Camp Idlewood Cam, MN",
 		"tags": "Hotels & Resorts,Lake",
 		"geo": "Usa/Minnesota",
@@ -14927,6 +14943,14 @@ export const wctCams =
 		"pos": "39.27137997164659,-74.58322592271831",
 		"src": "https://www.youtube.com/embed/c4Nf2dBFQVo",
 		"wct": "/en/usa/new-jersey/bobsgrill-14thstreet-fishingpier.html"
+	},
+	{
+		"name": "Gardens Plaza 3rd Skycam II, NJ",
+		"tags": "Beach,Landscape,Sea",
+		"geo": "Usa/New Jersey",
+		"pos": "39.27984812404565,-74.5643849228317",
+		"src": "https://www.youtube.com/embed/eZyS2t60wqg",
+		"wct": "/en/usa/new-jersey/ocean-city-gardens-plaza-skycam.html"
 	},
 	{
 		"name": "Kitkat Playroom Cam, NJ",
@@ -15389,7 +15413,7 @@ export const wctCams =
 		"tags": "Boats,Bridge,Restaurant,River",
 		"geo": "Usa/North Carolina",
 		"pos": "34.23290397297732,-77.95204528724692",
-		"src": "https://www.youtube.com/embed/Dx7lzLuQyUk",
+		"src": "https://www.youtube.com/embed/_xbUrdWMizc",
 		"wct": "/en/usa/north-carolina/downtown-wilmington-cam.html"
 	},
 	{
