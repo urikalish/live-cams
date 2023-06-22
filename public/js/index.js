@@ -32,7 +32,10 @@ if (mode === 'guess') {
 	if (autoShowIssCam) {
 		camService.displayLiveCams([issCam], autoPlay);
 	}
-} else if (mode === 'check') {
+} else if (mode === 'err') {
 	camService.init(wctCams, [], remCams, addCams, updCams, null, false, false);
-	camService.displayAllErrCams(wctCams, errCams);
+	camService.displayAllProblematicCams(wctCams, errCams);
+} else if (mode === 'rem') {
+	camService.init(wctCams, errCams, [], addCams, updCams, null, false, false);
+	camService.displayAllProblematicCams(wctCams, remCams);
 }

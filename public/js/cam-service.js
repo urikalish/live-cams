@@ -91,13 +91,13 @@ export class CamService {
 		});
 	}
 
-	displayAllErrCams(wctCams, errCams) {
+	displayAllProblematicCams(wctCams, problematicCams) {
 		const unwantedCams = [];
 		const unwantedCamIds = [];
 		const unwantedCamNames = [];
 		const unwantedCamUrls = [];
 		const allCams = this.cams;
-		errCams.forEach(unwantedCam => {
+		problematicCams.forEach(unwantedCam => {
 			const cam = allCams.find(cam => cam.src.includes(unwantedCam));
 			if (cam) {
 				unwantedCams.push(cam);
