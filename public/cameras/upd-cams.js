@@ -44,7 +44,6 @@ export const remCams =
 	"player.twitch.tv/?channel=studiograssi",
 	"player.twitch.tv/?channel=webcampennabilli",
 	"polyanaski.ru/webcam/cam.php?cam_id=93",
-	"resortcams.com/embed.php?cam=hogs-breath-raw-bar",
 	"rtsp.me/embed/7s2YEfr3",
 	"rtsp.me/embed/RNsNiBhT",
 	"rtsp.me/embed/f682rABs",
