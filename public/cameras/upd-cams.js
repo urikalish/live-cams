@@ -35,7 +35,6 @@ export const remCams =
 	"3x6ZPzO_4PQ",
 	"UC0XwlUj1WxwF1e-gzxwRSUw",
 	"UCL3zCbAHMUHJk0M1T0oIoIg",
-	"UCMuBZXmPvGSgN_xAQz3iFQA",
 	"UCryGec9PdUCLjpJW2mgCuLw",
 	"UCyS3fQ0zsZFK8ArfjbCweHg",
 	"jwplayer.com/players/QfGPTxWt-PvmcpbOb",
