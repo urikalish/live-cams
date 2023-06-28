@@ -4,7 +4,7 @@
   "description": "live-cams",
   "main": "js/index.js",
   "scripts": {
-    "http-server": "http-server ./public --port 5555 --cors -c-1",
+    "serve": "http-server ./public --port 5555 --cors -c-1",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
