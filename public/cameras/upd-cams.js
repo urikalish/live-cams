@@ -1,19 +1,13 @@
 export const errCams =
 [
-	"85T4YAzTukc",
-	"DURbvDTRfpI",
 	"JL57Uqyg5HU",
 	"UC8pFjcaJuGzUPynhZ8pbQlg",
 	"UC90AkGrousC-CDBcCL8UaSg",
-	"UCH3v-NvNtwmFFmK5PVGzkQg",
 	"UC_3boA5axpWS61tBbX4LWQQ",
-	"UC_dQTOYTn6r5Kij3z0_SP6Q",
 	"Zb1JrJW7Bmk",
 	"jDW3BObg-Dk",
 	"kWLoVV8iRQU",
-	"nAO3XMZXdXI",
-	"pYZX8hq5sR8",
-	"zOc-1ObAXXI"
+	"nAO3XMZXdXI"
 ];
 export const remCams =
 [
