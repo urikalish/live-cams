@@ -177,14 +177,6 @@ export const wctCams =
 		"src": "https://open.ivideon.com/embed/v2/?server=200-zyQwyxhuBgR2nQfTTiWTn7&camera=0&width=&height=&lang=en"
 	},
 	{
-		"name": "Port Lincoln Osprey Cam",
-		"geo": "Australia/South Australia",
-		"tags": "Animals",
-		"wct": "/en/australia/south-australia/port-lincoln-osprey-nest-cam.html",
-		"pos": "-34.73767679306897,135.8697762288218",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCK_BLeXdJeHqA1SlC79CruQ"
-	},
-	{
 		"name": "Anglesea Golf Club Cam, Australia",
 		"geo": "Australia/Victoria",
 		"tags": "Sports",
@@ -438,7 +430,7 @@ export const wctCams =
 		"tags": "City,Shopping",
 		"wct": "/en/belgium/antwerp/mechelen-bruul-street-cam.html",
 		"pos": "51.02622555358954,4.478978016408263",
-		"src": "https://www.youtube.com/embed/rM9CJTC2Q0A"
+		"src": "https://www.youtube.com/embed/_lM8bpwT_i4"
 	},
 	{
 		"name": "Grote Markt, Mechelen",
@@ -446,7 +438,7 @@ export const wctCams =
 		"tags": "Square",
 		"wct": "/en/belgium/antwerp/mechelen-grote-markt.html",
 		"pos": "51.02830895333871,4.477805951556364",
-		"src": "https://www.youtube.com/embed/-DP9J62zDi8"
+		"src": "https://www.youtube.com/embed/kGYSSQNtJ9g"
 	},
 	{
 		"name": "Ijzerenleen Square, Mechelen",
@@ -454,7 +446,7 @@ export const wctCams =
 		"tags": "Bar,Square",
 		"wct": "/en/belgium/antwerp/mechelen-ijzerenleen-square.html",
 		"pos": "51.027583279559174,4.477172416434721",
-		"src": "https://www.youtube.com/embed/n3_9q0sNc6Q"
+		"src": "https://www.youtube.com/embed/1I_cfeA-QE4"
 	},
 	{
 		"name": "Schoenmarkt Cam, Mechelen",
@@ -462,7 +454,7 @@ export const wctCams =
 		"tags": "Square",
 		"wct": "/en/belgium/antwerp/mechelen-schoenmarkt.html",
 		"pos": "51.027047512664964,4.47847965334171",
-		"src": "https://www.youtube.com/embed/ZKRW8niAmUM"
+		"src": "https://www.youtube.com/embed/VrqGaXi3N90"
 	},
 	{
 		"name": "Oudenaarde Town Centre",
@@ -606,7 +598,7 @@ export const wctCams =
 		"tags": "Traffic",
 		"wct": "/en/bosnia-herzegovina/sarajevo-canton/ali-pasha-s-mosque.html",
 		"pos": "43.85750997901232,18.41065395152554",
-		"src": "https://www.youtube.com/embed/17XCoqx3mPg"
+		"src": "https://www.youtube.com/embed/ARqEPgWO11s"
 	},
 	{
 		"name": "Sarajevo City Centre",
@@ -670,7 +662,7 @@ export const wctCams =
 		"tags": "Airport",
 		"wct": "/en/brazil/pernambuco-state/recife-airport-cam.html",
 		"pos": "-8.138388991857811,-34.920136287676854",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCdz_Kbzu83ZE86LVcGFN0JA"
+		"src": "https://www.youtube.com/embed/md3iyCnNAEY"
 	},
 	{
 		"name": "Galeão International Airport, Brazil",
@@ -686,7 +678,7 @@ export const wctCams =
 		"tags": "Airport,Sound",
 		"wct": "/en/brazil/rio-de-janeiro-state/riodejaneiro-santosdumontairport.html",
 		"pos": "-22.90998929626542,-43.17204582175348",
-		"src": "https://www.youtube.com/embed/rhuRzIJbTN0"
+		"src": "https://www.youtube.com/embed/Ia7CBwcSI4k"
 	},
 	{
 		"name": "Saquarema Cam, Brazil",
@@ -711,6 +703,14 @@ export const wctCams =
 		"wct": "/en/brazil/rio-grande-do-sul/lake-guaiba-porto-alegre.html",
 		"pos": "-30.01265397860287,-51.21370374974223",
 		"src": "https://www.youtube.com/embed/live_stream?channel=UCqI8nU3-dstxAS3YCXhKuPg&rel=0&autoplay=1"
+	},
+	{
+		"name": "Montenegro RS East, Brazil",
+		"geo": "Brazil/Rio Grande do Sul",
+		"tags": "Landscape",
+		"wct": "/en/brazil/rio-grande-do-sul/montenegro-rs-east-cam.html",
+		"pos": "-29.69475049983473,-51.49606257692382",
+		"src": "https://www.youtube.com/embed/live_stream?channel=UC0T38EzZthvvGk8cf98GaXA"
 	},
 	{
 		"name": "Salgado Filho Airport, Brazil",
@@ -806,7 +806,7 @@ export const wctCams =
 		"tags": "Boats,Marina",
 		"wct": "/en/brazil/santa-catarina/florianopolis-marina-santo-antonio-de-lisboa-cam.html",
 		"pos": "-27.50656291588035,-48.52334022503533",
-		"src": "https://www.youtube.com/embed/o8gFF2ztKRc"
+		"src": "https://www.youtube.com/embed/7-AL3Pf9gGc"
 	},
 	{
 		"name": "São Joaquim Cam, SC",
@@ -974,7 +974,7 @@ export const wctCams =
 		"tags": "Religion,Sound",
 		"wct": "/en/canada/alberta/dashmeshculturecentre-cam.html",
 		"pos": "51.11361534723833,-113.95766368372387",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UC5Ls0yJbNABQn8HeARivOSQ"
+		"src": "https://www.youtube.com/embed/pAG6L8uYCnQ"
 	},
 	{
 		"name": "Downtown Calgary Cam, AB",
@@ -1102,7 +1102,15 @@ export const wctCams =
 		"tags": "Boats,Harbour",
 		"wct": "/en/canada/british-columbia/nanaimo-harbor-cam.html",
 		"pos": "49.16590548685634,-123.93764304818578",
-		"src": "https://www.youtube.com/embed/YnqAfQdnLqA"
+		"src": "https://www.youtube.com/embed/cqGGjNN9zpQ"
+	},
+	{
+		"name": "Nanaimo Waterfront, BC",
+		"geo": "Canada/British Columbia",
+		"tags": "Boats,Marina",
+		"wct": "/en/canada/british-columbia/nanaimo-waterfront-marina.html",
+		"pos": "49.17763800269321,-123.96428491224523",
+		"src": "https://www.youtube.com/embed/aTgZSO2uBRM?rel=0&autoplay=1"
 	},
 	{
 		"name": "Osoyoos Lake Cam 1",
@@ -1110,7 +1118,15 @@ export const wctCams =
 		"tags": "Lake,Landscape,Nature",
 		"wct": "/en/canada/british-columbia/osoyoos-lake-cam1.html",
 		"pos": "49.07257297930895,-119.49322668390896",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UChSrVSKXHiRIeGZAinWULqQ&autoplay=1"
+		"src": "https://www.youtube.com/embed/a58IgAAcxJs"
+	},
+	{
+		"name": "Osoyoos Lake Cam 2",
+		"geo": "Canada/British Columbia",
+		"tags": "Lake,Landscape,Nature",
+		"wct": "/en/canada/british-columbia/osoyoos-lake-cam2.html",
+		"pos": "49.07257297930895,-119.49322668390896",
+		"src": "https://www.youtube.com/embed/a58IgAAcxJs"
 	},
 	{
 		"name": "Pacific Sands Beach Cam, BC",
@@ -1158,7 +1174,7 @@ export const wctCams =
 		"tags": "Boats,Harbour",
 		"wct": "/en/canada/british-columbia/victoria-inner-harbour-cam.html",
 		"pos": "48.4229555392195,-123.37263168377353",
-		"src": "https://www.youtube.com/embed/0Uordx9RiSU"
+		"src": "https://www.youtube.com/embed/EC_jtvnfuMQ"
 	},
 	{
 		"name": "Whales Pass Cam 1, BC",
@@ -1230,7 +1246,7 @@ export const wctCams =
 		"tags": "Boats,Sea",
 		"wct": "/en/canada/newfoundland-labrador/st-johns-harbour.html",
 		"pos": "47.566065979079845,-52.713588048377964",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCpPLxYC6uNNfNrSQokButSg"
+		"src": "https://www.youtube.com/embed/FEpf6Zqel7I"
 	},
 	{
 		"name": "New Glasgow Cam, NS",
@@ -1327,6 +1343,14 @@ export const wctCams =
 		"wct": "/en/canada/ontario/niagara-horseshoe-falls-cam.html",
 		"pos": "43.08191721389201,-79.08310290348703",
 		"src": "https://www.youtube.com/embed/live_stream?channel=UC15QFO-cdISk-4Sn5CPd78g"
+	},
+	{
+		"name": "Toronto CN Tower Cam, ON",
+		"geo": "Canada/Ontario",
+		"tags": "Traffic",
+		"wct": "/en/canada/ontario/toronto-cn-tower-cam.html",
+		"pos": "43.63903931256379,-79.40047379201133",
+		"src": "https://www.youtube.com/embed/live_stream?channel=UCuUtTm7v20_S-qIx5G8P_gg"
 	},
 	{
 		"name": "Wasaga Beach Cam",
@@ -1494,7 +1518,7 @@ export const wctCams =
 		"tags": "City,Traffic",
 		"wct": "/en/chile/santiago/tobalaba-apoquindo.html",
 		"pos": "-33.41898242324892,-70.6020997979267",
-		"src": "https://www.youtube.com/embed/rSJnp7_ursg"
+		"src": "https://www.youtube.com/embed/n3ezmmdtWp8"
 	},
 	{
 		"name": "Playa Acapulco, Viña del Mar",
@@ -1526,7 +1550,7 @@ export const wctCams =
 		"tags": "Construction",
 		"wct": "/en/china/hubei-province/wuhan-huoshenshan-hospital.html",
 		"pos": "30.526381465354664,114.08350532599994",
-		"src": "https://www.youtube.com/embed/jDW3BObg-Dk"
+		"src": "https://www.youtube.com/embed/live_stream?channel=UCDGiCfCZIV5phsoGiPwIcyQ"
 	},
 	{
 		"name": "Esparteiro Garden Cam",
@@ -1745,20 +1769,12 @@ export const wctCams =
 		"src": "https://www.youtube.com/embed/v-xAIxyvdGg"
 	},
 	{
-		"name": "Šilo, Krk Island, Croatia",
-		"geo": "Croatia/Primorje-Gorski Kotar",
-		"tags": "Beach,Sea",
-		"wct": "/en/croatia/primorje-gorski-kotar/silo.html",
-		"pos": "45.14784397909841,14.66003331598716",
-		"src": "https://www.youtube.com/embed/TACO-Ok5PgA"
-	},
-	{
 		"name": "Slatina Beach, Martinšćica",
 		"geo": "Croatia/Primorje-Gorski Kotar",
 		"tags": "Beach",
 		"wct": "/en/croatia/primorje-gorski-kotar/slatina-beach-martinscica.html",
 		"pos": "44.82228158396257,14.336528151403662",
-		"src": "https://www.youtube.com/embed/CBIldcA3llo"
+		"src": "https://www.youtube.com/embed/H-9a2QKS6Ls"
 	},
 	{
 		"name": "Veli Žal Beach, Lošinj",
@@ -1774,7 +1790,7 @@ export const wctCams =
 		"tags": "Boats,Harbour,Sea",
 		"wct": "/en/croatia/sibenik-knin/zirje-muna-bay-cam.html",
 		"pos": "43.66189085978442,15.655897950904759",
-		"src": "https://www.youtube.com/embed/PF6G2v_4SE4"
+		"src": "https://www.youtube.com/embed/XM9bs2QbhZU"
 	},
 	{
 		"name": "Pirovac Marina",
@@ -1822,7 +1838,7 @@ export const wctCams =
 		"tags": "Boats,Landscape",
 		"wct": "/en/croatia/sibenik-knin/zaton-village-cam.html",
 		"pos": "43.78393097901464,15.82304595185867",
-		"src": "https://www.youtube.com/embed/fkBL_KIgxBA"
+		"src": "https://www.youtube.com/embed/VsMIHA5DCaE"
 	},
 	{
 		"name": "Bol Marina, Croatia",
@@ -1873,6 +1889,14 @@ export const wctCams =
 		"src": "https://www.youtube.com/embed/jYbnFBtXj5U"
 	},
 	{
+		"name": "Zlatni Rat",
+		"geo": "Croatia/Split-Dalmatia",
+		"tags": "Beach,Sea",
+		"wct": "/en/croatia/split-dalmatia/zlatni-rat.html",
+		"pos": "43.258881979136795,16.63457831596151",
+		"src": "https://www.youtube.com/embed/CB5TIB2Fh3g"
+	},
+	{
 		"name": "Varazdin City Square Cam",
 		"geo": "Croatia/Varaždin County",
 		"tags": "Bar,Restaurant,Square",
@@ -1903,14 +1927,6 @@ export const wctCams =
 		"wct": "/en/czech-republic/central-bohemian-region/dolni-jircany-catinnhotel-cam.html",
 		"pos": "49.951047735004856,14.525832587854632",
 		"src": "https://www.youtube.com/embed/live_stream?channel=UCiijK6RLOIB3FqrLs-uBphg"
-	},
-	{
-		"name": "Čerčany Train Station, Czechia",
-		"geo": "Czech Republic/Central Bohemian Region",
-		"tags": "Trains",
-		"wct": "/en/czech-republic/central-bohemian-region/cercany-train-station-cam.html",
-		"pos": "49.8490374382947,14.698813951658835",
-		"src": "https://www.youtube.com/embed/pqoVnHIs1Kc"
 	},
 	{
 		"name": "Lužná u Rakovníka Train Station",
@@ -2055,6 +2071,14 @@ export const wctCams =
 		"wct": "/en/czech-republic/prague/historical-old-town.html",
 		"pos": "50.057336723492305,14.411839116371427",
 		"src": "https://tv.idnes.cz/embed.aspx?idvideo=V181003_141333_webtv_taus"
+	},
+	{
+		"name": "Old Town Square, Prague",
+		"geo": "Czech Republic/Prague",
+		"tags": "Square",
+		"wct": "/en/czech-republic/prague/old-town-square.html",
+		"pos": "50.087610421221456,14.417680951954729",
+		"src": "https://v.angelcam.com/iframe?v=b91yx13loj&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkb21haW4iOiJob3RlbC1saXBwZXJ0LmNsaWNrMnN0cmVhbS5jb20iLCJjYW1lcmFfaWQiOjMyMiwiZXhwIjoxNjg5NDEyNzMzfQ.3uMOoDJ5pzyrwfzSzKwM9L1yyQ6tjFIfTvvW6EzBb6c&autoplay=1"
 	},
 	{
 		"name": "Plane Spotting Prague Cam",
@@ -2265,6 +2289,14 @@ export const wctCams =
 		"src": "https://www.youtube.com/embed/uKw3ey7VNN8"
 	},
 	{
+		"name": "Ilulissat Airport North, Greenland",
+		"geo": "Denmark/Greenland",
+		"tags": "Airport,Landscape",
+		"wct": "/en/denmark/greenland/ilulissat-airport-north-cam.html",
+		"pos": "69.24056758103815,-51.08026590951579",
+		"src": "https://www.youtube.com/embed/4YdNNvajwjI"
+	},
+	{
 		"name": "Nuuk Airport North Cam",
 		"geo": "Denmark/Greenland",
 		"tags": "Airport",
@@ -2318,14 +2350,6 @@ export const wctCams =
 		"tags": "Beach,Sea",
 		"wct": "/en/dominican-republic/altagracia-province/cortecito-beach-punta-cana.html",
 		"pos": "18.693279999206794,-68.42480417077567",
-		"src": ""
-	},
-	{
-		"name": "Playa del Cortecito, Bávaro",
-		"geo": "Dominican Republic/La Altagracia Province",
-		"tags": "Beach,Hotels & Resorts,Sea",
-		"wct": "/en/dominican-republic/altagracia-province/playa-del-cortecito-bavaro.html",
-		"pos": "18.69283899920682,-68.4241381707596",
 		"src": ""
 	},
 	{
@@ -2417,20 +2441,12 @@ export const wctCams =
 		"src": "https://www.youtube.com/embed/live_stream?channel=UCToP9T8yl8FzL-G9J3ONJ0g&autoplay=1"
 	},
 	{
-		"name": "River Camel, Rock",
-		"geo": "England/Cornwall",
-		"tags": "Harbour,River,United Kingdom",
-		"wct": "/en/england/cornwall/river-camel-rock.html",
-		"pos": "50.54461448845608,-4.926188684028119",
-		"src": "https://streamcaster.io/embed/7B686F2C-3399-4E20-9D7D-951397E8E831.html"
-	},
-	{
 		"name": "Brunel Holiday Park, Dawlish",
 		"geo": "England/Devon",
 		"tags": "Sea,Trains",
 		"wct": "/en/england/devon/dawlish-warren-brunel-holiday-park.html",
 		"pos": "50.596816315556275,-3.4462616683338965",
-		"src": "https://www.youtube.com/embed/UhMBlyLNaxY"
+		"src": "https://www.youtube.com/embed/1UrKuEHQorQ"
 	},
 	{
 		"name": "Colyford Station Cam, UK",
@@ -2446,7 +2462,7 @@ export const wctCams =
 		"tags": "Boats,Marina,United Kingdom",
 		"wct": "/en/england/devon/exmouth-marina-cam.html",
 		"pos": "50.61763098334043,-3.4244889871526767",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCRXsae5QhG5N5DQmKvOx4AQ"
+		"src": "https://www.youtube.com/embed/_LGM4d_2yho"
 	},
 	{
 		"name": "River Teign, Teignmouth",
@@ -2598,7 +2614,7 @@ export const wctCams =
 		"tags": "Boats,Island,United Kingdom",
 		"wct": "/en/england/isle-of-wight/cowes-yachting-cam.html",
 		"pos": "50.76560457999987,-1.330326237995314",
-		"src": "https://www.youtube.com/embed/vV5fIhfRhts"
+		"src": "https://www.youtube.com/embed/d99E1-kAlpk"
 	},
 	{
 		"name": "Ford Farm House Cam, Isle of Wight",
@@ -3462,7 +3478,7 @@ export const wctCams =
 		"tags": "Religion",
 		"wct": "/en/france/occitanie/notre-dame-lourdes.html",
 		"pos": "43.09745897914418,-0.060754684042406644",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UC7zlbnNCnuAPiC3goKcFgUg&autoplay=1"
+		"src": "https://www.youtube.com/embed/Zz2lqOMiBeo"
 	},
 	{
 		"name": "Baie de Sion, Saint-Hilaire-de-Riez",
@@ -3630,7 +3646,7 @@ export const wctCams =
 		"tags": "Landscape,Nature,Ski",
 		"wct": "/en/germany/bavaria/balderschwang-bio-berghotel-ifenblick.html",
 		"pos": "47.46489250574827,10.090811316357502",
-		"src": "https://www.youtube.com/embed/4MPopI7SuH8"
+		"src": "https://www.youtube.com/embed/Yn3r3yZKRHw"
 	},
 	{
 		"name": "Freilassing Train Station Cam",
@@ -3777,6 +3793,14 @@ export const wctCams =
 		"src": "https://www.youtube.com/embed/SZp1Q6LX7Wk?rel=0&autoplay=1"
 	},
 	{
+		"name": "Esens-Bensersiel Beach, Germany",
+		"geo": "Germany/Lower Saxony",
+		"tags": "Beach,Boats,Harbour,Landscape,Sea",
+		"wct": "/en/germany/lower-saxony/esens-panorama.html",
+		"pos": "53.676455149971595,7.567854077605282",
+		"src": "https://www.youtube.com/embed/live_stream?channel=UCwlHa7Aw0SiBLUH4LY0yiPQ"
+	},
+	{
 		"name": "Lüneburg Town Hall View",
 		"geo": "Germany/Lower Saxony",
 		"tags": "City,Square,Traffic",
@@ -3838,7 +3862,7 @@ export const wctCams =
 		"tags": "City,Shopping,Traffic",
 		"wct": "/en/germany/north-rhine-westphalia/monheim-am-rhein.html",
 		"pos": "51.091114448774086,6.887083751979455",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCCZ0dSF4mdNfJTnUq5cIISQ"
+		"src": "https://www.youtube.com/embed/BDnugWiazZA"
 	},
 	{
 		"name": "Phoenix See Cam, Germany",
@@ -3945,12 +3969,12 @@ export const wctCams =
 		"src": "https://www.youtube.com/embed/live_stream?channel=UCXRN-pSteMKLhim403y0BlA&autoplay=1"
 	},
 	{
-		"name": "Kiel Canal Cam",
+		"name": "Kiel Canal Cam, Germany",
 		"geo": "Germany/Schleswig-Holstein",
 		"tags": "Boats",
 		"wct": "/en/germany/schleswig-holstein/brunsbuttel-kiel-canal.html",
 		"pos": "53.887836050127625,9.13367637744888",
-		"src": "https://www.youtube.com/embed/9M4y0lXH5FA"
+		"src": "https://www.youtube.com/embed/GmMgTZdmALU"
 	},
 	{
 		"name": "Port of Kiel, Germany",
@@ -4038,7 +4062,7 @@ export const wctCams =
 		"tags": "Boats,Marina,Sea",
 		"wct": "/en/greece/ionian-islands-region/paxos-loggos-harbour.html",
 		"pos": "39.226143035102226,20.15889461623454",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UC3c-pudL55WWFxl89wTH1NA"
+		"src": "https://www.youtube.com/embed/TqPyMhQRRIY"
 	},
 	{
 		"name": "Marathia Cam, Zakynthos",
@@ -4070,7 +4094,7 @@ export const wctCams =
 		"tags": "Square",
 		"wct": "/en/greece/north-aegean/chios-central-square.html",
 		"pos": "38.36988091329425,26.128553659158072",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCMls_Jf_tt_WTvq5p_KjB1w&autoplay=1"
+		"src": "https://www.youtube.com/embed/5f-no64QoY0"
 	},
 	{
 		"name": "Plomari Port & Marina Cam, GR",
@@ -4182,7 +4206,7 @@ export const wctCams =
 		"tags": "Boats,Island,Sea",
 		"wct": "/en/greece/thassos/waterfront.html",
 		"pos": "40.780143979324585,24.708086315879793",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCUT8t0c6nWr-g-RylAZkr8g"
+		"src": "https://www.youtube.com/embed/Zksbxgm6VHA"
 	},
 	{
 		"name": "Patitiri Port Cam, Greece",
@@ -4377,14 +4401,6 @@ export const wctCams =
 		"src": "https://video.nest.com/embedded/live/nAIAxezBAR?autoplay=0"
 	},
 	{
-		"name": "Bali Barber Dreadlocks Studio",
-		"geo": "Indonesia/Bali",
-		"tags": "Barbershop,Business",
-		"wct": "/en/indonesia/bali/barber-dreadlocks-studio-cam.html",
-		"pos": "-8.683305593730474,115.1644726514268",
-		"src": "https://video.nest.com/embedded/live/5LbPjhKZZt?autoplay=1"
-	},
-	{
 		"name": "Bingin Beach Cam, Bali",
 		"geo": "Indonesia/Bali",
 		"tags": "Beach",
@@ -4398,7 +4414,7 @@ export const wctCams =
 		"tags": "Beach,Island,Sea",
 		"wct": "/en/indonesia/bali/dreamlandbeach-cam.html",
 		"pos": "-8.798708459369427,115.11576102071585",
-		"src": "https://www.youtube.com/embed/yRwjWb9WJqY"
+		"src": "https://www.youtube.com/embed/hhp1KRit4gM"
 	},
 	{
 		"name": "Jemeluk Amed Cam, Bali",
@@ -5113,6 +5129,14 @@ export const wctCams =
 		"src": "https://www.youtube.com/embed/3lDUAGio6mE"
 	},
 	{
+		"name": "Il Veliero Cam, Italy",
+		"geo": "Italy/Veneto",
+		"tags": "Beach,Sea,Venice",
+		"wct": "/en/italy/veneto/venice-lidojesolo-chioscoveliero-cam.html",
+		"pos": "45.49120083022834,12.556871998590708",
+		"src": "https://www.youtube.com/embed/live_stream?channel=UCa5WGUEKz7yExBHKSeqOgTQ"
+	},
+	{
 		"name": "Jesolo International Club",
 		"geo": "Italy/Veneto",
 		"tags": "Beach,Pool,Sea",
@@ -5350,7 +5374,7 @@ export const wctCams =
 		"tags": "4k,Airport",
 		"wct": "/en/japan/fukuoka-prefecture/kyushu-fukuoka-airport.html",
 		"pos": "33.581597460239315,130.44266405482213",
-		"src": "https://www.youtube.com/embed/1lAOJ7wMBsk"
+		"src": "https://www.youtube.com/embed/2SL93MY8Rdg"
 	},
 	{
 		"name": "Hakata Station, Japan",
@@ -5526,7 +5550,7 @@ export const wctCams =
 		"tags": "Animals",
 		"wct": "/en/japan/hyogo-prefecture/awaji-monkey-center.html",
 		"pos": "34.29128192075586,134.80190629779395",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCujrqnm0oqm_cF3AV1128Sw"
+		"src": "https://www.youtube.com/embed/lsxYH2XQQCg"
 	},
 	{
 		"name": "Kobe Waterfront Cam, Japan",
@@ -5582,7 +5606,7 @@ export const wctCams =
 		"tags": "Boats,Landscape,Sea,Volcanoes",
 		"wct": "/en/japan/kagoshima-prefecture/sakurajima-volcano.html",
 		"pos": "31.60352773355463,130.55066064519346",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCpWU25qIleNLmUEF9VwBdMA"
+		"src": "https://www.youtube.com/embed/GSJwOX3gZsk"
 	},
 	{
 		"name": "Hale Surf Enoshima Island",
@@ -5590,7 +5614,7 @@ export const wctCams =
 		"tags": "Island,Sea,Traffic",
 		"wct": "/en/japan/kanagawa-prefecture/enoshima-island.html",
 		"pos": "35.307472980283045,139.48235031628917",
-		"src": "https://www.youtube.com/embed/wkmq0r2QpU4"
+		"src": "https://www.youtube.com/embed/UUtbGjHcTJk"
 	},
 	{
 		"name": "Hayama Port Cam",
@@ -5638,7 +5662,7 @@ export const wctCams =
 		"tags": "Religion,Traffic",
 		"wct": "/en/japan/kyoto-prefecture/kyoto-higashi-honganji-temple.html",
 		"pos": "34.99047657505389,135.75811155120127",
-		"src": "https://www.youtube.com/embed/ebIt3GBpyYQ"
+		"src": "https://www.youtube.com/embed/AWMHG5O_fnw"
 	},
 	{
 		"name": "Kyoto Hachijo Taxi Station, JP",
@@ -5758,7 +5782,7 @@ export const wctCams =
 		"tags": "Traffic",
 		"wct": "/en/japan/okinawa-prefecture/ishigaki-730intersection-cam.html",
 		"pos": "24.336808085333644,124.14967201409497",
-		"src": "https://www.youtube.com/embed/q06ddNbuMqo"
+		"src": "https://www.youtube.com/embed/CpMCOQhTU2o"
 	},
 	{
 		"name": "Ginowan City",
@@ -5782,7 +5806,7 @@ export const wctCams =
 		"tags": "Traffic",
 		"wct": "/en/japan/okinawa-prefecture/kokusaidori-st.html",
 		"pos": "26.218563983431483,127.69286631600359",
-		"src": "https://www.youtube.com/embed/hRNS3yyG8iA"
+		"src": "https://www.youtube.com/embed/fEobc4WzpV4"
 	},
 	{
 		"name": "Naha Airport Cam",
@@ -5798,7 +5822,7 @@ export const wctCams =
 		"tags": "Harbour,Sea",
 		"wct": "/en/japan/okinawa-prefecture/onna-village.html",
 		"pos": "26.448853127480987,127.80335132391757",
-		"src": "https://www.youtube.com/embed/tvMXnNdAWg8"
+		"src": "https://www.youtube.com/embed/b0MqMcXmJyA"
 	},
 	{
 		"name": "Ryukyu Shimpo Cam, Naha",
@@ -5838,7 +5862,7 @@ export const wctCams =
 		"tags": "City,Shopping",
 		"wct": "/en/japan/osaka-prefecture/dotonbori-live.html",
 		"pos": "34.66869879243739,135.499089116181",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCQ2mmGKtrBp6rL8tSMJCCwA&autoplay=1"
+		"src": "https://www.youtube.com/embed/4Ek_1UULqq8"
 	},
 	{
 		"name": "Osaka City, Japan",
@@ -5870,7 +5894,7 @@ export const wctCams =
 		"tags": "Trains",
 		"wct": "/en/japan/osaka-prefecture/settsu-torikai-railroad-depot-cam.html",
 		"pos": "34.77774398031864,135.57203895187982",
-		"src": "https://www.youtube.com/embed/kgUcJAexG3U"
+		"src": "https://www.youtube.com/embed/FDFf4vyJt5Y"
 	},
 	{
 		"name": "Saitama Japan Train Cam",
@@ -5878,7 +5902,7 @@ export const wctCams =
 		"tags": "4k,Trains",
 		"wct": "/en/japan/saitama-prefecture/saitama-shintoshin-train-station-cam.html",
 		"pos": "35.89595232577183,139.6292833160226",
-		"src": "https://www.youtube.com/embed/4URR0gOy1tI"
+		"src": "https://www.youtube.com/embed/1M9AYd-XPyI"
 	},
 	{
 		"name": "Lake Biwa Flower Fountain",
@@ -5894,7 +5918,7 @@ export const wctCams =
 		"tags": "Garden,Museums,Nature",
 		"wct": "/en/japan/shimane-prefecture/yasugi-gardens-adachi-museum.html",
 		"pos": "35.38014325403079,133.19192241618856",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCowlDiO2tj5wP4BGV-KnExA&autoplay=1"
+		"src": "https://www.youtube.com/embed/oQIU54KwIU8"
 	},
 	{
 		"name": "Hamamatsu Flower Park, Japan",
@@ -5974,7 +5998,7 @@ export const wctCams =
 		"tags": "Trains",
 		"wct": "/en/japan/tokyo/chuo-line-hino-tokyo.html",
 		"pos": "35.67136673590993,139.38735556203264",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCDoo6BDBM70pQQfmoG640Bg&autoplay=1"
+		"src": "https://www.youtube.com/embed/4MLXEmxTi9Y"
 	},
 	{
 		"name": "Cross Space Shinjuku, Japan",
@@ -6014,7 +6038,7 @@ export const wctCams =
 		"tags": "Traffic",
 		"wct": "/en/japan/tokyo/kabukicho-crossing.html",
 		"pos": "35.69313932931769,139.70180407708412",
-		"src": "https://www.youtube.com/embed/LFmSWYO31HI"
+		"src": "https://www.youtube.com/embed/plyipbkj04k"
 	},
 	{
 		"name": "Kabukichō, Shinjuku, Japan",
@@ -6030,7 +6054,7 @@ export const wctCams =
 		"tags": "Business",
 		"wct": "/en/japan/tokyo/kameido-koto-kitchendive-bentoshop.html",
 		"pos": "35.69766313208367,139.82193874229182",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCo9e_ilRlTxHTCFAcaLR2-w"
+		"src": "https://www.youtube.com/embed/FeDrge6Nfdo"
 	},
 	{
 		"name": "Koen-dori Street",
@@ -6110,7 +6134,7 @@ export const wctCams =
 		"tags": "Traffic,Trains",
 		"wct": "/en/japan/tokyo/seibu-shinjuku-station-cam.html",
 		"pos": "35.69434398019126,139.69832731614008",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UC56apcbc2pLZ9xyBizbD1Dg"
+		"src": "https://www.youtube.com/embed/lA6TaaMGgDo"
 	},
 	{
 		"name": "Shibuya Ai Vision, Miyamasuzaka",
@@ -6214,7 +6238,7 @@ export const wctCams =
 		"tags": "Garden,Landscape,Nature",
 		"wct": "/en/japan/yamanashi-prefecture/fuji-motosuko-resort-cam.html",
 		"pos": "35.44240601156901,138.5992616063798",
-		"src": "https://www.youtube.com/embed/XL8CiSEamKk"
+		"src": "https://www.youtube.com/embed/RiHSzRu4kLw"
 	},
 	{
 		"name": "JR Chuo Main Line, Fuefuki",
@@ -6222,7 +6246,7 @@ export const wctCams =
 		"tags": "Trains",
 		"wct": "/en/japan/yamanashi-prefecture/honshu-fuefuki-jrchuoline.html",
 		"pos": "35.66389260191513,138.64866648361047",
-		"src": "https://www.youtube.com/embed/4_C_guxdipw"
+		"src": "https://www.youtube.com/embed/zON6cQzzZcs"
 	},
 	{
 		"name": "Mount Fuji Cam, Japan",
@@ -6558,7 +6582,7 @@ export const wctCams =
 		"tags": "Bridge,Traffic",
 		"wct": "/en/mexico/coahuila-state/blvd-jesus-maria-ramon-cam.html",
 		"pos": "29.32470513981424,-100.92917186441179",
-		"src": "https://www.youtube.com/embed/sOAI5vjqy04"
+		"src": "https://www.youtube.com/embed/nuts4c36Zt0"
 	},
 	{
 		"name": "Piedras Negras Cam 2, Mexico",
@@ -6590,7 +6614,7 @@ export const wctCams =
 		"tags": "Boats,Marina",
 		"wct": "/en/mexico/guerrero/acapulco-marina.html",
 		"pos": "",
-		"src": "https://www.youtube.com/embed/anYU5gUAsrk"
+		"src": "https://www.youtube.com/embed/AV98eNgS6Dg"
 	},
 	{
 		"name": "Ixtapa Beach",
@@ -6614,7 +6638,7 @@ export const wctCams =
 		"tags": "Beach",
 		"wct": "/en/mexico/guerrero/zihuatanejo-paseo-del-pescador-cam.html",
 		"pos": "17.63865510009077,-101.5581590485791",
-		"src": "https://www.youtube.com/embed/2CgaQ0yMaTA"
+		"src": "https://www.youtube.com/embed/VveDI_1V5dA"
 	},
 	{
 		"name": "Playa Condesa, Acapulco",
@@ -6622,7 +6646,7 @@ export const wctCams =
 		"tags": "Beach,Hotels & Resorts,Sea",
 		"wct": "/en/mexico/guerrero/playa-condesa-acapulco.html",
 		"pos": "16.85595412240608,-99.86867332016246",
-		"src": "https://www.youtube.com/embed/7flCtUTdBEI"
+		"src": "https://www.youtube.com/embed/2Ur6lreTAkA"
 	},
 	{
 		"name": "Playa El Palmar",
@@ -6678,7 +6702,7 @@ export const wctCams =
 		"tags": "Beach,Hotels & Resorts,Pool,Sea",
 		"wct": "/en/mexico/jalisco/puertovallarta-friendlyvallartaresort.html",
 		"pos": "20.64048005641097,-105.23629305535884",
-		"src": "https://www.youtube.com/embed/1KmRbhUUZno"
+		"src": "https://www.youtube.com/embed/5DH61dy3zto"
 	},
 	{
 		"name": "Basílica de Guadalupe, Mexico",
@@ -6734,7 +6758,7 @@ export const wctCams =
 		"tags": "City,Monument,Traffic",
 		"wct": "/en/mexico/mexico-city/zocalo.html",
 		"pos": "19.431837045674925,-99.13486604900747",
-		"src": "https://www.youtube.com/embed/M_nT9MN4geU"
+		"src": "https://www.youtube.com/embed/v1iRzTRQbsg"
 	},
 	{
 		"name": "Nuevo Vallarta Beach",
@@ -6758,7 +6782,7 @@ export const wctCams =
 		"tags": "City,Landscape",
 		"wct": "/en/mexico/nuevo-leon/monterrey-cam.html",
 		"pos": "25.67805063924277,-100.4511988669247",
-		"src": "https://www.youtube.com/embed/TrNyUOsVrIQ"
+		"src": "https://www.youtube.com/embed/ESDZVzWN9aE"
 	},
 	{
 		"name": "Volcanoes, Puebla",
@@ -6774,7 +6798,7 @@ export const wctCams =
 		"tags": "Traffic",
 		"wct": "/en/mexico/quintana-roo/quinta-avenida-playa-del-carmen.html",
 		"pos": "20.625550006793937,-87.0752976839463",
-		"src": "https://www.youtube.com/embed/dpWnwqt9afs"
+		"src": "https://www.youtube.com/embed/FycI-2vROqw"
 	},
 	{
 		"name": "Beach in Cozumel",
@@ -6807,14 +6831,6 @@ export const wctCams =
 		"wct": "/en/mexico/quintana-roo/playa-de-cancun.html",
 		"pos": "",
 		"src": "https://www.youtube.com/embed/VKEsV3EZGSg"
-	},
-	{
-		"name": "Playa Pocna Tulum, MX",
-		"geo": "Mexico/Quintana Roo",
-		"tags": "Beach,Sea",
-		"wct": "/en/mexico/quintana-roo/playa-pocna-tulum.html",
-		"pos": "20.198148552204998,-87.43784649751333",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCjFxmGy49kJjLf5RSQSwrCA"
 	},
 	{
 		"name": "Playacar beach",
@@ -7038,7 +7054,7 @@ export const wctCams =
 		"tags": "Bar,Restaurant,Square",
 		"wct": "/en/netherlands/friesland/sneek-marktstraat-cam.html",
 		"pos": "53.03253220577191,5.657816951888941",
-		"src": "https://www.youtube.com/embed/N2WqEz0zB7Q"
+		"src": "https://www.youtube.com/embed/M4k_wLmPrQI"
 	},
 	{
 		"name": "Oldehoofsterkerkhof, Leeuwarden",
@@ -7374,7 +7390,7 @@ export const wctCams =
 		"tags": "Bar,Business,Restaurant,Square",
 		"wct": "/en/netherlands/north-holland/egmond-aan-zee-pompplein-square.html",
 		"pos": "52.61778103672956,4.620228016435236",
-		"src": "https://www.youtube.com/embed/7l70yKC7A1Q"
+		"src": "https://www.youtube.com/embed/wxnHAhcIOcQ"
 	},
 	{
 		"name": "Vink Motorsport Cam, Zaandam",
@@ -7526,7 +7542,7 @@ export const wctCams =
 		"tags": "Business",
 		"wct": "/en/netherlands/south-holland/voorschoten-dutchtattooshop.html",
 		"pos": "52.12622547308811,4.4453391164329",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCOMgg67Vp92fEx3QkDBvrhg&autoplay=1"
+		"src": "https://www.youtube.com/embed/OHi_8rNaQT0"
 	},
 	{
 		"name": "El Niño Beach Club Cam, NL",
@@ -7665,6 +7681,14 @@ export const wctCams =
 		"src": "https://www.youtube.com/embed/live_stream?channel=UCJk1ArOmeKdyMyvONIWPMfw&autoplay=1"
 	},
 	{
+		"name": "Groede Beach",
+		"geo": "Netherlands/Zeeland",
+		"tags": "Beach,Landscape",
+		"wct": "/en/netherlands/zeeland/groede-beach.html",
+		"pos": "51.39648932662664,3.480099316405742",
+		"src": "https://www.youtube.com/embed/live_stream?channel=UCgBwodddPsSwg5nfUqH4-jA&autoplay=1"
+	},
+	{
 		"name": "Pier 7 Zandpaviljoen Cam, NL",
 		"geo": "Netherlands/Zeeland",
 		"tags": "Bar,Beach,Sea",
@@ -7702,7 +7726,7 @@ export const wctCams =
 		"tags": "Beach,Sea",
 		"wct": "/en/netherlands/zeeland/oostkapelle-strandpaviljoen-de-piraat.html",
 		"pos": "51.582279304250136,3.5329112742321964",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCfqYOWazxCFQ3DHA0c4fFJg"
+		"src": "https://www.youtube.com/embed/fb07vbV-vWo"
 	},
 	{
 		"name": "Vlissingen Walcheren, NL",
@@ -7718,7 +7742,7 @@ export const wctCams =
 		"tags": "Beach,Sea",
 		"wct": "/en/netherlands/zeeland/breezand-pavilion-vrouwenpolder-beach-cam.html",
 		"pos": "51.590435417813126,3.6081382479263957",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UChGVqb02S5ku_q7PrlPGxaA"
+		"src": "https://www.youtube.com/embed/z_WfgJ8lnZA"
 	},
 	{
 		"name": "Anse Vata Bay Cam, Nouméa",
@@ -7735,14 +7759,6 @@ export const wctCams =
 		"wct": "/en/new-caledonia/noumea/baie-des-citrons.html",
 		"pos": "-22.30096898532321,166.43673431614",
 		"src": "https://www.youtube.com/embed/VYrScmofCwE"
-	},
-	{
-		"name": "Auckland East, New Zealand",
-		"geo": "New Zealand/Auckland Region",
-		"tags": "Bridge,Landscape",
-		"wct": "/en/new-zealand/auckland-region/east-auckland-city-cam.html",
-		"pos": "-36.841570999215925,174.76273040722614",
-		"src": "https://www.youtube.com/embed/VSfV6PSFl6U"
 	},
 	{
 		"name": "Hauraki Gulf Cam, Auckland",
@@ -7782,7 +7798,7 @@ export const wctCams =
 		"tags": "Hotels & Resorts,Lake",
 		"wct": "/en/north-macedonia/southwestern-statistical-region/hoteltino-ohridlake-cam.html",
 		"pos": "41.1089260211742,20.803665315339238",
-		"src": "https://www.youtube.com/embed/aVIMv6FYF4A"
+		"src": "https://www.youtube.com/embed/hZlxI8mDM7g"
 	},
 	{
 		"name": "St. Naum Monastery Cam, Ohrid",
@@ -7806,7 +7822,7 @@ export const wctCams =
 		"tags": "Traffic",
 		"wct": "/en/norway/akershus/lillestrom-city.html",
 		"pos": "59.95438888179301,11.038472651984558",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCgVm0GlBQ8wVnyEui-DJx2Q&autoplay=1"
+		"src": "https://www.youtube.com/embed/XGgnP29GFhw"
 	},
 	{
 		"name": "Bergen Line",
@@ -7838,7 +7854,7 @@ export const wctCams =
 		"tags": "Landscape,Ski",
 		"wct": "/en/norway/innlandet-county/hafjell-alpinsenter-resort.html",
 		"pos": "61.23504765360329,10.446567997452643",
-		"src": "https://www.youtube.com/embed/aAtphqLk2-4"
+		"src": "https://www.youtube.com/embed/Hbzx_kQo9EQ"
 	},
 	{
 		"name": "Bud Panoramic View",
@@ -7934,7 +7950,7 @@ export const wctCams =
 		"tags": "Boats,Harbour,Sea",
 		"wct": "/en/norway/nordland/bodo-ferry-terminal.html",
 		"pos": "67.29003235033142,14.394738913691558",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCU1_-XDqlKRsN0mIiAp4j2w"
+		"src": "https://www.youtube.com/embed/NjgJoPHFbCQ"
 	},
 	{
 		"name": "Bodø Marina",
@@ -7974,7 +7990,7 @@ export const wctCams =
 		"tags": "Sound,Trains",
 		"wct": "/en/norway/nordland/train-cab-ride-to-north-pole.html",
 		"pos": "67.25247127441924,12.123730729758574",
-		"src": "https://www.youtube.com/embed/lx5vVGxusnc"
+		"src": "https://www.youtube.com/embed/g7CJ3pm-e7s"
 	},
 	{
 		"name": "Marka Live Cam, Norway",
@@ -8110,7 +8126,7 @@ export const wctCams =
 		"tags": "Bridge,Harbour",
 		"wct": "/en/norway/troms/tromso-port-city.html",
 		"pos": "69.64877664995885,18.941354910382103",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UC6HiVa8ET2pDdiDZqzmTPhw&autoplay=1"
+		"src": "https://www.youtube.com/embed/zKpPfH8u3GI"
 	},
 	{
 		"name": "Pirbadet, Trondheim Cam",
@@ -8198,7 +8214,7 @@ export const wctCams =
 		"tags": "Business,Sound",
 		"wct": "/en/philippines/davao-region/inside-agdao-public-market.html",
 		"pos": "7.082190318353277,125.62134295139658",
-		"src": "https://www.youtube.com/embed/joe8nqYSzr8"
+		"src": "https://www.youtube.com/embed/IrLEb-zzVAU"
 	},
 	{
 		"name": "Market Area, Agdao",
@@ -8377,20 +8393,12 @@ export const wctCams =
 		"src": "https://www.youtube.com/embed/live_stream?channel=UCzk5x_PbhFKUoJx_HNTefDQ&autoplay=1"
 	},
 	{
-		"name": "Warsaw City Cam",
-		"geo": "Poland/Mazovia",
-		"tags": "City,Traffic",
-		"wct": "/en/poland/mazovia/warsaw-city-centre.html",
-		"pos": "52.23666667198827,21.018536177745776",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCMivEo47mlt1vaP1ypjBLmw&autoplay=1"
-	},
-	{
 		"name": "Warsaw City, Poland",
 		"geo": "Poland/Mazovia",
 		"tags": "Garden,Sound,Traffic",
 		"wct": "/en/poland/mazovia/warsaw-city.html",
 		"pos": "52.235900469049305,21.019490074101824",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCMivEo47mlt1vaP1ypjBLmw"
+		"src": "https://www.youtube.com/embed/T4h1QNf0Udk"
 	},
 	{
 		"name": "Warsaw Panorama",
@@ -8654,7 +8662,7 @@ export const wctCams =
 		"tags": "Beach,Landscape,Surf",
 		"wct": "/en/portugal/madeira/portodacruz-praia-alagoa-beach.html",
 		"pos": "32.774154998810744,-16.8294991707234",
-		"src": "https://www.youtube.com/embed/7kvQFqCYQSo"
+		"src": "https://www.youtube.com/embed/ctDJeyafiB8"
 	},
 	{
 		"name": "Av. Do Mar Crosswalk Cam",
@@ -8686,7 +8694,7 @@ export const wctCams =
 		"tags": "Beach,Landscape,Sea",
 		"wct": "/en/portugal/madeira/calhetabeach-mudas-cam.html",
 		"pos": "32.722752370348736,-17.18058408886024",
-		"src": "https://www.youtube.com/embed/q1zpa2a5TmM"
+		"src": "https://www.youtube.com/embed/PVqnEIciYdE"
 	},
 	{
 		"name": "Camacha, Porto Santo",
@@ -8790,7 +8798,7 @@ export const wctCams =
 		"tags": "Beach,Landscape,Nature,Sea",
 		"wct": "/en/portugal/madeira/pauldomar-oprecipicio.html",
 		"pos": "32.763810438429076,-17.24272297727441",
-		"src": "https://www.youtube.com/embed/iQToyNs62V4"
+		"src": "https://www.youtube.com/embed/YoAvA1Q5SwM"
 	},
 	{
 		"name": "Penha França Mar Cam, Funchal",
@@ -8982,7 +8990,7 @@ export const wctCams =
 		"tags": "Animals,Nature",
 		"wct": "/en/romania/brasov-county/zarnesti-libearty-bear-sanctuary.html",
 		"pos": "45.59350090866715,25.3837725872265",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCNWeIMAJbSt1skNb0GSPn2A&autoplay=1"
+		"src": "https://www.youtube.com/embed/V3aTpIxIGDg"
 	},
 	{
 		"name": "Michael Weiss Street Cam",
@@ -9054,7 +9062,7 @@ export const wctCams =
 		"tags": "Church,Square",
 		"wct": "/en/romania/cluj-county/cluj-napoca-unirii-square-cam.html",
 		"pos": "46.768927653354815,23.587272951769865",
-		"src": "https://www.youtube.com/embed/TDu1D3ehCMw"
+		"src": "https://www.youtube.com/embed/z8Ij_1R11yc"
 	},
 	{
 		"name": "Targu Secuiesc Cam, Covasna",
@@ -9174,7 +9182,7 @@ export const wctCams =
 		"tags": "Bridge,City,River,Traffic",
 		"wct": "/en/russia/moscow-province/moscow-city-river.html",
 		"pos": "55.70832736748996,37.64901001891106",
-		"src": "https://www.youtube.com/embed/XYOIKm6JcFw"
+		"src": "https://www.youtube.com/embed/Mu0ts-GnNto"
 	},
 	{
 		"name": "Mosdisplay Shop Cam, Russia",
@@ -9246,7 +9254,7 @@ export const wctCams =
 		"tags": "Boats,Monument,River",
 		"wct": "/en/russia/saint-petersburg/cruiser-aurora.html",
 		"pos": "59.953935874594904,30.331596092681945",
-		"src": "https://www.youtube.com/embed/Zb1JrJW7Bmk"
+		"src": "https://www.youtube.com/embed/BxsWV5m5t34"
 	},
 	{
 		"name": "Griboyedov Channel",
@@ -9271,14 +9279,6 @@ export const wctCams =
 		"wct": "/en/russia/saint-petersburg/lakhta-center.html",
 		"pos": "59.985646728202774,30.185816133942815",
 		"src": "https://www.youtube.com/embed/live_stream?channel=UCnE7OkX55HNUfuuI3DQY3FA&rel=0&autoplay=1"
-	},
-	{
-		"name": "Lakhta Center View",
-		"geo": "Russia/Saint Petersburg",
-		"tags": "Bridge,River",
-		"wct": "/en/russia/saint-petersburg/lakhta-center-view.html",
-		"pos": "59.98711108189385,30.1757002164263",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCZGfc2AjPX3DQ8I8lhPIDcg&autoplay=1"
 	},
 	{
 		"name": "Metro Gostiny Dvor",
@@ -9334,7 +9334,7 @@ export const wctCams =
 		"tags": "4k,Traffic",
 		"wct": "/en/russia/saint-petersburg/rubinstein-street-cam.html",
 		"pos": "59.926785535173536,30.342004415253918",
-		"src": "https://www.youtube.com/embed/kzX0mO5Q_ME"
+		"src": "https://www.youtube.com/embed/62Nq0dOAQAQ"
 	},
 	{
 		"name": "Saint Isaac's Cathedral, Russia",
@@ -9678,7 +9678,7 @@ export const wctCams =
 		"tags": "Landscape,River,Traffic,United Kingdom",
 		"wct": "/en/scotland/highland/fort-william-loch-linnhe-west-end-cam.html",
 		"pos": "56.811731551426384,-5.11987187537634",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCAY-GlV3P5twjg7B9tjx_lg"
+		"src": "https://www.youtube.com/embed/2u-DIFcU1tk"
 	},
 	{
 		"name": "Loch Ness Monster Cam, Scotland",
@@ -9687,14 +9687,6 @@ export const wctCams =
 		"wct": "/en/scotland/highland/loch-ness.html",
 		"pos": "57.36531587394335,-4.341627683490649",
 		"src": "https://www.youtube.com/embed/live_stream?channel=UCw_ySKg9iYcTmytDtT-LW2Q&autoplay=1"
-	},
-	{
-		"name": "Lossiemouth Bridge Cam, Scotland",
-		"geo": "Scotland/Moray",
-		"tags": "Bridge,Sea,United Kingdom",
-		"wct": "/en/scotland/moray/lossiemouth-bridge-cam.html",
-		"pos": "57.71900698103204,-3.285286047837204",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCJoa2xDFTSGPVrhTi2bPqIg"
 	},
 	{
 		"name": "Osprey Nest Loch of the Lowes",
@@ -9846,7 +9838,7 @@ export const wctCams =
 		"tags": "Beach,Sea,Surf",
 		"wct": "/en/south-africa/eastern-cape/jeffreysbay-supertubes-cam.html",
 		"pos": "-34.0207245343916,24.926679315391457",
-		"src": "https://www.youtube.com/embed/xAy8_H9Hzoc"
+		"src": "https://www.youtube.com/embed/Qmj72sI-KTo"
 	},
 	{
 		"name": "Nahoon Beach Cam",
@@ -9886,7 +9878,7 @@ export const wctCams =
 		"tags": "Nature",
 		"wct": "/en/south-africa/mpumalanga/lisbon-falls-cam.html",
 		"pos": "-24.860922646828197,30.83226901938783",
-		"src": "https://www.youtube.com/embed/d8nkjwsspNc"
+		"src": "https://www.youtube.com/embed/kTYRUTUz8Zo"
 	},
 	{
 		"name": "Live African Safari",
@@ -9918,7 +9910,7 @@ export const wctCams =
 		"tags": "Beach,Island,Sea",
 		"wct": "/en/south-africa/western-cape/capetown-bloubergstrand-beach.html",
 		"pos": "-33.824223524085255,18.476103951795697",
-		"src": "https://www.youtube.com/embed/PbjQLHV0MI4"
+		"src": "https://www.youtube.com/embed/hGFCoxj0eCI"
 	},
 	{
 		"name": "Brass Bell Surf cam, Kalk Bay",
@@ -9934,7 +9926,7 @@ export const wctCams =
 		"tags": "City,New Year’s Eve",
 		"wct": "/en/south-africa/western-cape/cape-town.html",
 		"pos": "-33.908189928536835,18.393144615841937",
-		"src": "https://www.youtube.com/embed/gtMWnTtk0sc"
+		"src": "https://www.youtube.com/embed/xZyOCelv-Go"
 	},
 	{
 		"name": "Clifton 4th Beach, Cape Town",
@@ -9950,7 +9942,7 @@ export const wctCams =
 		"tags": "Beach,Landscape,Sea,Surf",
 		"wct": "/en/south-africa/western-cape/muizenberg-beach.html",
 		"pos": "-34.10803298049556,18.467857951686902",
-		"src": "https://www.youtube.com/embed/RiUQeXlFtaw"
+		"src": "https://www.youtube.com/embed/JIkNFH1jfM0"
 	},
 	{
 		"name": "Sea Point Promenade",
@@ -9966,7 +9958,7 @@ export const wctCams =
 		"tags": "Animals,Nature",
 		"wct": "/en/south-africa/western-cape/stony-point-penguins-cam.html",
 		"pos": "-34.37295464865889,18.892506275388172",
-		"src": "https://www.youtube.com/embed/HzbAxVsaK3k"
+		"src": "https://www.youtube.com/embed/Lau818Ajejc"
 	},
 	{
 		"name": "Strand Beach Cam, Cape Sands",
@@ -10062,7 +10054,7 @@ export const wctCams =
 		"tags": "City",
 		"wct": "/en/south-korea/seoul/city-centre.html",
 		"pos": "37.551063754933594,126.98685582492546",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UC90AkGrousC-CDBcCL8UaSg"
+		"src": "https://www.youtube.com/embed/JBdzesI-ul4"
 	},
 	{
 		"name": "Earth Live Cam 1",
@@ -10086,7 +10078,7 @@ export const wctCams =
 		"tags": "Astronomy",
 		"wct": "/en/space/moon.html",
 		"pos": "",
-		"src": "https://www.youtube.com/embed/apq5oDoT6y8"
+		"src": "https://www.youtube.com/embed/kG_xDx0TCts"
 	},
 	{
 		"name": "NASA TV",
@@ -10145,6 +10137,14 @@ export const wctCams =
 		"src": "https://www.youtube.com/embed/SE1Oh8qn9Sk"
 	},
 	{
+		"name": "L'Albir Beach Cam, Spain",
+		"geo": "Spain/Alicante",
+		"tags": "Beach,Landscape,Sea",
+		"wct": "/en/spain/alicante/lalbir-beach-cam.html",
+		"pos": "38.57395397167736,-0.06811028712845672",
+		"src": "https://www.youtube.com/embed/gLOL0aFkaiM"
+	},
+	{
 		"name": "Los Locos Beach, Torrevieja",
 		"geo": "Spain/Alicante",
 		"tags": "Beach,Sea",
@@ -10181,7 +10181,7 @@ export const wctCams =
 		"geo": "Spain/Alicante",
 		"tags": "Beach",
 		"wct": "/en/spain/alicante/benidorm-playa-de-poniente.html",
-		"pos": "38.531400093086425,-0.16079802395872697",
+		"pos": "38.5375829716856,-0.14699028712949275",
 		"src": "https://www.youtube.com/embed/7VpKKXgwXWA"
 	},
 	{
@@ -10318,7 +10318,7 @@ export const wctCams =
 		"tags": "Beach,Sea",
 		"wct": "/en/spain/basque-country/zurriola-beach-cam.html",
 		"pos": "43.32925812604962,-1.9797010334817344",
-		"src": "https://www.youtube.com/embed/S78cG-OZXek"
+		"src": "https://www.youtube.com/embed/D842zCGF2H4"
 	},
 	{
 		"name": "Plaza de Sevilla",
@@ -10374,7 +10374,7 @@ export const wctCams =
 		"tags": "City,Traffic",
 		"wct": "/en/spain/community-of-madrid/moratalaz-district-cam.html",
 		"pos": "40.40302998090802,-3.641324732526255",
-		"src": "https://www.youtube.com/embed/xVw10klMgKI"
+		"src": "https://www.youtube.com/embed/A1-QbQ4oCWk"
 	},
 	{
 		"name": "Playa de la Barca, Fuerteventura",
@@ -10470,7 +10470,7 @@ export const wctCams =
 		"tags": "Canary Islands,Sports",
 		"wct": "/en/spain/gran-canaria/minigolf-yumbo.html",
 		"pos": "27.75771772979793,-15.579553048913494",
-		"src": "https://www.youtube.com/embed/Ea48y09PuNc"
+		"src": "https://www.youtube.com/embed/xWlZip2pwjU"
 	},
 	{
 		"name": "Playa de las Burras Beach Cam",
@@ -10582,7 +10582,7 @@ export const wctCams =
 		"tags": "Bar,Beach,Canary Islands",
 		"wct": "/en/spain/lanzarote/beach-bar-costa-teguise.html",
 		"pos": "",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCPNkrps0FeHFXthbVjR0nlA"
+		"src": "https://www.youtube.com/embed/FS2YduNW6yM"
 	},
 	{
 		"name": "Lanzarote Airport",
@@ -10598,7 +10598,7 @@ export const wctCams =
 		"tags": "Beach,Canary Islands,Sea,Sound",
 		"wct": "/en/spain/lanzarote/puerto-del-carmen.html",
 		"pos": "28.91977267768549,-13.668008048897214",
-		"src": "https://www.youtube.com/embed/eWMJ_SuC64k"
+		"src": "https://www.youtube.com/embed/BUBMIU72H3Y"
 	},
 	{
 		"name": "Puerto del Carmen Weather",
@@ -10622,7 +10622,7 @@ export const wctCams =
 		"tags": "Beach",
 		"wct": "/en/spain/malaga/costa-del-sol-beach.html",
 		"pos": "36.40071598003273,-5.1943296836950665",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCd3-NYoslM4KN99HFV4d9GA&autoplay=1"
+		"src": "https://www.youtube.com/embed/W6oEENpEw_c"
 	},
 	{
 		"name": "Malaga Airport Cam, Spain",
@@ -10745,14 +10745,6 @@ export const wctCams =
 		"src": "https://www.youtube.com/embed/live_stream?channel=UCB1PUu8IJKnIsMSKMOgT8tw"
 	},
 	{
-		"name": "Europe Villa Cortés Hotel",
-		"geo": "Spain/Tenerife",
-		"tags": "Canary Islands,Hotels & Resorts,Pool",
-		"wct": "/en/spain/tenerife/europe-villa-cortes-hotel.html",
-		"pos": "28.05633990422685,-16.735585278106285",
-		"src": ""
-	},
-	{
 		"name": "HOVIMA La Pinta Beachfront",
 		"geo": "Spain/Tenerife",
 		"tags": "Beach,Canary Islands,Hotels & Resorts",
@@ -10775,6 +10767,14 @@ export const wctCams =
 		"wct": "/en/spain/tenerife/flowbeachclub-playateresitas.html",
 		"pos": "28.5085829823809,-16.189611048395395",
 		"src": "https://www.youtube.com/embed/live_stream?channel=UCDFKgUaZ4RIquYV7ElPq9Rg"
+	},
+	{
+		"name": "Playa el Camison Beach Cam, Arona",
+		"geo": "Spain/Tenerife",
+		"tags": "Beach,Sea",
+		"wct": "/en/spain/tenerife/playa-camison-beach-cam.html",
+		"pos": "28.053253982649924,-16.733752685032385",
+		"src": "https://www.youtube.com/embed/live_stream?channel=UCDAsn8j-jjEqo-pwRxswLRw"
 	},
 	{
 		"name": "Playa Honda Arona, Tenerife",
@@ -10985,6 +10985,14 @@ export const wctCams =
 		"src": "https://www.youtube.com/embed/NCfMPD5A6hQ"
 	},
 	{
+		"name": "Liseberg Park, Gothenburg",
+		"geo": "Sweden/Västergötland",
+		"tags": "",
+		"wct": "/en/sweden/vastergotland/gothenburg-liseberg-cam.html",
+		"pos": "57.69701960291642,11.985308164464994",
+		"src": "https://www.youtube.com/embed/AqkYfZl4vkA"
+	},
+	{
 		"name": "Middle Bridge, Basel",
 		"geo": "Switzerland/Basel",
 		"tags": "Bridge,Hotels & Resorts,New Year’s Eve,River",
@@ -11054,7 +11062,7 @@ export const wctCams =
 		"tags": "Christmas,Landscape,Nature",
 		"wct": "/en/switzerland/valais/verbier-village.html",
 		"pos": "46.09623969896474,7.227093951433521",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCOwFOmfN8qOMLskpl1h_6lQ"
+		"src": "https://www.youtube.com/embed/yDKJMdZTEXQ"
 	},
 	{
 		"name": "Bussigny Streets view",
@@ -11537,6 +11545,14 @@ export const wctCams =
 		"src": "https://www.youtube.com/embed/7e7YsuZnKJ0"
 	},
 	{
+		"name": "FitKoh Beach Gym, Koh Samui",
+		"geo": "Thailand/Surat Thani",
+		"tags": "Beach,Sea,Sports",
+		"wct": "/en/thailand/surat-thani/kohsamui-fitkoh-beach-gym.html",
+		"pos": "9.583021990462504,99.96450571233346",
+		"src": "https://www.youtube.com/embed/MAqh45sTaGM"
+	},
+	{
 		"name": "Hooters Cam, Chaweng, Koh Samui",
 		"geo": "Thailand/Surat Thani",
 		"tags": "Bar,Traffic",
@@ -11550,7 +11566,7 @@ export const wctCams =
 		"tags": "Beach",
 		"wct": "/en/thailand/surat-thani/haad-rin-beach.html",
 		"pos": "9.723675756788925,99.9898000420848",
-		"src": "https://www.youtube.com/embed/UKYV7hgv1yg"
+		"src": "https://www.youtube.com/embed/WAx6shjZRdQ"
 	},
 	{
 		"name": "Lamai Walking Street Cam",
@@ -11606,7 +11622,15 @@ export const wctCams =
 		"tags": "4k,Bar,Sound",
 		"wct": "/en/thailand/surat-thani/tropical-murphys-bar.html",
 		"pos": "9.528205283592415,100.05782831536999",
-		"src": "https://www.youtube.com/embed/JsaD2iPZsas"
+		"src": "https://www.youtube.com/embed/D37GyD75a6s"
+	},
+	{
+		"name": "ZeZe Restaurant, Koh Samui",
+		"geo": "Thailand/Surat Thani",
+		"tags": "Restaurant",
+		"wct": "/en/thailand/surat-thani/kohsamui-zeze-restaurant-cam.html",
+		"pos": "9.532642990510833,100.06265271233303",
+		"src": "https://www.youtube.com/embed/cOR6LvlG_tw"
 	},
 	{
 		"name": "Zoo Cafe Cam, Koh Phangan",
@@ -11695,6 +11719,14 @@ export const wctCams =
 		"wct": "/en/turks-and-caicos-islands/providenciales-island/somerset-gracebay-cam.html",
 		"pos": "21.792965985589323,-72.19260568404694",
 		"src": "https://www.youtube.com/embed/pfv2YurHcwQ"
+	},
+	{
+		"name": "Villa Renaissance, TCI",
+		"geo": "Turks And Caicos Islands/Providenciales",
+		"tags": "",
+		"wct": "/en/turks-and-caicos-islands/providenciales-island/villa-renaissance-cam.html",
+		"pos": "21.79711496085966,-72.18423428760278",
+		"src": "https://www.youtube.com/embed/live_stream?channel=UCx6ra-kP4Z2kZQfu5zTX1vA"
 	},
 	{
 		"name": "European Square, Kiev",
@@ -11937,12 +11969,20 @@ export const wctCams =
 		"src": "https://www.youtube.com/embed/psFG3B4YPZw"
 	},
 	{
+		"name": "Surprise Recreation Campus, AZ",
+		"geo": "Usa/Arizona",
+		"tags": "Lake,Sports",
+		"wct": "/en/usa/arizona/surprise-recreation-campus.html",
+		"pos": "33.62864531385195,-112.36992286956263",
+		"src": "https://player.castr.com/live_854ecb80419c11eca92d1b104ac5b379"
+	},
+	{
 		"name": "Willcox City Hall Cam, AZ",
 		"geo": "Usa/Arizona",
 		"tags": "Sound,Traffic,Trains",
 		"wct": "/en/usa/arizona/willcox-city-hall-rail-cam.html",
 		"pos": "32.25233869923102,-109.83452989939427",
-		"src": "https://www.youtube.com/embed/SezltCAl7KM"
+		"src": "https://www.youtube.com/embed/XYQSVB4FIhw"
 	},
 	{
 		"name": "African Penguins Cam, CA",
@@ -12030,7 +12070,7 @@ export const wctCams =
 		"tags": "Traffic",
 		"wct": "/en/usa/california/castro-street-cam-1.html",
 		"pos": "37.7612777796624,-122.43719404861912",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCoFUleuZUyRUVDjO4JcCSTQ&rel=0&autoplay=1"
+		"src": "https://www.youtube.com/embed/sW-MsHT9uVg"
 	},
 	{
 		"name": "Castro Street Cam 2",
@@ -12046,7 +12086,7 @@ export const wctCams =
 		"tags": "Traffic",
 		"wct": "/en/usa/california/castro-street-san-francisco.html",
 		"pos": "37.76239312054373,-122.4371940482099",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCKxzK9FBETp6vK3wdqrUelQ&rel=0&autoplay=1"
+		"src": "https://www.youtube.com/embed/x9kPMTF-Dz0"
 	},
 	{
 		"name": "Courthouse Square, Santa Rosa",
@@ -12166,7 +12206,7 @@ export const wctCams =
 		"tags": "Animals,Aquarium,Nature,Sea",
 		"wct": "/en/usa/california/monterey-bay-aquarium.html",
 		"pos": "36.61874083689037,-121.90253728851147",
-		"src": "https://www.youtube.com/embed/53IbTllHPHo"
+		"src": "https://www.youtube.com/embed/we3tKZxUIDw"
 	},
 	{
 		"name": "Moon Jelly",
@@ -12190,7 +12230,7 @@ export const wctCams =
 		"tags": "Astronomy",
 		"wct": "/en/usa/california/nasa-europa-clipper-mission.html",
 		"pos": "34.200733042210295,-118.18102817431671",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCryGec9PdUCLjpJW2mgCuLw"
+		"src": "https://www.youtube.com/embed/yk0X3Sh2gIE"
 	},
 	{
 		"name": "Pacifica Municipal Pier",
@@ -12246,7 +12286,7 @@ export const wctCams =
 		"tags": "Traffic,Trains",
 		"wct": "/en/usa/california/san-diego-rail-cam.html",
 		"pos": "32.717474486914476,-117.17281028741404",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCm1glwcFyCeqftQ8WKfteeA"
+		"src": "https://www.youtube.com/embed/mskdldWHhCQ"
 	},
 	{
 		"name": "San Francisco city view",
@@ -12262,7 +12302,7 @@ export const wctCams =
 		"tags": "City",
 		"wct": "/en/usa/california/sanfrancisco-city-views.html",
 		"pos": "37.75781489364663,-122.50781094004105",
-		"src": "https://www.youtube.com/embed/_JbTLMIgEPA"
+		"src": "https://www.youtube.com/embed/MAg7bMG61ag"
 	},
 	{
 		"name": "San Pedro St Cam, Los Angeles",
@@ -12334,7 +12374,7 @@ export const wctCams =
 		"tags": "Animals",
 		"wct": "/en/usa/california/snapcats-felv-catio-cam.html",
 		"pos": "38.38724942197909,-122.75726576148976",
-		"src": "https://www.youtube.com/embed/vGQ2I0zze5o"
+		"src": "https://www.youtube.com/embed/K2K7AvH2mkk"
 	},
 	{
 		"name": "SNAP Cats Kitten Room Cam, CA",
@@ -12342,7 +12382,7 @@ export const wctCams =
 		"tags": "Animals",
 		"wct": "/en/usa/california/snapcats-kittenroom-cam.html",
 		"pos": "38.38724942197909,-122.75726576148976",
-		"src": "https://www.youtube.com/embed/r5Wz0MfwW-U"
+		"src": "https://www.youtube.com/embed/jDeD3X7HX9g"
 	},
 	{
 		"name": "Snow Summit Cam, CA",
@@ -12423,6 +12463,14 @@ export const wctCams =
 		"wct": "/en/usa/california/trinidad-harbor.html",
 		"pos": "",
 		"src": "https://www.youtube.com/embed/live_stream?channel=UCNYdL7-9PEk0rhCHzquQP8Q&autoplay=1"
+	},
+	{
+		"name": "Unbound Main Park, Mammoth",
+		"geo": "Usa/California",
+		"tags": "Landscape,Ski",
+		"wct": "/en/usa/california/mammoth-unbound-mainpark-cam.html",
+		"pos": "37.64679561517599,-119.03652863365905",
+		"src": "https://www.youtube.com/embed/lxFbWFBQNwo"
 	},
 	{
 		"name": "Venice Beach Cam, Los Angeles",
@@ -12566,7 +12614,7 @@ export const wctCams =
 		"tags": "Animals",
 		"wct": "/en/usa/connecticut/baby-goat-salem.html",
 		"pos": "41.536142459966825,-72.22928238384303",
-		"src": "https://www.youtube.com/embed/jvrBkTtY9d0"
+		"src": "https://www.youtube.com/embed/Bd6dnnMo15w"
 	},
 	{
 		"name": "Goat Barn Cam, Salem",
@@ -12574,7 +12622,7 @@ export const wctCams =
 		"tags": "Animals",
 		"wct": "/en/usa/connecticut/symansaysfarms-goatbarn-cam.html",
 		"pos": "41.536142459966825,-72.22928238384303",
-		"src": "https://www.youtube.com/embed/bhu9r_yrxbQ"
+		"src": "https://www.youtube.com/embed/Kz3_ad_mrOM"
 	},
 	{
 		"name": "Kitten Academy Cam, CT",
@@ -12742,7 +12790,7 @@ export const wctCams =
 		"tags": "Boats,Harbour",
 		"wct": "/en/usa/florida/capecoral-chiquitalock.html",
 		"pos": "26.545197701904115,-82.01811729050021",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCKom-yXEEOETFJS0-MnfcbA&autoplay=1"
+		"src": "https://www.youtube.com/embed/p3AB2dxXH6I"
 	},
 	{
 		"name": "Clearwater Beach Cam, Florida",
@@ -12782,7 +12830,7 @@ export const wctCams =
 		"tags": "Beach,Fishing,Sea",
 		"wct": "/en/usa/florida/dania-beach-pier.html",
 		"pos": "26.058416802614207,-80.11328768450423",
-		"src": "https://www.youtube.com/embed/bEoNVd3spEM?rel=0&autoplay=1"
+		"src": "https://www.youtube.com/embed/live_stream?channel=UCpJ4goz4R_g2GqQHfixq3Xw"
 	},
 	{
 		"name": "Daytona Beach Cam, FL",
@@ -12830,7 +12878,7 @@ export const wctCams =
 		"tags": "Traffic",
 		"wct": "/en/usa/florida/destin-bridge.html",
 		"pos": "30.390032409117214,-86.51168868404575",
-		"src": "https://www.youtube.com/embed/UUxw6Gls204"
+		"src": "https://www.youtube.com/embed/qy8cochKQX4"
 	},
 	{
 		"name": "Downtown Fort Lauderdale, FL",
@@ -12855,14 +12903,6 @@ export const wctCams =
 		"wct": "/en/usa/florida/destin-water-users-tower-cam.html",
 		"pos": "30.392428609004124,-86.48234968473778",
 		"src": "https://www.youtube.com/embed/5KfQl7BBCVg"
-	},
-	{
-		"name": "Eagle Nest Southwest Florida",
-		"geo": "Usa/Florida",
-		"tags": "Animals,Nature",
-		"wct": "/en/usa/florida/eagle-nest-webcam.html",
-		"pos": "26.702614775529153,-81.8497156839227",
-		"src": "https://www.youtube.com/embed/zam4RKmNafw"
 	},
 	{
 		"name": "Eau Gallie River Melbourne, Florida",
@@ -13070,7 +13110,7 @@ export const wctCams =
 		"tags": "Boats,Business,Marina",
 		"wct": "/en/usa/florida/madeirabeach-hubbardsmarina-dockcam.html",
 		"pos": "27.78652243822867,-82.78435152932333",
-		"src": "https://www.youtube.com/embed/foM7gBCkDlA"
+		"src": "https://www.youtube.com/embed/rappTzVUQZQ"
 	},
 	{
 		"name": "Inlet Reef Beach Destin, FL",
@@ -13158,7 +13198,7 @@ export const wctCams =
 		"tags": "Fishing,Sea,Square",
 		"wct": "/en/usa/florida/mallory-square-key-west.html",
 		"pos": "24.55991686336185,-81.80905732009045",
-		"src": "https://www.youtube.com/embed/iTIm_-QQK_Y"
+		"src": "https://www.youtube.com/embed/xtI89GwnliM"
 	},
 	{
 		"name": "Marathon Cam, Florida Keys",
@@ -13166,7 +13206,7 @@ export const wctCams =
 		"tags": "Marina,Sea",
 		"wct": "/en/usa/florida/marathon-florida-keys.html",
 		"pos": "24.723642150858684,-81.01555892390871",
-		"src": "https://www.youtube.com/embed/rF3Bj6w2C44"
+		"src": "https://www.youtube.com/embed/Gw6QES1zoPE"
 	},
 	{
 		"name": "Mezcal Tiki Bar Cam, FL",
@@ -13190,7 +13230,7 @@ export const wctCams =
 		"tags": "Beach,Miami,Sea",
 		"wct": "/en/usa/florida/miami-south-beach-cam.html",
 		"pos": "25.79744781333374,-80.12928404851851",
-		"src": "https://www.youtube.com/embed/bjPNz2PHsX0"
+		"src": "https://www.youtube.com/embed/66LDr_5i8zU"
 	},
 	{
 		"name": "Miramar Beach Cam, FL",
@@ -13230,7 +13270,7 @@ export const wctCams =
 		"tags": "Astronomy,Boats,Harbour",
 		"wct": "/en/usa/florida/portcanaveral-nsffleetcam.html",
 		"pos": "28.40891668242075,-80.62038844839667",
-		"src": "https://www.youtube.com/embed/gnt2wZBg89g"
+		"src": "https://www.youtube.com/embed/Jm8wRjD3xVA"
 	},
 	{
 		"name": "Ocean Key Bar",
@@ -13310,7 +13350,7 @@ export const wctCams =
 		"tags": "Boats",
 		"wct": "/en/usa/florida/river-reach-island.html",
 		"pos": "26.109914983398866,-80.16001104824704",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCvKVVENvA1M5nshj_egJR4w&autoplay=1"
+		"src": "https://www.youtube.com/embed/bFSbIxkVTDc"
 	},
 	{
 		"name": "Robbie's Marina Cam, FL",
@@ -13401,12 +13441,20 @@ export const wctCams =
 		"src": "https://www.youtube.com/embed/4NdDRjVHzvk"
 	},
 	{
+		"name": "The Isle of Collier Preserve, FL",
+		"geo": "Usa/Florida",
+		"tags": "Bridge,Lake",
+		"wct": "/en/usa/florida/the-isle-of-collier-preserve.html",
+		"pos": "26.102108209142916,-81.74820632890231",
+		"src": "https://www.youtube.com/embed/-sx6SVlzuho"
+	},
+	{
 		"name": "The Landings, Fort Myers",
 		"geo": "Usa/Florida",
 		"tags": "Marina",
 		"wct": "/en/usa/florida/the-landings-fort-myers.html",
 		"pos": "26.550449181981794,-81.9248553844978",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCqMehEbj_d3oP1S_dl5T8fg"
+		"src": "https://www.youtube.com/embed/gkvMJWzzOGY"
 	},
 	{
 		"name": "The Pub Anastasia Cam, FL",
@@ -13422,7 +13470,7 @@ export const wctCams =
 		"tags": "4k,Bar,Business,Sound,Traffic",
 		"wct": "/en/usa/florida/staugustine-tini-martini-bar.html",
 		"pos": "29.894865732575923,-81.31341088385824",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCDwgvHS4LLOJofZvBtxR2ww"
+		"src": "https://www.youtube.com/embed/NBy_9ARkxZA"
 	},
 	{
 		"name": "Tranquility Bay Hotel",
@@ -13502,7 +13550,7 @@ export const wctCams =
 		"tags": "Animals",
 		"wct": "/en/usa/florida/wild-bald-eagle-nest-cam.html",
 		"pos": "25.55816037765297,-80.73835262948501",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCtMr9ZgraacKwDyBhA_FbqQ"
+		"src": "https://www.youtube.com/embed/_PIzJDPDN1c"
 	},
 	{
 		"name": "Willie T's Stage Cam, Key West",
@@ -13510,7 +13558,7 @@ export const wctCams =
 		"tags": "Bar,Restaurant",
 		"wct": "/en/usa/florida/keywest-williets-stagecam.html",
 		"pos": "24.555338163463468,-81.80446648390041",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UC9I3kqPrtlr7tiXVdpm327Q"
+		"src": "https://www.youtube.com/embed/4SptyZ2ug2c"
 	},
 	{
 		"name": "Winter Garden, Florida",
@@ -13681,12 +13729,20 @@ export const wctCams =
 		"src": "https://www.youtube.com/embed/live_stream?channel=UCk27XZ4bnNTtZKz2urL1HmQ"
 	},
 	{
+		"name": "Evanston Beach Cam, IL",
+		"geo": "Usa/Illinois",
+		"tags": "Beach,Sea",
+		"wct": "/en/usa/illinois/evanston-beach-cam.html",
+		"pos": "42.04095397920978,-87.67188468358162",
+		"src": "https://www.youtube.com/embed/live_stream?channel=UCPSR2Sz1xSlh3vVeCUWeUDg"
+	},
+	{
 		"name": "Illinois Railway Museum Barn 9",
 		"geo": "Usa/Illinois",
 		"tags": "Trains",
 		"wct": "/en/usa/illinois/railwaymuseum-barn9north.html",
 		"pos": "42.22711505147818,-88.52999428371852",
-		"src": "https://www.youtube.com/embed/j8P2DY_ZSMQ"
+		"src": "https://www.youtube.com/embed/KXghzput4Mo"
 	},
 	{
 		"name": "Illinois Railway Museum Cam",
@@ -13854,7 +13910,7 @@ export const wctCams =
 		"tags": "Animals",
 		"wct": "/en/usa/louisiana/jefferson-pawlins-audubon-playyard.html",
 		"pos": "29.962226527032403,-90.17160477840793",
-		"src": "https://www.youtube.com/embed/N37Oa9BH6_c"
+		"src": "https://www.youtube.com/embed/ImkgPdEsDZk"
 	},
 	{
 		"name": "City Park Cam, Jefferson",
@@ -13862,7 +13918,7 @@ export const wctCams =
 		"tags": "Animals",
 		"wct": "/en/usa/louisiana/jefferson-pawlins-city-park-cam.html",
 		"pos": "29.962226527032403,-90.17160477840793",
-		"src": "https://www.youtube.com/embed/NbyW8IXiFWQ"
+		"src": "https://www.youtube.com/embed/tVftPHKabXs"
 	},
 	{
 		"name": "RCVR, R/V Taani Cam",
@@ -13950,7 +14006,7 @@ export const wctCams =
 		"tags": "Beach,Surf",
 		"wct": "/en/usa/maine/scarborough-higginsbeach.html",
 		"pos": "43.560222179124665,-70.28196648371907",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCZ63kVFT7hf1K-Mx82MxFnQ&autoplay=1"
+		"src": "https://www.youtube.com/embed/rOg8Zv_5wPA"
 	},
 	{
 		"name": "Marginal Way Ogunquit cam, Maine",
@@ -14030,7 +14086,7 @@ export const wctCams =
 		"tags": "Nature,Ski",
 		"wct": "/en/usa/maine/sunday-river-ski-resort.html",
 		"pos": "44.46919437910172,-70.88218868403017",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UC1nBtPLJlT5B0h9MjBtjpJA&autoplay=1"
+		"src": "https://www.youtube.com/embed/J98tW5YX4Z8"
 	},
 	{
 		"name": "Trafton Falls, Milo, Maine",
@@ -14097,14 +14153,6 @@ export const wctCams =
 		"src": "https://www.youtube.com/embed/live_stream?channel=UCwi9OZaPpVD5119djKkxf7A"
 	},
 	{
-		"name": "St. Michaels Town Harbour",
-		"geo": "Usa/Maryland",
-		"tags": "Boats,Marina,River",
-		"wct": "/en/usa/maryland/stmichaels-townharbour.html",
-		"pos": "38.786424898673296,-76.22432806670119",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCiSI6H9qABMMGIO1pmzjEFg&autoplay=1"
-	},
-	{
 		"name": "Alpaca Farm, Martha's Vineyard",
 		"geo": "Usa/Massachusetts",
 		"tags": "Animals",
@@ -14113,12 +14161,20 @@ export const wctCams =
 		"src": "https://www.youtube.com/embed/a_WjWhIsVVU"
 	},
 	{
+		"name": "Annisquam Yacht Club Cam, MA",
+		"geo": "Usa/Massachusetts",
+		"tags": "Boats,Marina,River",
+		"wct": "/en/usa/massachusetts/annisquam-yacht-club-cam.html",
+		"pos": "42.6519229246113,-70.67995968399836",
+		"src": "https://www.youtube.com/embed/-R5sKOU5Jak"
+	},
+	{
 		"name": "Barnstable Cam, Cape Cod",
 		"geo": "Usa/Massachusetts",
 		"tags": "Boats,Marina",
 		"wct": "/en/usa/massachusetts/capecod-barnstable-cam.html",
 		"pos": "41.707276971260924,-70.30182592264453",
-		"src": "https://www.youtube.com/embed/ovQrqcyBsnY"
+		"src": "https://www.youtube.com/embed/LFror3JuP3Y"
 	},
 	{
 		"name": "Boston Skyline Cam, MA, USA",
@@ -14166,7 +14222,7 @@ export const wctCams =
 		"tags": "Museums,Trains",
 		"wct": "/en/usa/massachusetts/massachusetts-chester-railway-station.html",
 		"pos": "42.2806210013997,-72.98165480555708",
-		"src": "https://www.youtube.com/embed/q9w6eaGjLnc"
+		"src": "https://www.youtube.com/embed/c9NT_QAQAwE"
 	},
 	{
 		"name": "Downtown Fitchburg Cam, MA",
@@ -14361,14 +14417,6 @@ export const wctCams =
 		"src": "https://www.youtube.com/embed/BtDGW_HlErk"
 	},
 	{
-		"name": "Boyne Mountain Resort",
-		"geo": "Usa/Michigan",
-		"tags": "Landscape",
-		"wct": "/en/usa/michigan/boyne-mountain-resort.html",
-		"pos": "45.163448978996065,-84.93340104797316",
-		"src": "https://www.youtube.com/embed/uiIrKz1VB5Q?rel=0&autoplay=1"
-	},
-	{
 		"name": "Bridge, Charlevoix",
 		"geo": "Usa/Michigan",
 		"tags": "Bridge,Lake",
@@ -14390,15 +14438,7 @@ export const wctCams =
 		"tags": "Traffic",
 		"wct": "/en/usa/michigan/downtown-bangor.html",
 		"pos": "42.3124769046092,-86.1177251804321",
-		"src": "https://www.youtube.com/embed/rNDikcUtmJs"
-	},
-	{
-		"name": "Downtown Marshall Cam",
-		"geo": "Usa/Michigan",
-		"tags": "Traffic",
-		"wct": "/en/usa/michigan/downtown-marshall-fountain.html",
-		"pos": "42.271944307254046,-84.96486319630282",
-		"src": "https://www.youtube.com/embed/5xKUt1dzzk0"
+		"src": "https://www.youtube.com/embed/lYnHmyVns1w"
 	},
 	{
 		"name": "Four Corners Cam, Coldwater",
@@ -14407,14 +14447,6 @@ export const wctCams =
 		"wct": "/en/usa/michigan/fourcorners-downtowncoldwater-webcam.html",
 		"pos": "41.94045205255461,-85.00253284165679",
 		"src": "https://www.youtube.com/embed/ByED80IKdIU"
-	},
-	{
-		"name": "Gingerman Raceway Cam, MI",
-		"geo": "Usa/Michigan",
-		"tags": "Sports",
-		"wct": "/en/usa/michigan/gingerman-raceway-cam.html",
-		"pos": "42.406720940145355,-86.14213968412162",
-		"src": "https://www.youtube.com/embed/rFQroHh_e-0"
 	},
 	{
 		"name": "Harbor Springs Cam, Michigan",
@@ -14430,7 +14462,7 @@ export const wctCams =
 		"tags": "Airport",
 		"wct": "/en/usa/michigan/kalamazoo-battle-creek-international-airport.html",
 		"pos": "42.23581911782887,-85.56262917217883",
-		"src": "https://www.youtube.com/embed/-2f9sxpDQpw"
+		"src": "https://www.youtube.com/embed/ruvT9YOLAII"
 	},
 	{
 		"name": "Lighthouse cam, South Haven",
@@ -14766,7 +14798,7 @@ export const wctCams =
 		"tags": "Bridge,Nature,River",
 		"wct": "/en/usa/missouri/cassville-roaringriver-statepark.html",
 		"pos": "36.5886829799926,-93.83800168366503",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCvbE_G4O1qOlSmi10Q8OO3A"
+		"src": "https://www.youtube.com/embed/kZFOgOpFMy8"
 	},
 	{
 		"name": "Saint Louis Zoo, Missouri",
@@ -14870,7 +14902,7 @@ export const wctCams =
 		"tags": "Animals",
 		"wct": "/en/usa/new-hampshire/falcon-feed.html",
 		"pos": "43.00425190216643,-71.46823768371499",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCWqiOqqcBZT9Rx3HX7Zrd6A&autoplay=1"
+		"src": "https://www.youtube.com/embed/jCifa12Ij_s"
 	},
 	{
 		"name": "Ice-skating Cam1",
@@ -14977,20 +15009,20 @@ export const wctCams =
 		"src": "https://www.youtube.com/embed/live_stream?channel=UCsXI799O64fOhxu_wQcoBKg"
 	},
 	{
-		"name": "Bird Feeders & Critter Cam",
-		"geo": "Usa/New Jersey",
-		"tags": "Animals,Sound",
-		"wct": "/en/usa/new-jersey/morriscounty-birdfeeders-crittercam.html",
-		"pos": "40.8676738035487,-74.71861942546685",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UC_Wou7Scqrhf7jSTxRhrGHw"
-	},
-	{
 		"name": "Boardwalk, Atlantic City",
 		"geo": "Usa/New Jersey",
 		"tags": "Traffic",
 		"wct": "/en/usa/new-jersey/boardwalk-atlantic-city.html",
 		"pos": "",
 		"src": "https://www.youtube.com/embed/live_stream?channel=UCjBTdlFa28vCjI6m9kIM7gA"
+	},
+	{
+		"name": "Bob's Grill Ocean City Pier, NJ",
+		"geo": "Usa/New Jersey",
+		"tags": "Beach,Fishing,Sea",
+		"wct": "/en/usa/new-jersey/bobsgrill-14thstreet-fishingpier.html",
+		"pos": "39.27137997164659,-74.58322592271831",
+		"src": "https://www.youtube.com/embed/3kxKF4QsJd0"
 	},
 	{
 		"name": "Gardens Plaza 3rd Skycam II, NJ",
@@ -15030,7 +15062,7 @@ export const wctCams =
 		"tags": "Island",
 		"wct": "/en/usa/new-jersey/wildwoods-roller-coaster-cam.html",
 		"pos": "38.982524024104,-74.82144333728716",
-		"src": "https://www.youtube.com/embed/2zfxkupBX2c"
+		"src": "https://www.youtube.com/embed/drPH6qjXtC8"
 	},
 	{
 		"name": "Somers Point Higbee Beach, NJ",
@@ -15047,6 +15079,14 @@ export const wctCams =
 		"wct": "/en/usa/new-mexico/lasvegas-bridge-street-cam.html",
 		"pos": "35.593577334667636,-105.22724828735691",
 		"src": "https://www.youtube.com/embed/sw8MuxrKcs8"
+	},
+	{
+		"name": "1000 Islands Bridge Alexandria Bay",
+		"geo": "Usa/New York",
+		"tags": "Boats,Bridge,River",
+		"wct": "/en/usa/new-york/thousand-islands-bridge-alexandriabay.html",
+		"pos": "44.29889849410692,-75.98560439072786",
+		"src": "https://www.youtube.com/embed/sz3E79a8nAU"
 	},
 	{
 		"name": "39A Traffic Southampton, NY",
@@ -15139,10 +15179,10 @@ export const wctCams =
 	{
 		"name": "Duffy Square Cam , NYC",
 		"geo": "Usa/New York",
-		"tags": "4k,Business,Square,Traffic",
+		"tags": "4k,Business,Sound,Square,Traffic",
 		"wct": "/en/usa/new-york/manhattan-duffy-square.html",
 		"pos": "40.759319042655314,-73.9880571842563",
-		"src": "https://www.youtube.com/embed/l3QbTeaGH3o"
+		"src": "https://www.youtube.com/embed/4yLuA3bPkp4"
 	},
 	{
 		"name": "East 34th Street Ferry Landing",
@@ -15223,6 +15263,14 @@ export const wctCams =
 		"wct": "/en/usa/new-york/new-york-view.html",
 		"pos": "40.696407914261314,-74.00790713018762",
 		"src": "https://www.youtube.com/embed/Vj0XKu6AoOw?rel=0&autoplay=1"
+	},
+	{
+		"name": "New York City Panorama",
+		"geo": "Usa/New York",
+		"tags": "Boats,River",
+		"wct": "/en/usa/new-york/city-live-panorama.html",
+		"pos": "40.650640049302865,-74.02573668374698",
+		"src": "https://www.youtube.com/embed/live_stream?channel=UC88Mh_7_d2FYQTp94R27I-Q"
 	},
 	{
 		"name": "New York City Traffic & Weather",
@@ -15390,7 +15438,7 @@ export const wctCams =
 		"tags": "City,New Year’s Eve,Traffic",
 		"wct": "/en/usa/new-york/times-square.html",
 		"pos": "40.75948804264468,-73.98690368390676",
-		"src": "https://www.youtube.com/embed/XrnmAfiJDNY"
+		"src": "https://www.youtube.com/embed/GSmCh4DrbWY"
 	},
 	{
 		"name": "Tobay Beach Cam",
@@ -15422,7 +15470,7 @@ export const wctCams =
 		"tags": "Airport",
 		"wct": "/en/usa/new-york/watertown-airport-cam.html",
 		"pos": "43.99395683834541,-76.02563568369386",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCTuEAr2E3-931Nw9hbRu1vg"
+		"src": "https://www.youtube.com/embed/L3bYhofjjRU"
 	},
 	{
 		"name": "Windham Mountain Cam, NY",
@@ -15678,7 +15726,7 @@ export const wctCams =
 		"tags": "Animals,Sound",
 		"wct": "/en/usa/ohio/friends-of-felines-rescue-center.html",
 		"pos": "41.23190001358095,-84.41205768375443",
-		"src": "https://www.youtube.com/embed/2kXRQrgtZ1w"
+		"src": "https://www.youtube.com/embed/fbxfbJNOAKc"
 	},
 	{
 		"name": "Monarch Habitat Bird Feeder Cam",
@@ -15838,7 +15886,7 @@ export const wctCams =
 		"tags": "Traffic",
 		"wct": "/en/usa/pennsylvania/lock-haven-university-poorman-commons.html",
 		"pos": "41.14181105604829,-77.46352096577536",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UC3Mrl7XBm-D-FGGW_6bdcBQ&autoplay=1"
+		"src": "https://www.youtube.com/embed/mO-1j-3kGRc"
 	},
 	{
 		"name": "PA Bird Feeder Cam, Murrysville",
@@ -15903,6 +15951,14 @@ export const wctCams =
 		"wct": "/en/usa/south-carolina/myrtlebeach-oceancreekresort-cam.html",
 		"pos": "33.78931998067833,-78.73948268370394",
 		"src": "https://www.youtube.com/embed/lsD46RnvUiw"
+	},
+	{
+		"name": "Sea Pines Beach Club, SC",
+		"geo": "Usa/South Carolina",
+		"tags": "Beach,Restaurant,Sea",
+		"wct": "/en/usa/south-carolina/seapinesresort-beachclub-cam.html",
+		"pos": "32.1249459979817,-80.78740463076839",
+		"src": "https://www.youtube.com/embed/QIJku1LZGRE"
 	},
 	{
 		"name": "Sea Watch Resort, Myrtle Beach",
@@ -16334,7 +16390,7 @@ export const wctCams =
 		"tags": "City,Traffic,Trains",
 		"wct": "/en/usa/virginia/roanoke-railway-station.html",
 		"pos": "37.27355984860815,-79.94238308381524",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCZCSgaZ7tH_DRqbHsykKqeg&autoplay=1"
+		"src": "https://www.youtube.com/embed/cV3kP5FSUDk"
 	},
 	{
 		"name": "Downtown Leavenworth, WA",
@@ -16374,7 +16430,7 @@ export const wctCams =
 		"tags": "Animals,Sound",
 		"wct": "/en/usa/washington/kittens-purrfect-pals.html",
 		"pos": "48.14315915102699,-122.23192928587599",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCn19JAAloBH0o54ckC8SviA"
+		"src": "https://www.youtube.com/embed/nrjrqbnNPqY"
 	},
 	{
 		"name": "Little Hooves, Montesano",
@@ -16382,7 +16438,7 @@ export const wctCams =
 		"tags": "Animals",
 		"wct": "/en/usa/washington/little-hooves-montesano.html",
 		"pos": "46.99320141459718,-123.6321088833602",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UChImhh3aWdr4OcD2I1s_pvA&autoplay=1"
+		"src": "https://www.youtube.com/embed/mDDwbJ1j7ZA"
 	},
 	{
 		"name": "Port of Friday Harbor",
@@ -16390,7 +16446,7 @@ export const wctCams =
 		"tags": "Boats,Harbour,Marina",
 		"wct": "/en/usa/washington/port-of-friday-harbor.html",
 		"pos": "48.53672573125463,-123.01891088407861",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCwYQ0fEcfhpVdmzVF2jr2gA&autoplay=1"
+		"src": "https://www.youtube.com/embed/o28diqEXik8"
 	},
 	{
 		"name": "Rhein Haus Cam, Leavenworth",
@@ -16470,7 +16526,7 @@ export const wctCams =
 		"tags": "Traffic",
 		"wct": "/en/usa/wisconsin/greendale-broad-street-cam.html",
 		"pos": "42.942407915484196,-88.00023758843939",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCNmyncaMP2S_BqeW-FuDL2w"
+		"src": "https://www.youtube.com/embed/ADsY4BQWZOU"
 	},
 	{
 		"name": "DCMM South Waterway, WI",
@@ -16574,7 +16630,7 @@ export const wctCams =
 		"tags": "Airport",
 		"wct": "/en/usa/wyoming/afton-municipal-airport.html",
 		"pos": "42.709098858984724,-110.94258159261047",
-		"src": "https://www.youtube.com/embed/F20UV_uNOZ0"
+		"src": "https://www.youtube.com/embed/VyzULEX4WHU"
 	},
 	{
 		"name": "Alpine, Wyoming",
@@ -17046,7 +17102,7 @@ export const wctCams =
 		"tags": "Animals,Boats,Sea",
 		"wct": "/en/wales/ceredigion/newquay-cbmwc-dolphin-watch.html",
 		"pos": "52.21202010961484,-4.357006155700973",
-		"src": "https://www.youtube.com/embed/live_stream?channel=UCiOnG14iUHThkDOrM2d4fEQ"
+		"src": "https://www.youtube.com/embed/f5p1NFsX514"
 	},
 	{
 		"name": "Glaslyn Osprey Nest Cam, UK",
@@ -17054,7 +17110,7 @@ export const wctCams =
 		"tags": "Animals,United Kingdom",
 		"wct": "/en/wales/gwynedd/porthmadog-bywyd-gwyllt-glaslyn-wildlife-osprey.html",
 		"pos": "52.955245055453574,-4.1008222946683786",
-		"src": "https://www.youtube.com/embed/m6JayjQnFis"
+		"src": "https://www.youtube.com/embed/z64nNOYa76Q"
 	},
 	{
 		"name": "Saundersfoot Beach Cam",
@@ -17070,7 +17126,7 @@ export const wctCams =
 		"tags": "Boats,Harbour,United Kingdom",
 		"wct": "/en/wales/pembrokeshire/tenby-harbour.html",
 		"pos": "",
-		"src": "https://www.youtube.com/embed/5lrdZKNiAyM"
+		"src": "https://www.youtube.com/embed/LRURqFcywV0"
 	},
 	{
 		"name": "Dyfi Osprey Project Cam",

@@ -2,10 +2,7 @@ export const errCams =
 [
 	"JL57Uqyg5HU",
 	"UC8pFjcaJuGzUPynhZ8pbQlg",
-	"UC90AkGrousC-CDBcCL8UaSg",
 	"UC_3boA5axpWS61tBbX4LWQQ",
-	"Zb1JrJW7Bmk",
-	"jDW3BObg-Dk",
 	"kWLoVV8iRQU",
 	"nAO3XMZXdXI"
 ];
