@@ -13,9 +13,9 @@ export class CamService {
 		return this.issCam;
 	}
 
-	init(wctCams, errCams, remCams, addCams, updCams, issCam, onlyYouTube, randomOrder) {
+	init(wctCams, remCams, addCams, updCams, issCam, onlyYouTube, randomOrder) {
 		const fixService = new FixService();
-		this.cams = fixService.fix(wctCams, errCams, remCams, addCams, updCams, onlyYouTube, randomOrder);
+		this.cams = fixService.fix(wctCams, remCams, addCams, updCams, onlyYouTube, randomOrder);
 		this.issCam = issCam;
 	}
 

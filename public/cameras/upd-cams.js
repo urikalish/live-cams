@@ -1,11 +1,3 @@
-export const errCams =
-[
-	"JL57Uqyg5HU",
-	"UC8pFjcaJuGzUPynhZ8pbQlg",
-	"UC_3boA5axpWS61tBbX4LWQQ",
-	"kWLoVV8iRQU",
-	"nAO3XMZXdXI"
-];
 export const remCams =
 [
 	"09Aaq59WIAE",

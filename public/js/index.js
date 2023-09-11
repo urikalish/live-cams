@@ -1,5 +1,5 @@
 import { wctCams } from '../cameras/wct-cams.js';
-import { errCams, remCams, addCams, updCams, issCam } from '../cameras/upd-cams.js';
+import { remCams, addCams, updCams, issCam } from '../cameras/upd-cams.js';
 import { MapService} from './map-service.js';
 import { CamService} from './cam-service.js';
 import { GameService } from './game-service.js';
@@ -17,7 +17,7 @@ if (mode === 'guess') {
 		await mapService.initForGuess(camService);
 		gameService.startUserGuess();
 	}
-	camService.init(wctCams, errCams, remCams, addCams, updCams, issCam, true, true);
+	camService.init(wctCams, remCams, addCams, updCams, issCam, true, true);
 	gameService.init(mapService, camService);
 } else if (mode === 'view') {
 	const autoShowIssCam = true;
@@ -28,14 +28,11 @@ if (mode === 'guess') {
 			camService.displayLiveCams(markers.map(m => m.cam), autoPlay);
 		});
 	}
-	camService.init(wctCams, errCams, remCams, addCams, updCams, issCam, false, false);
+	camService.init(wctCams, remCams, addCams, updCams, issCam, false, false);
 	if (autoShowIssCam) {
 		camService.displayLiveCams([issCam], autoPlay);
 	}
-} else if (mode === 'err') {
-	camService.init(wctCams, [], remCams, addCams, updCams, null, false, false);
-	camService.displayAllProblematicCams(wctCams, errCams);
 } else if (mode === 'rem') {
-	camService.init(wctCams, errCams, [], addCams, updCams, null, false, false);
+	camService.init(wctCams, [], addCams, updCams, null, false, false);
 	camService.displayAllProblematicCams(wctCams, remCams);
 }

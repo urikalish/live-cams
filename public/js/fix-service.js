@@ -156,10 +156,10 @@ export class FixService {
 		}
 	}
 
-	fix(wctCams, errCams, remCams, addCams, updCams, onlyYouTube, randomOrder) {
+	fix(wctCams, remCams, addCams, updCams, onlyYouTube, randomOrder) {
 		const cams = [...wctCams];
-		console.log(`WCT:${wctCams.length}, Err:${addCams.length}, Remove:${remCams.length}, Add:${addCams.length}, Update:${Object.keys(updCams).length}`);
-		this.removeCams(cams, [...errCams, ...remCams]);
+		console.log(`WCT:${wctCams.length}, Remove:${remCams.length}, Add:${addCams.length}, Update:${Object.keys(updCams).length}`);
+		this.removeCams(cams, [...remCams]);
 		this.addCams(cams, addCams);
 		this.updateCams(cams, updCams);
 		this.handleClonedCams(cams);
