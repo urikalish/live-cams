@@ -23,7 +23,6 @@ export class GameService {
 	}
 
 	startUserGuess() {
-		this.nextButtonElm.classList.toggle('hidden', true);
 		this.mapService.clearGuess();
 		const cams = this.camService.getCams();
 		this.cam = cams[this.camIndex];
@@ -83,7 +82,6 @@ export class GameService {
 		this.guesses.push(distance);
 		this.displayGuessDistance(distance);
 		this.displayStats();
-		this.nextButtonElm.classList.toggle('hidden', false);
 	}
 
 	init(mapService, camService) {
@@ -99,7 +97,6 @@ export class GameService {
 		this.statsMessageElm.classList.toggle('hidden', false);
 		this.distanceMessageElm.classList.toggle('hidden', false);
 		this.locationMessageElm.classList.toggle('hidden', false);
-		this.nextButtonElm.classList.toggle('hidden', true);
 		this.nextButtonElm.addEventListener('click', () => {
 			this.startUserGuess();
 		})
