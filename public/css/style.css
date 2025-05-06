@@ -35,7 +35,7 @@ body {
     font-family: play, helvetica, sans-serif;
 }
 .main {
-    display: block;
+    display: grid;
     grid-template-columns: repeat(auto-fit, 475px);
 }
 .map {
