@@ -12028,7 +12028,7 @@ export const wctCams = [
         "tags": "Bridge,Landscape,Nature",
         "geo": "Taiwan/Chiayi County",
         "pos": "23.562286924165484,120.59864062262763",
-        "src": "https://www.youtube.com/embed/dY2cRNr5Buw",
+        "src": "https://www.youtube.com/embed/hMYs60qtkK8",
         "wct": "/en/taiwan/chiayi-county/alishan-scenic-mountain-taiping-skybridge.html"
     },
     {
