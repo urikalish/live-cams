@@ -1,5 +1,4 @@
-export const wctCams =
-    [
+export const wctCams = [
     {
         "name": "Grandvalira Cams, Andorra",
         "tags": "Landscape,Ski",
