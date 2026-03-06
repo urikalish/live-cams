@@ -47,11 +47,11 @@ body {
 @keyframes animation-frame-appear {
     0% {
         filter: brightness(0) grayscale(0);
-        /*transform: scale(1.8);*/
+        transform: scale(1.8);
     }
     100% {
         filter: brightness(1) grayscale(0);
-        /*transform: scale(1.2);*/
+        transform: scale(1.2);
     }
 }
 .cam-container {
@@ -61,7 +61,7 @@ body {
 }
 .cam-container > iframe {
     filter: brightness(0) grayscale(0);
-    /*transform: scale(1.8);*/
+    transform: scale(1.8);
     animation: animation-frame-appear 5s 1s ease-in-out forwards;
 }
 .cam-container--large {
